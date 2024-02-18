@@ -80,7 +80,6 @@ footer img {
     text-shadow: 2px 2px #060404;
     font-weight: 700;
 }
-
 .carousel-caption {
     display: flex;
     flex-direction: column;
@@ -140,7 +139,17 @@ footer img {
     text-align: center;
     font-size: 25px;
 }
-
+.modal-body span, .disappear-mobile span {
+    font-weight: 700;
+}
+.disappear-fullscreen {
+    display: none;
+}
+.disappear-mobile {
+    font-size: 26px;
+    padding: 0px 40px;
+    line-height: 1.5;
+}
 .feeder_pictures div,
 .feeder_pictures article {
     justify-content: space-evenly;
@@ -344,6 +353,12 @@ footer h2 {
 @media screen and (max-width: 1064px) {
     .broken-small-res-display-none {
         display: none;
+    }
+    .disappear-mobile {
+        display: none;
+    }
+    .disappear-fullscreen {
+        display: inline-block;
     }
 }
 
