@@ -366,11 +366,13 @@ footer h2 {
     }
 }
 
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 991px) {
     .logo {
         margin-top: 0;
     }
-
+    .disappear {
+        display: inline!important;
+    }
     .offcanvas form {
         width: 100% !important;
         height: 3rem !important;
@@ -392,9 +394,6 @@ footer h2 {
 }
 
 @media screen and (max-width: 962px) {
-    .disappear {
-        display: none;
-    }
 }
 
 @media screen and (max-width: 932px) {
@@ -485,9 +484,6 @@ footer h2 {
 }
 
 @media screen and (max-width: 500px) {
-    .disappear {
-        display: none!important;
-    }
 
     .carousel-item h1 {
         font-size: 25px;

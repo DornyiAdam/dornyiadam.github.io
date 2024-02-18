@@ -314,7 +314,7 @@ footer h2 {
 }
 @media screen and (max-width:1518px) {
     .disappear {
-        display: none;
+        display: none!important;
     }
 }
 @media screen and (max-width: 1476px) {
@@ -376,9 +376,12 @@ footer h2 {
     }
 }
 
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 991px) {
     .logo {
         margin-top: 0;
+    }
+    .disappear {
+        display: inline!important;
     }
 
     .offcanvas form {
@@ -402,9 +405,6 @@ footer h2 {
 }
 
 @media screen and (max-width: 962px) {
-    .disappear {
-        display: none;
-    }
 }
 
 @media screen and (max-width: 932px) {
@@ -495,10 +495,6 @@ footer h2 {
 }
 
 @media screen and (max-width: 500px) {
-    .disappear {
-        display: none !important;
-    }
-
     .carousel-item h1 {
         font-size: 25px;
     }
