@@ -302,9 +302,9 @@ footer h2 {
 
 
 }
-@media screen and (max-width:1518px) {
+@media screen and (max-width:1530px) {
     .disappear {
-        display: none;
+        display: none!important;
     }
 }
 @media screen and (max-width: 1476px) {
@@ -486,7 +486,7 @@ footer h2 {
 
 @media screen and (max-width: 500px) {
     .disappear {
-        display: none !important;
+        display: none!important;
     }
 
     .carousel-item h1 {
