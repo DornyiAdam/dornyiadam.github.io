@@ -5,12 +5,22 @@
     padding: 0;
     margin: 0;
 }
-
+.choose article{
+    width: 200px;
+    height: 200px;
+    background-color: #ccc;
+}
 .logo {
     height: 60px;
     margin-top: 10px;
     margin-left: 10px;
     object-fit: cover;
+}
+.form-select {
+    width: 30%;
+}
+.choose section {
+    justify-content: space-evenly;
 }
 
 header .container-fluid {
