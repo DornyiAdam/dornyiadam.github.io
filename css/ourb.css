@@ -5,16 +5,24 @@
     padding: 0;
     margin: 0;
 }
-
+.choose article{
+    width: 200px;
+    height: 200px;
+    background-color: #ccc;
+}
 .logo {
     height: 60px;
     margin-top: 10px;
     margin-left: 10px;
     object-fit: cover;
 }
-#top button i {
-    font-size: 23px;
+.form-select {
+    width: 30%;
 }
+.choose section {
+    justify-content: space-evenly;
+}
+
 header .container-fluid {
     justify-content: unset !important;
     padding: 0px 20px;
@@ -30,7 +38,6 @@ a {
     color: #fff;
 }
 
-
 footer a {
     color: #000;
 }
@@ -42,12 +49,9 @@ footer a {
 }
 
 .carousel-item img {
+    height: 800px;
     object-fit: cover;
     width: 100% !important;
-    height: 700px!important;
-}
-.carousel-item, .carousel-item .active{
-    height: 600px!important;
 }
 
 .fit-img {
@@ -81,7 +85,7 @@ footer img {
 
 .carousel-item h1 {
     z-index: 99;
-    font-size: 90px;
+    font-size: 56px;
     color: #ffffff;
     text-shadow: 2px 2px #060404;
     font-weight: 700;
@@ -93,10 +97,10 @@ footer img {
     justify-content: center;
     position: relative;
     border-radius: 50px;
-    top: -630px;
+    top: -730px;
     background: none;
     background-color: transparent;
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: rgba(0, 0, 0, 0.3);
     backdrop-filter: blur(4px);
     height: 100px;
     left: 0 !important;
@@ -106,24 +110,21 @@ footer img {
 
 .video {
     display: flex;
+    margin-bottom: 20px;
     flex-direction: column;
     align-items: center;
 }
 
 .carousel-indicators button {
     border-radius: 50%;
-    height: 15px !important;
-    width: 15px !important;
-    border: 2px solid #000!important;
-}
-.carousel-indicators {
-    margin: 0!important;
+    height: 10px !important;
+    width: 10px !important;
     position: relative;
-    top: 570px;
+    top: -100px;
 }
 
 .video h3 {
-    margin: 40px 0px 0px 0px;
+    margin: 20px 0px;
 }
 
 .uppercase {
@@ -131,7 +132,7 @@ footer img {
 }
 
 .building_feeder {
-    width: 100%;
+    max-width: 100%;
     object-fit: cover;
 }
 
@@ -171,17 +172,19 @@ footer img {
 
 .feeder_pictures p {
     font-size: 22px;
-    padding: 5px 40px;
+    padding: 5px 20px;
 }
 
 figcaption {
-    margin-top: 20px;
-    padding: 10px 40px;
+    margin-top: 10px;
 }
-
+.form-check-label {
+    margin-right: 120px!important;
+    margin-top: 4px;
+}
 body {
     font-family: "Overpass", sans-serif;
-    line-height: 1.4;
+    line-height: 1.3;
     overflow: visible !important;
     padding-right: 0 !important;
 }
@@ -193,11 +196,9 @@ body {
 .crop_picture {
     width: 100px;
 }
-.btn-close {
-    color: #fff;
-}
+
 .container {
-    width: 60%;
+    width: 80%;
 }
 
 .btn-primary:first-of-type {
@@ -206,11 +207,14 @@ body {
     font-size: 30px;
 }
 
+.place_holder {
+    height: 100px;
+}
 
 h2 {
     font-size: 40px;
     font-weight: 600;
-    margin: 60px 0px!important;
+    margin-bottom: 50px;
 }
 
 .bi-facebook:hover,
@@ -239,6 +243,11 @@ nav {
 .feeder_pictures h3 {
     font-size: 34px;
 }
+figure img {
+    height: 200px;
+    width: 200px;
+
+}
 
 .help p {
     font-weight: 600;
@@ -254,8 +263,6 @@ nav {
 
 form {
     height: 80% !important;
-}
-header form {
     padding-top: 8px !important;
 }
 
@@ -284,10 +291,29 @@ header form {
 footer h2 {
     margin: 10px 0px!important;
 }
+.imageplace {
+    width: 400px;
+    height: 400px;
+    background-color: #ccc;
+}
 
+.madaraink img {
+    display: flex;
+    width: 80%;
+    height: 300px;
+    object-fit: cover;
+    justify-content: center;
+}
+@media screen and (max-width: 1832px) {
+    .carousel-item h1 {
+        font-size: 54px;
+    }
+}
 
 @media screen and (max-width: 1760px) {
-
+    .carousel-item h1 {
+        font-size: 50px;
+    }
 
     .feeder_pictures img {
         height: 300px;
@@ -295,6 +321,9 @@ footer h2 {
 }
 
 @media screen and (max-width: 1630px) {
+    .carousel-item h1 {
+        font-size: 42px;
+    }
 
     .feeder_pictures div,
     .feeder_pictures div figcaption {
@@ -303,16 +332,15 @@ footer h2 {
 
 
 }
-@media screen and (max-width:1530px) {
+@media screen and (max-width:1518px) {
     .disappear {
         display: none!important;
     }
-    .video{
-        height: auto;
-    }
 }
 @media screen and (max-width: 1476px) {
-
+    .carousel-item h1 {
+        font-size: 36px;
+    }
 
     .feeder_pictures img {
         height: 220px;
@@ -331,15 +359,6 @@ footer h2 {
 @media screen and (max-width: 1388px) {
     .help .bi {
         font-size: 36px !important;
-    }
-    .carousel-caption {
-        background-color: rgba(0, 0, 0, 0);
-        background: none;
-        backdrop-filter: blur(0px);
-        top: -600px;
-    }
-    .carousel-item img {
-        filter: blur(2px);
     }
 
 }
@@ -382,8 +401,9 @@ footer h2 {
         margin-top: 0;
     }
     .disappear {
-        display: block !important;
+        display: block!important;
     }
+
     .offcanvas form {
         width: 100% !important;
         height: 3rem !important;
@@ -408,6 +428,9 @@ footer h2 {
 }
 
 @media screen and (max-width: 932px) {
+    .carousel-item h1 {
+        font-size: 36px;
+    }
 
     .feeder_pictures img {
         height: 180px;
@@ -439,6 +462,10 @@ footer h2 {
 }
 
 @media screen and (max-width: 812px) {
+    .carousel-item h1 {
+        font-size: 36px;
+        width: 100%;
+    }
 
     .feeder_pictures img {
         height: 250px;
@@ -449,18 +476,18 @@ footer h2 {
     }
 
     .needs-validation h2 {
-        font-size: 34px;
+        font-size: 30px;
     }
 
     .needs-validation h3 {
         font-size: 30px;
     }
-    iframe {
-        height: 350px !important;
-    }
 }
 
 @media screen and (max-width: 580px) {
+    .carousel-item h1 {
+        font-size: 32px;
+    }
 
     .feeder_pictures img {
         height: 200px;
@@ -474,14 +501,11 @@ footer h2 {
     .broken-small-res-display-none-icon {
         display: none;
     }
-    iframe {
-        height: 220px !important;
-    }
 }
 
 @media screen and (max-width: 520px) {
     .carousel-item h1 {
-        font-size: 65px;
+        font-size: 30px;
     }
 
     .help .bi {
@@ -491,7 +515,9 @@ footer h2 {
 }
 
 @media screen and (max-width: 500px) {
-
+    .carousel-item h1 {
+        font-size: 25px;
+    }
 
     .help p {
         margin-right: 0px !important;
@@ -503,6 +529,14 @@ footer h2 {
         height: 200px;
     }
 
+    .carousel-item h1 {
+        font-size: 25px;
+    }
+
+    iframe {
+        height: 220px !important;
+    }
+
     .check {
         flex-direction: column;
     }
@@ -511,7 +545,7 @@ footer h2 {
 
 @media screen and (max-width: 400px) {
     .carousel-item h1 {
-        font-size: 50px;
+        font-size: 25px;
     }
 
     .feeder_pictures img {
@@ -526,5 +560,4 @@ footer h2 {
         margin-right: 20px !important;
         margin-left: 10px !important;
     }
-
 }
