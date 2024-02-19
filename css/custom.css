@@ -114,7 +114,7 @@ footer img {
     border-radius: 50%;
     height: 15px !important;
     width: 15px !important;
-    border: 2px solid #000!important;
+    border: 1px solid #0000007f!important;
 }
 .carousel-indicators {
     margin: 0!important;
@@ -122,10 +122,12 @@ footer img {
     top: 570px;
 }
 
-.video h3 {
+h3 {
     margin: 40px 0px 0px 0px;
 }
-
+.build-your-birdfeeder h3:nth-of-type(2) {
+    margin-top: 20px;
+}
 .uppercase {
     text-transform: uppercase;
 }
@@ -165,9 +167,6 @@ footer img {
     align-items: center;
 }
 
-.feeder_pictures div:nth-of-type(2) {
-    margin-left: 40px;
-}
 
 .feeder_pictures p {
     font-size: 22px;
@@ -294,14 +293,23 @@ footer h2 {
     }
 }
 
-@media screen and (max-width: 1630px) {
+@media screen and (max-width: 1670px) {
 
     .feeder_pictures div,
     .feeder_pictures div figcaption {
         flex-wrap: wrap;
+        padding-left: 40px;
+        padding-right: 40px;
     }
+    
 
 
+}
+
+@media screen and (max-width: 1590px) {
+    .container {
+        width: 80%!important;
+    }
 }
 @media screen and (max-width:1530px) {
     .disappear {
@@ -363,6 +371,7 @@ footer h2 {
     .help p {
         margin-right: 10px !important;
     }
+
 
 }
 @media screen and (max-width: 1064px) {
@@ -525,6 +534,10 @@ footer h2 {
     .help p {
         margin-right: 20px !important;
         margin-left: 10px !important;
+    }
+    .feeder_pictures div figcaption {
+        padding-left: 20px;
+        padding-right: 20px;
     }
 
 }
