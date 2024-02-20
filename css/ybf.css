@@ -179,7 +179,7 @@ footer img {
     padding: 5px 20px;
 }
 .check {
-    justify-content: space-evenly;
+    justify-content: center;
 }
 figcaption {
     margin-top: 10px;
@@ -277,11 +277,18 @@ form {
     height: 80px;
     font-size: 30px;
 }
-
+.form-check .form-check-input {
+    margin-left: 1.5em;
+}
+img {
+    border-radius: 5px;
+}
 .bi-search {
     font-size: 26px;
 }
-
+.calculated {
+    display: none;
+}
 .navbar-toggler {
     font-size: 25px;
     margin-bottom: 10px;
