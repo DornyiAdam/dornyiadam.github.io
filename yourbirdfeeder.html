@@ -69,7 +69,7 @@
         <main>
             <section class="text-center my-5 choose">
                 <h1>Készítsd el a te madáretetőd</h1>
-                <h3 class="text-start ms-5">Válassz ezek közül</h3>
+                <h3 class="text-start ms-5">Kérlek, válaszd ki milyen anyagból, és mekkora madáretetőt szeretnél!</h3>
                 <section class="container-fluid">
                     <section class="d-flex container-fluid">
                         <article>
@@ -112,13 +112,16 @@
                             </div>
                             <select class="form-select ms-5" required aria-label="Default select example">
                                 <option value="" selected>Faanyag</option>
-                                <option value="1">Fenyő</option>
-                                <option value="2">Tölgy</option>
-                                <option value="3">Bükk</option>
+                                <option value="1500">Fenyő</option>
+                                <option value="2000">Tölgy</option>
+                                <option value="3300">Bükk</option>
                             </select>
                             <div class="">
-                                <button class="btn btn-danger" type="button" onclick="calculatePrice()">Számolás</button>
+                                <button class="btn btn-danger" type="button" onclick="calculatePrice(event)">Számolás</button>
                             </div>
+                            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                
+                              </div>
                     </article>
                     </form>
                 </section>

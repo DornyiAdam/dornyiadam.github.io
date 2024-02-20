@@ -31,46 +31,53 @@ function validateForm(event) {
 
 
 function calculatePrice() {
-    var select = document.querySelector("select").value;
-    var radio_s = document.querySelector("#validationFormCheck2:checked");
-    var radio_m = document.querySelector("#validationFormCheck3:checked");
-    var radio_l = document.querySelector("#validationFormCheck4:checked");
     var calculated = document.querySelector(".calculated h3");
-    var selectedValue = parseInt(select);
-    var choosenwood;
-    if (selectedValue !== "" && !isNaN(selectedValue)) {
-        choosenwood = selectedValue * 1500;
-    } else {
-        choosenwood = 0;
-    }
-    var size;
-    if (radio_s) {
-        size = 1.6;
-    }
-    else if (radio_m) {
-        size = 2.3;
-    }
-    else if (radio_l) {
-        size = 2.7;
-    }
-    else {
-        size = 0;
-    }
-
+    var choosenwood = parseFloat(document.querySelector("select").value) || 0;
+    var size = document.querySelector("#validationFormCheck2:checked") ? 1.5 : (document.querySelector("#validationFormCheck3:checked") ? 2 : (document.querySelector("#validationFormCheck4:checked") ? 3 : 0));
     var price = (Math.floor(choosenwood * size));
     var element = document.querySelector(".calculated");
-    if (0 < price) {
-        element.style.display = "flex";
-        calculated.innerHTML = "Kalkulált összeg: " + price + "Ft";
-    }
-    
     if (size == 0) {
         alert("Kérlek, válaszd ki a madáretető méretét!");
     }
     else if (choosenwood == 0) {
         alert("Kérlek, válaszd ki a faanyag típusát!");
     }
+    else {
+        element.style.display = "flex";
+        calculated.innerHTML = "Kalkulált összeg: " + price + "Ft";
+    }
     validateForm(event);
-
+    const myModal = new bootstrap.Modal(document.getElementById('myModal'))
+    //myModal.show();
 }
-
+/*Ezt majd később hozzáadom, hogy jó legye a modal: 
+<div class="modal-dialog modal-dialog-centered">
+<div class="modal-content">
+<div class="modal-header">
+  <h1 class="modal-title fs-5" id="exampleModalToggleLabel">Modal 1</h1>
+  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+</div>
+<div class="modal-body">
+  Show a second modal and hide this one with the button below.
+</div>
+<div class="modal-footer">
+  <button class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">Open second modal</button>
+</div>
+</div>
+</div>
+</div>
+<div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+<div class="modal-dialog modal-dialog-centered">
+<div class="modal-content">
+<div class="modal-header">
+  <h1 class="modal-title fs-5" id="exampleModalToggleLabel2">Modal 2</h1>
+  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+</div>
+<div class="modal-body">
+  Hide this modal and show the first with the button below.
+</div>
+<div class="modal-footer">
+  <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Back to first</button>
+</div>
+</div>
+</div>*/
