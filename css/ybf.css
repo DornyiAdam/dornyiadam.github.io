@@ -8,7 +8,9 @@
 .main-products h1 {
     margin-bottom: 50px;
 }
-
+.final-container-mobile {
+    display: none;
+}
 .logo {
     height: 60px;
     margin-top: 10px;
@@ -40,23 +42,33 @@
 
 .inline {
     display: inline-block;
-    padding-left: 180px;
+    padding-left: 280px;
 }
 .final-container {
     position: relative;
 }
 .inline-size {
     display: inline-block;
-    padding-left: 200px;
+    padding-left: 290px;
 }
 .bi-bag {
     margin-right: 0!important;
 }
-.final {
+.final,.final2 {
     position: absolute;
     left: 18px;
     font-size:22px;
     top: 15px;
+}
+.final2 {
+    left: 18px;
+    top: 8px;
+}
+.final-container-mobile .bi-bag {
+    font-size: 30px;
+}
+.final-container-mobile p {
+    font-size: 18px;
 }
 .choose section {
     justify-content: space-evenly;
@@ -174,9 +186,10 @@ footer p,
 footer article {
     padding-left: 50px;
 }
-.bi-heart:hover {
+.bi-heart-fill:hover {
     color: rgb(255, 0, 0);
 }
+
 .bi-info-circle:hover {
     color: #00ddff;
 }
@@ -488,7 +501,7 @@ footer h2,h3 {
 }
 @media screen and (max-width:1399px) {
     .special-offer figcaption span {
-        padding: 20px;
+        padding: 0;
     }
 }
 @media screen and (max-width: 1388px) {
@@ -531,6 +544,12 @@ footer h2,h3 {
     .disappear-fullscreen {
         display: inline-block;
     }
+    .container {
+        width: 100%;
+    }
+    .recommendations section {
+        width: 100%;
+    }
 }
 
 @media screen and (max-width: 991px) {
@@ -558,6 +577,9 @@ footer h2,h3 {
 
     .offcanvas-header {
         padding-bottom: 0;
+    }
+    .final-container-mobile {
+        display: inline-block;
     }
 
 }
@@ -630,7 +652,9 @@ footer h2,h3 {
     .carousel-item h1 {
         font-size: 32px;
     }
-
+    .discounts {
+        font-size: 40px !important;
+    }
     .feeder_pictures img {
         height: 200px;
         width: 80%;
@@ -667,6 +691,17 @@ footer h2,h3 {
     .products img {
         width: 100%;
         height: 200px;
+    }
+    .inline {
+        display: inline-block;
+        padding-left: 180px;
+    }
+    .final-container {
+        position: relative;
+    }
+    .inline-size {
+        display: inline-block;
+        padding-left: 200px;
     }
 }
 

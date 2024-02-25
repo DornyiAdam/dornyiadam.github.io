@@ -63,8 +63,7 @@ footer {
     margin: 0 !important;
     border-top: 1px solid #ccc;
     background-position: top;
-    background: rgb(204, 244, 192);
-    background: linear-gradient(180deg, rgba(204, 244, 192, 1) 0%, rgba(95, 191, 102, 1) 100%);
+    background-color: #cccccc70;
 }
 
 footer p,
@@ -237,7 +236,10 @@ nav {
 .feeder_pictures h3 {
     font-size: 34px;
 }
+.up .bi{
+    font-size: 20px;
 
+}
 .help p {
     font-weight: 600;
     font-size: 25px;

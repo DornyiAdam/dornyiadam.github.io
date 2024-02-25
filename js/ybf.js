@@ -32,12 +32,22 @@ var counter = 0
 function fill() {
   counter++;
   final = document.querySelector(".final");
+  final2 = document.querySelector(".final2");
+  final2p = document.querySelector(".final-container-mobile p")
   final.innerHTML = counter;
+  final2.innerHTML = counter;
   if (10 > counter) {
-    final.style.left = "25px"
+    final.style.left = "25px";
   }
   else {
     final.style.left = "18px"
+    final2.style.left = "18px";
+  }
+  if (counter<10) {
+    final2.style.left = "18px"
+  }
+  else {
+    final2.style.left = "14px"
   }
 }
 function calculatePrice() {
