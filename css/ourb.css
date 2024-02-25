@@ -66,7 +66,6 @@ footer a {
 footer {
     margin: 0 !important;
     border-top: 1px solid #ccc;
-    background-position: top;
     background: rgb(204, 244, 192);
     background: linear-gradient(180deg, rgba(204, 244, 192, 1) 0%, rgba(95, 191, 102, 1) 100%);
 }
@@ -297,13 +296,31 @@ footer h2 {
     background-color: #ccc;
 }
 
+.madaraink {
+    margin: 50px;
+}
+
+.madaraink h2 {
+    margin-bottom: 30px;
+}
+
 .madaraink img {
     display: flex;
-    width: 80%;
-    height: 300px;
+    width: 90%;
+    height: 400px;
     object-fit: cover;
     justify-content: center;
+    margin: 0 auto;
 }
+
+.madar_info{
+    padding: 0px 50px;
+    font-size: 24px;
+}
+
+
+
+
 @media screen and (max-width: 1832px) {
     .carousel-item h1 {
         font-size: 54px;
@@ -330,6 +347,14 @@ footer h2 {
         flex-wrap: wrap;
     }
 
+    .madar_info{
+        font-size: 20px;
+    }
+
+    .madaraink h2 {
+        margin-bottom: 10px;
+    }
+
 
 }
 @media screen and (max-width:1518px) {
@@ -353,7 +378,6 @@ footer h2 {
     .help .bi-envelope {
         font-size: 24px !important;
     }
-
 }
 
 @media screen and (max-width: 1388px) {
@@ -394,6 +418,7 @@ footer h2 {
     .disappear-fullscreen {
         display: inline-block;
     }
+
 }
 
 @media screen and (max-width: 991px) {
@@ -421,6 +446,18 @@ footer h2 {
     .offcanvas-header {
         padding-bottom: 0;
     }
+
+    .madaraink:nth-child(odd) img{
+        order: 0 !important;
+    }
+    .madaraink:nth-child(odd) .madar_info{
+        order: 1 !important;
+    }
+
+    .madaraink h2 {
+        margin-top: 20px;
+    }
+
 
 }
 
@@ -500,6 +537,15 @@ footer h2 {
 
     .broken-small-res-display-none-icon {
         display: none;
+    }
+
+    .madaraink img{
+        height: 300px !important;
+        margin: 0px;
+        width: 100%;
+    }
+    .col-lg-6{
+        padding: 0px !important;
     }
 }
 

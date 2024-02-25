@@ -2,169 +2,676 @@
 <html lang="hu">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Madáretető projekt</title>
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/ybf.css">
-    <link rel="icon" type="image/x-icon" href="images/favicon.png">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Madáretető projekt</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/ybf.css">
+  <link rel="icon" type="image/x-icon" href="images/favicon.png">
 </head>
 
 <body>
-    <div class="container-fluid" id="top">
-        <header>
-            <section class="d-flex help">
-                <p class="text-center ms-5 me-5 bi">Tegyünk <span class="broken-small-res-display-none">együtt</span> a
-                    természetért! <i class="bi bi-heart-fill broken-small-res-display-none"></i> </p>
+  <div class="container-fluid" id="top">
+    <header>
+      <section class="d-flex help">
+        <p class="text-center ms-5 me-5 bi">Tegyünk <span class="broken-small-res-display-none">együtt</span> a
+          természetért! <i class="bi bi-heart-fill broken-small-res-display-none"></i> </p>
 
-                <a href="" class="text-dark">
-                    <i class="bi">Elakadtál? Segítünk! </i>
-                    <i class="bi">titkarsag@bankitatabanya.hu</i>
-                    <i class="bi bi-envelope broken-small-res-display-none"></i>
-                </a>
-            </section>
-            <nav class="navbar navbar-dark navbar-expand-lg bg-dark uppercase">
-                <div class="container-fluid">
-                    <a class="navbar-brand" href="index.html"><img src="images/logo.png" alt="" class="logo"></a>
-                    <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="offcanvas"
-                        data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar"
-                        aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="offcanvas bg-dark offcanvas-end" tabindex="-1" id="offcanvasNavbar"
-                        aria-labelledby="offcanvasNavbarLabel">
-                        <div class="offcanvas-header">
-                            <h4 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Menü</h4>
-                            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
-                                aria-label="Close"></button>
-                        </div>
-                        <div class="offcanvas-body">
-                            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                                <li class="nav-item">
-                                    <a class="nav-link disappear" aria-current="page" href="index.html">Főoldal </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link active" aria-current="page" href="yourbirdfeeder.html">A te
-                                        madáretetőd</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link " aria-current="page" href="ourbirds.html">Madaraink</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link " aria-current="page" href="galery.html">Galéria </a>
-                                </li>
-                            </ul>
-                            <form class="d-flex" role="search">
-                                <i class="bi bi-search text-white"></i>
-                                <input class="form-control me-2" type="search" placeholder="Ide írj"
-                                    aria-label="Search">
-                                <button class="btn btn-outline-success" type="submit">Keresés</button>
-                            </form>
-                        </div>
+        <a href="" class="text-dark">
+          <i class="bi">Elakadtál? Segítünk! </i>
+          <i class="bi">titkarsag@bankitatabanya.hu</i>
+          <i class="bi bi-envelope broken-small-res-display-none"></i>
+        </a>
+      </section>
+      <nav class="navbar navbar-dark navbar-expand-lg bg-dark uppercase">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html"><img src="images/logo.png" alt="" class="logo"></a>
+          <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="offcanvas bg-dark offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+            aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header">
+              <h4 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Menü</h4>
+              <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                <li class="nav-item">
+                  <a class="nav-link disappear" aria-current="page" href="index.html">Főoldal </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="yourbirdfeeder.html">A te madáretetőd</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link " aria-current="page" href="ourbirds.html">Madaraink</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link " aria-current="page" href="galery.html">Galéria </a>
+                </li>
+              </ul>
+              <div class="final-container"><i class="bi bi-bag text-light"></i>
+                <p class="final text-warning d-inline me-5"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section class="main-products">
+        <h1 class="text-center discounts">Akciós madáretetőink</h1>
+        <div class="container-fluid justify-content-evenly d-flex products">
+          <article class="product">
+            <figure>
+              <div class="small-icons d-flex flex-column"><span>
+                  <p>21<i class="lower">%</i> </p>
+                </span> <i class="bi bi-heart"></i><i class="bi bi-info-circle"></i></div>
+              <img src="images/S_madareteto.png" alt="">
+              <figcaption class="text-center">Lorem model 2000
+                <hr>
+              </figcaption>
+              <p>Befogadó képesség: <span class="ms-auto inline">3</span> </p>
+              <p>Méret: <span class="inline-size ps-auto"> S (5''x4'')</span></p>
+              <p class="old-price text-center"><s>9600Ft</s></p>
+              <p class="text-center new-price">7500Ft</p>
+              <button class="btn btn-dark d-block mx-auto rounded-pill" onclick="fill()">Kosárba <i
+                  class="bi bi-basket-fill"></i></button>
+            </figure>
+          </article>
+          <article class="product">
+            <figure>
+              <div class="small-icons d-flex flex-column"><span>
+                  <p>21<i class="lower">%</i> </p>
+                </span> <i class="bi bi-heart"></i><i class="bi bi-info-circle"></i></div>
+              <img src="images/L_madareteto.png" alt="">
+              <figcaption class="text-center">Lorem model 2000
+                <hr>
+              </figcaption>
+              <p>Befogadó képesség: <span class="ms-auto inline">3</span> </p>
+              <p>Méret: <span class="inline-size ps-auto"> S (5''x4'')</span></p>
+              <p class="old-price text-center"><s>9600Ft</s></p>
+              <p class="text-center new-price">7500Ft</p>
+              <button class="btn btn-dark d-block mx-auto rounded-pill">Kosárba <i
+                  class="bi bi-basket-fill"></i></button>
+            </figure>
+          </article>
+          <article class="product">
+            <figure>
+              <div class="small-icons d-flex flex-column"><span>
+                  <p>21<i class="lower">%</i> </p>
+                </span> <i class="bi bi-heart"></i><i class="bi bi-info-circle"></i></div>
+              <img src="images/cinege.jpg" alt="">
+              <figcaption class="text-center">Lorem model 2000
+                <hr>
+              </figcaption>
+              <p>Befogadó képesség: <span class="ms-auto inline">3</span> </p>
+              <p>Méret: <span class="inline-size ps-auto"> S (5''x4'')</span></p>
+              <p class="old-price text-center"><s>9600Ft</s></p>
+              <p class="text-center new-price">7500Ft</p>
+              <button class="btn btn-dark d-block mx-auto rounded-pill">Kosárba <i
+                  class="bi bi-basket-fill"></i></button>
+            </figure>
+          </article>
+          <article class="product">
+            <figure>
+              <div class="small-icons d-flex flex-column"><span>
+                  <p>21<i class="lower">%</i> </p>
+                </span> <i class="bi bi-heart"></i><i class="bi bi-info-circle"></i></div>
+              <img src="images/cinege.jpg" alt="">
+              <figcaption class="text-center">Lorem model 2000
+                <hr>
+              </figcaption>
+              <p>Befogadó képesség: <span class="ms-auto inline">3</span> </p>
+              <p>Méret: <span class="inline-size ps-auto"> S (5''x4'')</span></p>
+              <p class="old-price text-center"><s>9600Ft</s></p>
+              <p class="text-center new-price">7500Ft</p>
+              <button class="btn btn-dark d-block mx-auto rounded-pill">Kosárba <i
+                  class="bi bi-basket-fill"></i></button>
+            </figure>
+          </article>
+          <article class="product">
+            <figure>
+              <div class="small-icons d-flex flex-column"><span>
+                  <p>21<i class="lower">%</i> </p>
+                </span> <i class="bi bi-heart"></i><i class="bi bi-info-circle"></i></div>
+              <img src="images/cinege.jpg" alt="">
+              <figcaption class="text-center">Lorem model 2000
+                <hr>
+              </figcaption>
+              <p>Befogadó képesség: <span class="ms-auto inline">3</span> </p>
+              <p>Méret: <span class="inline-size ps-auto"> S (5''x4'')</span></p>
+              <p class="old-price text-center"><s>9600Ft</s></p>
+              <p class="text-center new-price">7500Ft</p>
+              <button class="btn btn-dark d-block mx-auto rounded-pill">Kosárba <i
+                  class="bi bi-basket-fill"></i></button>
+            </figure>
+          </article>
+          <article class="product">
+            <figure>
+              <div class="small-icons d-flex flex-column"><span>
+                  <p>21<i class="lower">%</i> </p>
+                </span> <i class="bi bi-heart"></i><i class="bi bi-info-circle"></i></div>
+              <img src="images/cinege.jpg" alt="">
+              <figcaption class="text-center">Lorem model 2000
+                <hr>
+              </figcaption>
+              <p>Befogadó képesség: <span class="ms-auto inline">3</span> </p>
+              <p>Méret: <span class="inline-size ps-auto"> S (5''x4'')</span></p>
+              <p class="old-price text-center"><s>9600Ft</s></p>
+              <p class="text-center new-price">7500Ft</p>
+              <button class="btn btn-dark d-block mx-auto rounded-pill">Kosárba <i
+                  class="bi bi-basket-fill"></i></button>
+            </figure>
+          </article>
+          <article class="product">
+            <figure>
+              <div class="small-icons d-flex flex-column"><span>
+                  <p>21<i class="lower">%</i> </p>
+                </span> <i class="bi bi-heart"></i><i class="bi bi-info-circle"></i></div>
+              <img src="images/cinege.jpg" alt="">
+              <figcaption class="text-center">Lorem model 2000
+                <hr>
+              </figcaption>
+              <p>Befogadó képesség: <span class="ms-auto inline">3</span> </p>
+              <p>Méret: <span class="inline-size ps-auto"> S (5''x4'')</span></p>
+              <p class="old-price text-center"><s>9600Ft</s></p>
+              <p class="text-center new-price">7500Ft</p>
+              <button class="btn btn-dark d-block mx-auto rounded-pill">Kosárba <i
+                  class="bi bi-basket-fill"></i></button>
+            </figure>
+          </article>
+          <article class="product">
+            <figure>
+              <div class="small-icons d-flex flex-column"><span>
+                  <p>21<i class="lower">%</i> </p>
+                </span> <i class="bi bi-heart"></i><i class="bi bi-info-circle"></i></div>
+              <img src="images/s1_madareteto.png" alt="">
+              <figcaption class="text-center">Lorem model 2000
+                <hr>
+              </figcaption>
+              <p>Befogadó képesség: <span class="ms-auto inline">3</span> </p>
+              <p>Méret: <span class="inline-size ps-auto"> S (5''x4'')</span></p>
+              <p class="old-price text-center"><s>9600Ft</s></p>
+              <p class="text-center new-price">7500Ft</p>
+              <button class="btn btn-dark d-block mx-auto rounded-pill">Kosárba <i
+                  class="bi bi-basket-fill"></i></button>
+            </figure>
+          </article>
+          <article class="product">
+            <figure>
+              <div class="small-icons d-flex flex-column"><span>
+                  <p>21<i class="lower">%</i> </p>
+                </span> <i class="bi bi-heart"></i><i class="bi bi-info-circle"></i></div>
+              <img src="images/cinege.jpg" alt="">
+              <figcaption class="text-center">Lorem model 2000
+                <hr>
+              </figcaption>
+              <p>Befogadó képesség: <span class="ms-auto inline">3</span> </p>
+              <p>Méret: <span class="inline-size ps-auto"> S (5''x4'')</span></p>
+              <p class="old-price text-center"><s>9600Ft</s></p>
+              <p class="text-center new-price">7500Ft</p>
+              <button class="btn btn-dark d-block mx-auto rounded-pill">Kosárba <i
+                  class="bi bi-basket-fill"></i></button>
+            </figure>
+          </article>
+          <article class="product">
+            <figure>
+              <div class="small-icons d-flex flex-column"><span>
+                  <p>21<i class="lower">%</i> </p>
+                </span> <i class="bi bi-heart"></i><i class="bi bi-info-circle"></i></div>
+              <img src="images/cinege.jpg" alt="">
+              <figcaption class="text-center">Lorem model 2000
+                <hr>
+              </figcaption>
+              <p>Befogadó képesség: <span class="ms-auto inline">3</span> </p>
+              <p>Méret: <span class="inline-size ps-auto"> S (5''x4'')</span></p>
+              <p class="old-price text-center"><s>9600Ft</s></p>
+              <p class="text-center new-price">7500Ft</p>
+              <button class="btn btn-dark d-block mx-auto rounded-pill">Kosárba <i
+                  class="bi bi-basket-fill"></i></button>
+            </figure>
+          </article>
+          <article class="product">
+            <figure>
+              <div class="small-icons d-flex flex-column"><span>
+                  <p>21<i class="lower">%</i> </p>
+                </span> <i class="bi bi-heart"></i><i class="bi bi-info-circle"></i></div>
+              <img src="images/cinege.jpg" alt="">
+              <figcaption class="text-center">Lorem model 2000
+                <hr>
+              </figcaption>
+              <p>Befogadó képesség: <span class="ms-auto inline">3</span> </p>
+              <p>Méret: <span class="inline-size ps-auto"> S (5''x4'')</span></p>
+              <p class="old-price text-center"><s>9600Ft</s></p>
+              <p class="text-center new-price">7500Ft</p>
+              <button class="btn btn-dark d-block mx-auto rounded-pill">Kosárba <i
+                  class="bi bi-basket-fill"></i></button>
+            </figure>
+          </article>
+          <article class="product">
+            <figure>
+              <div class="small-icons d-flex flex-column"><span>
+                  <p>21<i class="lower">%</i> </p>
+                </span> <i class="bi bi-heart"></i><i class="bi bi-info-circle"></i></div>
+              <img src="images/cinege.jpg" alt="">
+              <figcaption class="text-center">Lorem model 2000
+                <hr>
+              </figcaption>
+              <p>Befogadó képesség: <span class="ms-auto inline">3</span> </p>
+              <p>Méret: <span class="inline-size ps-auto"> S (5''x4'')</span></p>
+              <p class="old-price text-center"><s>9600Ft</s></p>
+              <p class="text-center new-price">7500Ft</p>
+              <button class="btn btn-dark d-block mx-auto rounded-pill">Kosárba <i
+                  class="bi bi-basket-fill"></i></button>
+            </figure>
+          </article>
+          <article class="product">
+            <figure>
+              <div class="small-icons d-flex flex-column"><span>
+                  <p>21<i class="lower">%</i> </p>
+                </span> <i class="bi bi-heart"></i><i class="bi bi-info-circle"></i></div>
+              <img src="images/cinege.jpg" alt="">
+              <figcaption class="text-center">Lorem model 2000
+                <hr>
+              </figcaption>
+              <p>Befogadó képesség: <span class="ms-auto inline">3</span> </p>
+              <p>Méret: <span class="inline-size ps-auto"> S (5''x4'')</span></p>
+              <p class="old-price text-center"><s>9600Ft</s></p>
+              <p class="text-center new-price">7500Ft</p>
+              <button class="btn btn-dark d-block mx-auto rounded-pill">Kosárba <i
+                  class="bi bi-basket-fill"></i></button>
+            </figure>
+          </article>
+          <article class="product">
+            <figure>
+              <div class="small-icons d-flex flex-column"><span>
+                  <p>21<i class="lower">%</i> </p>
+                </span> <i class="bi bi-heart"></i><i class="bi bi-info-circle"></i></div>
+              <img src="images/cinege.jpg" alt="">
+              <figcaption class="text-center">Lorem model 2000
+                <hr>
+              </figcaption>
+              <p>Befogadó képesség: <span class="ms-auto inline">3</span> </p>
+              <p>Méret: <span class="inline-size ps-auto"> S (5''x4'')</span></p>
+              <p class="old-price text-center"><s>9600Ft</s></p>
+              <p class="text-center new-price">7500Ft</p>
+              <button class="btn btn-dark d-block mx-auto rounded-pill">Kosárba <i
+                  class="bi bi-basket-fill"></i></button>
+            </figure>
+          </article>
+          <article class="product">
+            <figure>
+              <div class="small-icons d-flex flex-column"><span>
+                  <p>21<i class="lower">%</i> </p>
+                </span> <i class="bi bi-heart"></i><i class="bi bi-info-circle"></i></div>
+              <img src="images/cinege.jpg" alt="">
+              <figcaption class="text-center">Lorem model 2000
+                <hr>
+              </figcaption>
+              <p>Befogadó képesség: <span class="ms-auto inline">3</span> </p>
+              <p>Méret: <span class="inline-size ps-auto"> S (5''x4'')</span></p>
+              <p class="old-price text-center"><s>9600Ft</s></p>
+              <p class="text-center new-price">7500Ft</p>
+              <button class="btn btn-dark d-block mx-auto rounded-pill">Kosárba <i
+                  class="bi bi-basket-fill"></i></button>
+            </figure>
+          </article>
+
+        </div>
+      </section>
+      <section class="recommendations d-flex flex-wrap px-2 container">
+        <section class="me-5 ms-5 pt-3">
+          <article class="mx-2">
+            <h2><i class="bi bi-list-check"></i>Gondosan ellenőrzött madáretetők</h2>
+            <p>Értékesítés előtt minden etető egy <span> alapos átvizsgáláson és <br> tesztelésen esik</span> át és
+              <span>tökéletesen működik.</span>
+            </p>
+          </article>
+          <article class="mx-2">
+            <h2><i class="bi bi-truck"></i>Ingyenes országos házhozszállítás</h2>
+            <p>A megrendelt termékeket Magyarország területén <span>ingyenesen házhoz szállítjuk.</span></p>
+          </article>
+          <article class="mx-2">
+            <h2><i class="bi bi-check-square"></i>Minden madáretető összeszerelve érkezik</h2>
+            <p>Minden etetőt egy <span>fél kg-os</span> eledel mixxel szállítunk ki, használatra készen.</p>
+          </article>
+        </section>
+        <section class="ms-5 pt-3">
+          <article class="mx-2">
+            <h2><i class="bi bi-percent"></i>Mindig kedvező árak</h2>
+            <p>Minden termékünket közvetlen forrásból szerezzük be és kis árréssel értékesítjük,<span> így az áraink
+                mindig nagyon kedvezőek!</span></p>
+          </article>
+          <article class="mx-2">
+            <h2><i class="bi bi-shield-check"></i>100%-os garancia "Próbálja Ki Mielőtt Dönt" Pénzvisszafizetési
+              garancia</h2>
+            <p><span>Szuper egyszerű garanciális ügyintézés:</span> Meghibásodás esetén csak jelzi felénk a garanciális
+              igényét, mi a <span>saját költégünkre futárt küldünk az etetőért, majd visszatérítjük a teljes
+                vételárát.</span> </p>
+          </article>
+        </section>
+      </section>
+      <section class="container-fluid sticky-bottom text-end up mb-3">
+        <a href="#top">
+          <button class="btn btn-dark ms-auto border border-success rounded-pill me-2"><i class="bi bi-chevron-up"></i>
+          </button></a>
+      </section>
+      <section class="main-product">
+        <h2 class="text-center">Teljes árú madáretetők</h2>
+        <div class="container-fluid justify-content-evenly d-flex products">
+          <article class="product">
+            <figure>
+              <div class="small-icons d-flex flex-column"><span>
+                </span> <i class="bi bi-heart"></i><i class="bi bi-info-circle"></i></div>
+              <img src="images/cinege.jpg" alt="">
+              <figcaption class="text-center">Lorem model 2000
+                <hr>
+              </figcaption>
+              <p>Befogadó képesség: <span class="ms-auto inline">3</span> </p>
+              <p>Méret: <span class="inline-size ps-auto"> S (5''x4'')</span></p>
+              <p class="text-center new-price">7500Ft</p>
+              <button class="btn btn-dark d-block mx-auto rounded-pill">Kosárba <i
+                  class="bi bi-basket-fill"></i></button>
+            </figure>
+          </article>
+          <article class="product">
+            <figure>
+              <div class="small-icons d-flex flex-column"><span>
+                </span> <i class="bi bi-heart"></i><i class="bi bi-info-circle"></i></div>
+              <img src="images/cinege.jpg" alt="">
+              <figcaption class="text-center">Lorem model 2000
+                <hr>
+              </figcaption>
+              <p>Befogadó képesség: <span class="ms-auto inline">3</span> </p>
+              <p>Méret: <span class="inline-size ps-auto"> S (5''x4'')</span></p>
+              <p class="text-center new-price">7500Ft</p>
+              <button class="btn btn-dark d-block mx-auto rounded-pill">Kosárba <i
+                  class="bi bi-basket-fill"></i></button>
+            </figure>
+          </article>
+          <article class="product">
+            <figure>
+              <div class="small-icons d-flex flex-column"><span>
+                </span> <i class="bi bi-heart"></i><i class="bi bi-info-circle"></i></div>
+              <img src="images/cinege.jpg" alt="">
+              <figcaption class="text-center">Lorem model 2000
+                <hr>
+              </figcaption>
+              <p>Befogadó képesség: <span class="ms-auto inline">3</span> </p>
+              <p>Méret: <span class="inline-size ps-auto"> S (5''x4'')</span></p>
+              <p class="text-center new-price">7500Ft</p>
+              <button class="btn btn-dark d-block mx-auto rounded-pill">Kosárba <i
+                  class="bi bi-basket-fill"></i></button>
+            </figure>
+          </article>
+          <article class="product">
+            <figure>
+              <div class="small-icons d-flex flex-column"><span>
+                </span> <i class="bi bi-heart"></i><i class="bi bi-info-circle"></i></div>
+              <img src="images/cinege.jpg" alt="">
+              <figcaption class="text-center">Lorem model 2000
+                <hr>
+              </figcaption>
+              <p>Befogadó képesség: <span class="ms-auto inline">3</span> </p>
+              <p>Méret: <span class="inline-size ps-auto"> S (5''x4'')</span></p>
+              <p class="text-center new-price">7500Ft</p>
+              <button class="btn btn-dark d-block mx-auto rounded-pill">Kosárba <i
+                  class="bi bi-basket-fill"></i></button>
+            </figure>
+          </article>
+          <article class="product">
+            <figure>
+              <div class="small-icons d-flex flex-column"><span>
+                </span> <i class="bi bi-heart"></i><i class="bi bi-info-circle"></i></div>
+              <img src="images/cinege.jpg" alt="">
+              <figcaption class="text-center">Lorem model 2000
+                <hr>
+              </figcaption>
+              <p>Befogadó képesség: <span class="ms-auto inline">3</span> </p>
+              <p>Méret: <span class="inline-size ps-auto"> S (5''x4'')</span></p>
+              <p class="text-center new-price">7500Ft</p>
+              <button class="btn btn-dark d-block mx-auto rounded-pill">Kosárba <i
+                  class="bi bi-basket-fill"></i></button>
+            </figure>
+          </article>
+          <article class="product">
+            <figure>
+              <div class="small-icons d-flex flex-column"><span>
+                </span> <i class="bi bi-heart"></i><i class="bi bi-info-circle"></i></div>
+              <img src="images/cinege.jpg" alt="">
+              <figcaption class="text-center">Lorem model 2000
+                <hr>
+              </figcaption>
+              <p>Befogadó képesség: <span class="ms-auto inline">3</span> </p>
+              <p>Méret: <span class="inline-size ps-auto"> S (5''x4'')</span></p>
+              <p class="text-center new-price">7500Ft</p>
+              <button class="btn btn-dark d-block mx-auto rounded-pill">Kosárba <i
+                  class="bi bi-basket-fill"></i></button>
+            </figure>
+          </article>
+          <article class="product">
+            <figure>
+              <div class="small-icons d-flex flex-column"><span>
+                </span> <i class="bi bi-heart"></i><i class="bi bi-info-circle"></i></div>
+              <img src="images/cinege.jpg" alt="">
+              <figcaption class="text-center">Lorem model 2000
+                <hr>
+              </figcaption>
+              <p>Befogadó képesség: <span class="ms-auto inline">3</span> </p>
+              <p>Méret: <span class="inline-size ps-auto"> S (5''x4'')</span></p>
+              <p class="text-center new-price">7500Ft</p>
+              <button class="btn btn-dark d-block mx-auto rounded-pill">Kosárba <i
+                  class="bi bi-basket-fill"></i></button>
+            </figure>
+          </article>
+          <article class="product">
+            <figure>
+              <div class="small-icons d-flex flex-column"><span>
+                </span> <i class="bi bi-heart"></i><i class="bi bi-info-circle"></i></div>
+              <img src="images/cinege.jpg" alt="">
+              <figcaption class="text-center">Lorem model 2000
+                <hr>
+              </figcaption>
+              <p>Befogadó képesség: <span class="ms-auto inline">3</span> </p>
+              <p>Méret: <span class="inline-size ps-auto"> S (5''x4'')</span></p>
+              <p class="text-center new-price">7500Ft</p>
+              <button class="btn btn-dark d-block mx-auto rounded-pill">Kosárba <i
+                  class="bi bi-basket-fill"></i></button>
+            </figure>
+          </article>
+          <article class="product">
+            <figure>
+              <div class="small-icons d-flex flex-column"><span>
+                </span> <i class="bi bi-heart"></i><i class="bi bi-info-circle"></i></div>
+              <img src="images/cinege.jpg" alt="">
+              <figcaption class="text-center">Lorem model 2000
+                <hr>
+              </figcaption>
+              <p>Befogadó képesség: <span class="ms-auto inline">3</span> </p>
+              <p>Méret: <span class="inline-size ps-auto"> S (5''x4'')</span></p>
+              <p class="text-center new-price">7500Ft</p>
+              <button class="btn btn-dark d-block mx-auto rounded-pill">Kosárba <i
+                  class="bi bi-basket-fill"></i></button>
+            </figure>
+          </article>
+          <article class="product">
+            <figure>
+              <div class="small-icons d-flex flex-column"><span>
+                </span> <i class="bi bi-heart"></i><i class="bi bi-info-circle"></i></div>
+              <img src="images/cinege.jpg" alt="">
+              <figcaption class="text-center">Lorem model 2000
+                <hr>
+              </figcaption>
+              <p>Befogadó képesség: <span class="ms-auto inline">3</span> </p>
+              <p>Méret: <span class="inline-size ps-auto"> S (5''x4'')</span></p>
+              <p class="text-center new-price">7500Ft</p>
+              <button class="btn btn-dark d-block mx-auto rounded-pill">Kosárba <i
+                  class="bi bi-basket-fill"></i></button>
+            </figure>
+          </article>
+          <article class="product">
+            <figure>
+              <div class="small-icons d-flex flex-column"><span>
+                </span> <i class="bi bi-heart"></i><i class="bi bi-info-circle"></i></div>
+              <img src="images/cinege.jpg" alt="">
+              <figcaption class="text-center">Lorem model 2000
+                <hr>
+              </figcaption>
+              <p>Befogadó képesség: <span class="ms-auto inline">3</span> </p>
+              <p>Méret: <span class="inline-size ps-auto"> S (5''x4'')</span></p>
+              <p class="text-center new-price">7500Ft</p>
+              <button class="btn btn-dark d-block mx-auto rounded-pill">Kosárba <i
+                  class="bi bi-basket-fill"></i></button>
+            </figure>
+          </article>
+          <article class="product">
+            <figure>
+              <div class="small-icons d-flex flex-column"><span>
+                </span> <i class="bi bi-heart"></i><i class="bi bi-info-circle"></i></div>
+              <img src="images/cinege.jpg" alt="">
+              <figcaption class="text-center">Lorem model 2000
+                <hr>
+              </figcaption>
+              <p>Befogadó képesség: <span class="ms-auto inline">3</span> </p>
+              <p>Méret: <span class="inline-size ps-auto"> S (5''x4'')</span></p>
+              <p class="text-center new-price">7500Ft</p>
+              <button class="btn btn-dark d-block mx-auto rounded-pill">Kosárba <i
+                  class="bi bi-basket-fill"></i></button>
+            </figure>
+          </article>
+          <article class="product">
+            <figure>
+              <div class="small-icons d-flex flex-column"><span>
+                </span> <i class="bi bi-heart"></i><i class="bi bi-info-circle"></i></div>
+              <img src="images/cinege.jpg" alt="">
+              <figcaption class="text-center">Lorem model 2000
+                <hr>
+              </figcaption>
+              <p>Befogadó képesség: <span class="ms-auto inline">3</span> </p>
+              <p>Méret: <span class="inline-size ps-auto"> S (5''x4'')</span></p>
+              <p class="text-center new-price">7500Ft</p>
+              <button class="btn btn-dark d-block mx-auto rounded-pill">Kosárba <i
+                  class="bi bi-basket-fill"></i></button>
+            </figure>
+          </article>
+          <article class="product">
+            <figure>
+              <div class="small-icons d-flex flex-column"><span>
+                </span> <i class="bi bi-heart"></i><i class="bi bi-info-circle"></i></div>
+              <img src="images/cinege.jpg" alt="">
+              <figcaption class="text-center">Lorem model 2000
+                <hr>
+              </figcaption>
+              <p>Befogadó képesség: <span class="ms-auto inline">3</span> </p>
+              <p>Méret: <span class="inline-size ps-auto"> S (5''x4'')</span></p>
+              <p class="text-center new-price">7500Ft</p>
+              <button class="btn btn-dark d-block mx-auto rounded-pill">Kosárba <i
+                  class="bi bi-basket-fill"></i></button>
+            </figure>
+          </article>
+          <article class="product">
+            <figure>
+              <div class="small-icons d-flex flex-column"><span>
+                </span> <i class="bi bi-heart"></i><i class="bi bi-info-circle"></i></div>
+              <img src="images/cinege.jpg" alt="">
+              <figcaption class="text-center">Lorem model 2000
+                <hr>
+              </figcaption>
+              <p>Befogadó képesség: <span class="ms-auto inline">3</span> </p>
+              <p>Méret: <span class="inline-size ps-auto"> S (5''x4'')</span></p>
+              <p class="text-center new-price">7500Ft</p>
+              <button class="btn btn-dark d-block mx-auto rounded-pill">Kosárba <i
+                  class="bi bi-basket-fill"></i></button>
+            </figure>
+          </article>
+        </div>
+      </section>
+      <section class="special-offer text-center">
+        <h2>Speciális ajánlatunk</h2>
+        <article class="container">
+          <figure>
+            <img src="images/special_offer.jpg" alt="">
+            <figcaption class="container">
+              Ipsum model 2000 Turbo XXL Camera
+              <hr>
+              <p>Befogadó képesség: <span class="ms-auto inline">5</span> </p>
+              <p>Méret: <span class="inline-size"> XXL (12''x16'')</span></p>
+              <p>Az Ipsum model 2000 Turbo teljeskör...</p>
+              <!-- Button trigger modal -->
+              <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                Bővebben
+              </button>
+
+              <!-- Modal -->
+              <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h1 class="modal-title fs-5" id="exampleModalLabel">Ipsum model Információk</h1>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
+                    <div class="modal-body">
+                      <p>Az Ipsum model 2000 Turbo teljeskörű madáretető szolgálatot nyújt, és még afelett is! 2k 60fps
+                        kamerájával 0-24 rögzít,és az etetőhöz járó applikációval bármikor megtekintheti az esetleges
+                        látogatásokat, hisz a kamera érzékelője könyvjelzővel jelzi a madarak érkeztét.</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Bezárás</button>
+                    </div>
+                  </div>
                 </div>
-            </nav>
-        </header>
-        <main>
-            <section class="text-center my-5 choose">
-                <h1>Készítsd el a te madáretetőd</h1>
-                <h3 class="text-start ms-5">Kérlek, válaszd ki milyen anyagból, és mekkora madáretetőt szeretnél!</h3>
-                <section class="container-fluid">
-                    <section class="d-flex container-fluid">
-                        <article>
-                            <figure>
-                                <img src="images/s1_madareteto.png" class="" alt="">
-                                <figcaption>Kis madáretető</figcaption>
-                            </figure>
-                        </article>
-                        <article>
-                            <figure>
-                                <img src="images/M_madareteto.png" class="" alt="">
-                                <figcaption>Közepes madáretető </figcaption>
-                            </figure>
-                        </article>
-                        <article>
-                            <figure>
-                                <img src="images/L2_madareteto.png" class="" alt="">
-                                <figcaption>Nagy madáretető</figcaption>
-                            </figure>
-                        </article>
-                    </section>
-                    <article class="d-flex container-fluid">
-                        <form class="row  needs-validation container-fluid" novalidate>
-                            <div class="check row">
-                                <div class="form-check col-lg-4 ps-5">
-                                    <input type="radio" class="form-check-input my-0 " id="validationFormCheck2"
-                                        name="radio-stacked" required>
-                                    <label class="form-check-label" for="validationFormCheck2">S 15x15</label>
-                                </div>
-                                <div class="form-check col-lg-4 ps-5">
-                                    <input type="radio" class="form-check-input my-0" id="validationFormCheck3"
-                                        name="radio-stacked" required>
-                                    <label class="form-check-label" for="validationFormCheck3">M 20x20</label>
-                                </div>
-                                <div class="form-check col-lg-4 ps-5">
-                                    <input type="radio" class="form-check-input my-0 ms-2" id="validationFormCheck4"
-                                        name="radio-stacked" required>
-                                    <label class="form-check-label" for="validationFormCheck4">L 25x25</label>
-                                </div>
-                            </div>
-                            <select class="form-select ms-5" required aria-label="Default select example">
-                                <option value="" selected>Faanyag</option>
-                                <option value="1500">Fenyő</option>
-                                <option value="2000">Tölgy</option>
-                                <option value="3300">Bükk</option>
-                            </select>
-                            <div class="">
-                                <button class="btn btn-danger" type="button" onclick="calculatePrice(event)">Számolás</button>
-                            </div>
-                            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                
-                              </div>
-                    </article>
-                    </form>
-                </section>
-            </section>
-            <section class="calculated container">
-                <article class="pe-5">
-                    <h3>Kalkulált összeg</h3>
-                    <h4>Útmutató</h4>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis nobis sed et excepturi sint,
-                        officiis, maxime velit quibusdam quod ipsam dicta, illo voluptate. Impedit commodi numquam ipsum
-                        omnis similique exercitationem.</p>
-                </article>
-                <article class="plans ps-5">
-                    <div class="imageplace"></div>
-                    <img src="" alt="">
-                </article>
-            </section>
+              </div>
+              <p class="text-center new-price">375400Ft</p>
+              <button class="btn btn-dark d-block mx-auto rounded-pill">Kosárba <i
+                  class="bi bi-basket-fill"></i></button>
+            </figcaption>
+          </figure>
+        </article>
+      </section>
+    </main>
 
-            <a href="#top" class="ms-3 mb-5"><button
-                    class="btn btn-dark sticky-bottom ps-5 my-5 pe-5 fs-4 border border-warning rounded-pill">Fel!</button></a>
-        </main>
-        <footer class="row">
-            <section class="col-lg-6 contact-info">
-                <h2>Elérhetőségek</h2>
-                <p><i class="bi bi-house-fill"></i>Tatabánya, Réti utca 1-5.</i></p>
-                <p><i class="bi bi-globe"></i>Magyarország</p>
-                <p><i class="bi bi-telephone-fill"></i>+36 1234 5678</p>
-                <p><i class="bi bi-mailbox2"></i>titkarsag.bankitatabanya.hu</p>
-            </section>
-            <section class="col-lg-6">
-                <h2>Kövess minket itt is!</h2>
-                <article class="d-flex">
-                    <a href=""><i class="bi bi-facebook"></i></a>
-                    <a href=""><i class="bi bi-instagram"></i></a>
-                    <a href=""><i class="bi bi-linkedin"></i></a>
-                    <a href=""><i class="bi bi-twitter-x"></i></a>
-                </article>
-            </section>
-        </footer>
+    <footer class="row contact-info">
+      <section class="col-lg-4">
+        <h2>Információk</h2>
+        <p><i class="bi bi-house"></i>Tatabánya, Réti utca 1-5.</i></p>
+        <p><i class="bi bi-globe"></i>Magyarország</p>
+        <p><i class="bi bi-telephone"></i>+36 1234 5678</p>
+        <p><i class="bi bi-mailbox"></i>titkarsag.bankitatabanya.hu</p>
+        <article class="d-flex">
+          <a href=""><i class="bi bi-facebook"></i></a>
+          <a href=""><i class="bi bi-instagram"></i></a>
+          <a href=""><i class="bi bi-linkedin"></i></a>
+          <a href=""><i class="bi bi-twitter-x"></i></a>
+        </article>
+      </section>
+      <section class="col-lg-4">
+        <h2>Vásárlói fiók</h2>
+        <p><i class="bi bi-person-up"></i>Belépés</p>
+        <p><i class="bi bi-person-down"></i>Regisztráció </p>
+        <p><i class="bi bi-person"></i>Profilom </p>
+        <p><i class="bi bi-bag-check"></i>Kosár</p>
+        <p><i class="bi bi-star"></i>Kedvenceim</p>
+      </section>
+      <section class="col-lg-4">
+        <h2>Szállítás</h2>
+        <p><i class="bi bi-truck"></i> Visszaküldési szabályzat</p>
+        <p><i class="bi bi-box"></i> Elállás</p>
+        <p><i class="bi bi-box-seam"></i>Csomagbiztosítás</p>
+        <p><i class="bi bi-wallet2"></i>Fizetés</p>
+        <p><i class="bi bi-calendar"></i>Időzített átvétel</p>
 
-    </div>
-    <script src="js/ybf.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+
+      </section>
+    </footer>
+
+  </div>
+  <script src="js/ybf.js"></script>
+  <script src="js/bootstrap.min.js"></script>
 </body>
 
 </html>

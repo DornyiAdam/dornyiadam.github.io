@@ -5,7 +5,9 @@
     padding: 0;
     margin: 0;
 }
-
+.main-products h1 {
+    margin-bottom: 50px;
+}
 
 .logo {
     height: 60px;
@@ -19,7 +21,43 @@
     margin-left: 60px!important;    
 }
 
+.product {
+    display: flex;
+    flex-direction: column;
+    margin: 0px 20px;
+}
+.bi-basket-fill {
+    font-size: 17px!important;
+}
+.product p {
+    color: #8f8989;
+    font-size: 12px;
+}
+.up .bi{
+    font-size: 20px;
 
+}
+
+.inline {
+    display: inline-block;
+    padding-left: 180px;
+}
+.final-container {
+    position: relative;
+}
+.inline-size {
+    display: inline-block;
+    padding-left: 200px;
+}
+.bi-bag {
+    margin-right: 0!important;
+}
+.final {
+    position: absolute;
+    left: 18px;
+    font-size:22px;
+    top: 15px;
+}
 .choose section {
     justify-content: space-evenly;
 }
@@ -33,7 +71,29 @@ header .container-fluid {
 header .container-fluid a {
     margin-right: 40px;
 }
+.special-offer img {
+    width: 600px;
+    height: 600px;
+}
+article .container {
+    width: 40%;
+}
+.special-offer p {
+    margin-bottom: 0!important;
+    color: #ccc;
+}
+.special-offer .inline {
+    padding-right: 20px
+}
+.products img {
+    height: 400px;
+    width: 400px;
+    object-fit:cover;
 
+}
+.products {
+    flex-wrap: wrap;
+}
 a {
     text-decoration: none;
     color: #fff;
@@ -59,22 +119,72 @@ footer a {
     width: 100% !important;
     padding: 0 !important;
 }
+.discounts{
+    font-size: 60px!important;
+    font-weight: 700;
+    margin-top: 50px;
+}
 
+.small-icons p {
+    margin-bottom: 2px!important;
+}
+.small-icons {
+        position: absolute;
+        top: 10px;
+        right: 15px; 
+}
+.lower {
+    font-size: 16px;
+}
+.small-icons .bi, span {
+    font-size: 18px!important;
+}
+.product figure {
+    position: relative;
+  }
+
+.small-icons span p {
+    background-color: #fff200e1;
+    font-size: 20px;
+    padding-top: 8px;
+    color: #ffffff;
+    border-radius: 40px;
+    height: 40px;
+    text-align: center;
+    text-shadow: 1px 1px #000;
+}
+
+.old-price {
+    font-size: 20px!important;
+    margin-bottom: 0!important;
+}
+.new-price {
+    font-size: 28px!important;
+    color: #000!important;
+    font-weight: 700;
+}
 footer {
     margin: 0 !important;
     border-top: 1px solid #ccc;
     background-position: top;
-    background: rgb(204, 244, 192);
-    background: linear-gradient(180deg, rgba(204, 244, 192, 1) 0%, rgba(95, 191, 102, 1) 100%);
+    background-color: #cccccc70;
 }
 
 footer p,
 footer article {
     padding-left: 50px;
 }
-
+.bi-heart:hover {
+    color: rgb(255, 0, 0);
+}
+.bi-info-circle:hover {
+    color: #00ddff;
+}
 footer h2 {
     padding-left: 30px;
+}
+footer h3 {
+    padding-left: 35px;
 }
 
 footer img {
@@ -86,6 +196,7 @@ footer img {
     font-size: 56px;
     color: #ffffff;
     text-shadow: 2px 2px #060404;
+    
     font-weight: 700;
 }
 
@@ -150,10 +261,12 @@ footer img {
 }
 
 .modal-body span,
-.disappear-mobile span {
+.disappear-mobile span, .recommendations span {
     font-weight: 700;
 }
-
+.recommendations .bi {
+    font-size: 24px;
+}
 .disappear-fullscreen {
     display: none;
 }
@@ -206,7 +319,7 @@ body {
 }
 
 .container {
-    width: 80%;
+    width: 70%;
 }
 
 .btn-primary:first-of-type {
@@ -225,6 +338,15 @@ h2 {
     margin-bottom: 50px;
 }
 
+.recommendations h2 {
+    font-size: 30px;
+    margin-bottom: 5px!important;
+    color: #0270dd;
+    font-weight: 100;
+}
+.recommendations p {
+    font-weight: 200;
+}
 .bi-facebook:hover,
 .bi-linkedin:hover {
     color: #1877F2;
@@ -293,6 +415,9 @@ img {
     font-size: 25px;
     margin-bottom: 10px;
 }
+.recommendations section {
+    width: 40%;
+}
 
 .bi-twitter-x:hover {
     color: rgb(212, 212, 212);
@@ -302,7 +427,7 @@ img {
     color: #E4405F;
 }
 
-footer h2 {
+footer h2,h3 {
     margin: 10px 0px !important;
 }
 
@@ -361,7 +486,11 @@ footer h2 {
     }
 
 }
-
+@media screen and (max-width:1399px) {
+    .special-offer figcaption span {
+        padding: 20px;
+    }
+}
 @media screen and (max-width: 1388px) {
     .help .bi {
         font-size: 36px !important;
@@ -373,8 +502,7 @@ footer h2 {
 
     .nav-link,
     header form {
-        font-size: 24px !important;
-        padding: 0 !important;
+        padding: 8px !important;
     }
 
     .navbar-brand {
@@ -492,6 +620,10 @@ footer h2 {
     .needs-validation h3 {
         font-size: 30px;
     }
+    .special-offer img {
+        width: 100%;
+        height: 60%;
+    }
 }
 
 @media screen and (max-width: 580px) {
@@ -531,6 +663,10 @@ footer h2 {
 
     .help p {
         margin-right: 0px !important;
+    }
+    .products img {
+        width: 100%;
+        height: 200px;
     }
 }
 

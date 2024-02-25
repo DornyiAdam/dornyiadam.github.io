@@ -28,8 +28,18 @@ function validateForm(event) {
 
     form.classList.add('was-validated');
 }
-
-
+var counter = 0
+function fill() {
+  counter++;
+  final = document.querySelector(".final");
+  final.innerHTML = counter;
+  if (10 > counter) {
+    final.style.left = "25px"
+  }
+  else {
+    final.style.left = "18px"
+  }
+}
 function calculatePrice() {
     var calculated = document.querySelector(".calculated h3");
     var choosenwood = parseFloat(document.querySelector("select").value) || 0;
