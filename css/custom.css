@@ -237,7 +237,7 @@ nav {
     font-size: 34px;
 }
 .up .bi{
-    font-size: 20px;
+    font-size: 20px!important;
 
 }
 .help p {

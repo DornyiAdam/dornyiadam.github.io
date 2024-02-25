@@ -42,6 +42,9 @@ footer a {
     color: #000;
 }
 
+.up .bi     {
+    font-size: 20px;
+}
 .bi {
     font-size: 40px;
     margin: 0px 10px;
