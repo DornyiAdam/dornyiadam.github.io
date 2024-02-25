@@ -44,6 +44,10 @@
     display: inline-block;
     padding-left: 280px;
 }
+.small-icons {
+    position: absolute;
+    top: 60px;
+}
 .final-container {
     position: relative;
 }
@@ -64,7 +68,7 @@
     left: 18px;
     top: 8px;
 }
-.final-container-mobile .bi-bag {
+.final-container-mobile .bi-bag-fill {
     font-size: 30px;
 }
 .final-container-mobile p {
