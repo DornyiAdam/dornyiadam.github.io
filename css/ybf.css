@@ -26,7 +26,8 @@
 .product {
     display: flex;
     flex-direction: column;
-    margin: 0px 20px;
+    margin: 20px;
+    box-sizing: border-box;
 }
 .bi-basket-fill {
     font-size: 17px!important;
@@ -107,6 +108,17 @@ article .container {
     object-fit:cover;
 
 }
+
+.product:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.3s, transform 0.3s;
+    filter: contrast(150%);
+    border-radius: 10px;
+    margin: 0;
+    padding: 15px;
+
+}
+
 .products {
     flex-wrap: wrap;
 }
@@ -140,6 +152,10 @@ footer a {
     font-weight: 700;
     margin-top: 50px;
 }
+.minimize {
+    font-size: 14px!important;
+    color: #ccc;
+}
 
 .small-icons p {
     margin-bottom: 2px!important;
@@ -155,19 +171,26 @@ footer a {
 .small-icons .bi, span {
     font-size: 18px!important;
 }
+.small-icons .bi {
+    filter: contrast(200%) brightness(120%);
+    color: #8f8989;
+    text-shadow: 1px 1px 1px #000;
+}
 .product figure {
     position: relative;
+    margin-bottom: 0!important;
   }
 
 .small-icons span p {
     background-color: #fff200e1;
-    font-size: 20px;
-    padding-top: 8px;
+    font-size: 16px;
+    padding-top: 10px;
     color: #ffffff;
     border-radius: 40px;
     height: 40px;
     text-align: center;
     text-shadow: 1px 1px #000;
+
 }
 
 .old-price {
@@ -354,15 +377,22 @@ h2 {
     font-weight: 600;
     margin-bottom: 50px;
 }
-
+.recommendations .bi {
+    margin: 0!important;
+}
 .recommendations h2 {
     font-size: 30px;
-    margin-bottom: 5px!important;
+    margin: 5px!important;
     color: #0270dd;
     font-weight: 100;
 }
 .recommendations p {
     font-weight: 200;
+    margin: 5px;
+    line-height: 1.5;
+}
+.recommendations article{
+    padding: 0px 10px;
 }
 .bi-facebook:hover,
 .bi-linkedin:hover {
