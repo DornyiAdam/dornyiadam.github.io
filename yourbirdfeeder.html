@@ -13,9 +13,9 @@
 
 <body>
   <div class="container-fluid" id="top">
-    <header>
+    <header class="sticky-top">
       <section class="d-flex help">
-        <p class="text-center ms-5 me-5 bi">Tegyünk <span class="broken-small-res-display-none">együtt</span> a
+        <p class="text-center ms-5 me-5 bi">Tegyünk <span class="broken-small-res-display-none big">együtt</span> a
           természetért! <i class="bi  bi-heart-fill broken-small-res-display-none"></i> </p>
 
         <a href="" class="text-dark">
@@ -24,48 +24,59 @@
           <i class="bi bi-envelope broken-small-res-display-none"></i>
         </a>
       </section>
-      <nav class="navbar navbar-dark navbar-expand-lg bg-dark uppercase">
+      <nav class="navbar navbar-dark navbar-expand-xxl bg-dark uppercase">
         <div class="container-fluid">
-          <a class="navbar-brand" href="index.html"><img src="images/logo.png" alt="" class="logo"></a>
+          <a class="navbar-brand me-auto disappear-logo" href="index.html"><img src="images/logo.png" alt="" class="logo"></a>
+          <div class="position-relative mobile-cart ms-3">
+            <a href=""><i class="bi bi-cart3 end-0"></i></a>
+            <span class="position-absolute badge rounded-pill bg-danger start-50 cart-badge">
+              <span id="cartItemCount visually-hidden" class="mobile-cart-items" ></span>
+            </span>
+          </div>
           <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="offcanvas"
             data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
+          
+          
           <div class="offcanvas bg-dark offcanvas-end" tabindex="-1" id="offcanvasNavbar"
             aria-labelledby="offcanvasNavbarLabel">
             <div class="offcanvas-header">
-              <h4 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Menü</h4>
+              <h4 class="offcanvas-title text-white" id="offcanvasDarkNavbarLabel">Menü</h4>
               <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
                 aria-label="Close"></button>
             </div>
             <div class="offcanvas-body">
               <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                 <li class="nav-item">
-                  <a class="nav-link disappear" aria-current="page" href="index.html">Főoldal </a>
+                  <a class="nav-link" aria-current="page" href="index.html">Főoldal </a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link active" aria-current="page" href="yourbirdfeeder.html">A te madáretetőd</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link " aria-current="page" href="ourbirds.html">Madaraink</a>
+                  <a class="nav-link  " aria-current="page" href="ourbirds.html">Madaraink</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link " aria-current="page" href="galery.html">Galéria </a>
                 </li>
+                <li class="nav-item disappear-basket">
+                  <div class="position-relative">
+                    <a href="checkout.html"><i class="bi bi-cart3"></i></a>
+                    <span class="position-absolute badge rounded-pill bg-danger end-50 cart-badge">
+                      <span class="cartItemCount" ></span>
+                    </span>
+                  </div>
+                </li>
               </ul>
-              <div class="final-container"><i class="bi bi-bag text-light"></i>
-                <p class="final text-warning d-inline me-5"></p>
-              </div>
             </div>
           </div>
         </div>
       </nav>
     </header>
     <main>
-      <div class="final-container-mobile sticky-top"><i class="bi bi-bag-fill text-dark"></i>
-        <p class="final2 text-warning d-inline me-5"></p>
-      </div>
       <section class="main-products">
+
         <h1 class="text-center discounts">Akciós madáretetőink</h1>
         <div class="container-fluid justify-content-evenly d-flex products">
           <article class="product">
@@ -82,7 +93,143 @@
               <p>Méret: <span class="inline-size ps-auto"> S (5''x4'')</span></p>
               <p class="old-price text-center"><s>9600Ft</s></p>
               <p class="text-center new-price">7500Ft</p>
-              <button class="btn btn-dark d-block mx-auto rounded-pill" onclick="fill()">Kosárba <i
+              <button class="btn btn-dark d-block mx-auto rounded-pill" onclick="addToCart7500()">Kosárba <i
+                  class=" "></i></button>
+            </figure>
+          </article>
+          <article class="product">
+            <figure>
+              <div class="small-icons d-flex flex-column"><span>
+                  <p>25<i class="lower">%</i> </p>
+                </span> <i class="bi  bi-heart-fill"></i><i class="bi bi-info-circle"></i></div>
+              <img src="images/birdfeeder2.webp" alt="">
+              <figcaption class="text-center">Lorem model 2800 SUPER
+                <hr>
+              </figcaption>
+              <p>Befogadó képesség: <span class="ms-auto inline">3</span> </p>
+              <p>Méret: <span class="inline-size ps-auto"> S (5''x4'')</span></p>
+              <p class="old-price text-center"><s>10000Ft</s></p>
+              <p class="text-center new-price">7500Ft</p>
+              <button class="btn btn-dark d-block mx-auto rounded-pill" onclick="addToCart7500()">Kosárba <i
+                  class=" "></i></button>
+            </figure>
+          </article>
+          <article class="product">
+            <figure>
+              <div class="small-icons d-flex flex-column"><span>
+                  <p>25<i class="lower">%</i> </p>
+                </span> <i class="bi  bi-heart-fill"></i><i class="bi bi-info-circle"></i></div>
+              <img src="images/birdfeeder3.webp" alt="">
+              <figcaption class="text-center">Lorem model 2700 SUPER
+                <hr>
+              </figcaption>
+              <p>Befogadó képesség: <span class="ms-auto inline">3</span> </p>
+              <p>Méret: <span class="inline-size ps-auto"> S (5''x4'')</span></p>
+              <p class="old-price text-center"><s>10000Ft</s></p>
+              <p class="text-center new-price">7500Ft</p>
+              <button class="btn btn-dark d-block mx-auto rounded-pill" onclick="addToCart7500()">Kosárba <i
+                  class=" "></i></button>
+            </figure>
+          </article>
+          <article class="product">
+            <figure>
+              <div class="small-icons d-flex flex-column"><span>
+                  <p>25<i class="lower">%</i> </p>
+                </span> <i class="bi  bi-heart-fill"></i><i class="bi bi-info-circle"></i></div>
+              <img src="images/birdfeeder4.webp" alt="">
+              <figcaption class="text-center">Lorem model 2600
+                <hr>
+              </figcaption>
+              <p>Befogadó képesség: <span class="ms-auto inline">3</span> </p>
+              <p>Méret: <span class="inline-size ps-auto"> S (5''x4'')</span></p>
+              <p class="old-price text-center"><s>10000Ft</s></p>
+              <p class="text-center new-price">7500Ft</p>
+              <button class="btn btn-dark d-block mx-auto rounded-pill" onclick="addToCart7500()">Kosárba <i
+                  class=" "></i></button>
+            </figure>
+          </article>
+          <article class="product">
+            <figure>
+              <div class="small-icons d-flex flex-column"><span>
+                  <p>25<i class="lower">%</i> </p>
+                </span> <i class="bi  bi-heart-fill"></i><i class="bi bi-info-circle"></i></div>
+              <img src="images/birdfeeder5.webp" alt="">
+              <figcaption class="text-center">Lorem model 2500
+                <hr>
+              </figcaption>
+              <p>Befogadó képesség: <span class="ms-auto inline">3</span> </p>
+              <p>Méret: <span class="inline-size ps-auto"> S (5''x4'')</span></p>
+              <p class="old-price text-center"><s>10000Ft</s></p>
+              <p class="text-center new-price">7500Ft</p>
+              <button class="btn btn-dark d-block mx-auto rounded-pill" onclick="addToCart7500()">Kosárba <i
+                  class=" "></i></button>
+            </figure>
+          </article>
+          <article class="product">
+            <figure>
+              <div class="small-icons d-flex flex-column"><span>
+                  <p>25<i class="lower">%</i> </p>
+                </span> <i class="bi  bi-heart-fill"></i><i class="bi bi-info-circle"></i></div>
+              <img src="images/birdfeeder6.webp" alt="">
+              <figcaption class="text-center">Lorem model 2400 
+                <hr>
+              </figcaption>
+              <p>Befogadó képesség: <span class="ms-auto inline">3</span> </p>
+              <p>Méret: <span class="inline-size ps-auto"> S (5''x4'')</span></p>
+              <p class="old-price text-center"><s>10000Ft</s></p>
+              <p class="text-center new-price">7500Ft</p>
+              <button class="btn btn-dark d-block mx-auto rounded-pill" onclick="addToCart7500()">Kosárba <i
+                  class=" "></i></button>
+            </figure>
+          </article>
+          <article class="product">
+            <figure>
+              <div class="small-icons d-flex flex-column"><span>
+                  <p>25<i class="lower">%</i> </p>
+                </span> <i class="bi  bi-heart-fill"></i><i class="bi bi-info-circle"></i></div>
+              <img src="images/birdfeeder7.webp" alt="">
+              <figcaption class="text-center">Lorem model 2100
+                <hr>
+              </figcaption>
+              <p>Befogadó képesség: <span class="ms-auto inline">3</span> </p>
+              <p>Méret: <span class="inline-size ps-auto"> S (5''x4'')</span></p>
+              <p class="old-price text-center"><s>10000Ft</s></p>
+              <p class="text-center new-price">7500Ft</p>
+              <button class="btn btn-dark d-block mx-auto rounded-pill" onclick="addToCart7500()">Kosárba <i
+                  class=" "></i></button>
+            </figure>
+          </article>
+          <article class="product">
+            <figure>
+              <div class="small-icons d-flex flex-column"><span>
+                  <p>25<i class="lower">%</i> </p>
+                </span> <i class="bi  bi-heart-fill"></i><i class="bi bi-info-circle"></i></div>
+              <img src="images/birdfeeder8.webp" alt="">
+              <figcaption class="text-center">Lorem model 2400 SUPER
+                <hr>
+              </figcaption>
+              <p>Befogadó képesség: <span class="ms-auto inline">3</span> </p>
+              <p>Méret: <span class="inline-size ps-auto"> S (5''x4'')</span></p>
+              <p class="old-price text-center"><s>10000Ft</s></p>
+              <p class="text-center new-price">7500Ft</p>
+              <button class="btn btn-dark d-block mx-auto rounded-pill" onclick="addToCart7500()">Kosárba <i
+                  class=" "></i></button>
+            </figure>
+          </article>
+          <article class="product">
+            <figure>
+              <div class="small-icons d-flex flex-column"><span>
+                  <p>25<i class="lower">%</i> </p>
+                </span> <i class="bi  bi-heart-fill"></i><i class="bi bi-info-circle"></i></div>
+              <img src="images/birdfeeder9.webp" alt="">
+              <figcaption class="text-center">Lorem model 2300 SUPER
+                <hr>
+              </figcaption>
+              <p>Befogadó képesség: <span class="ms-auto inline">3</span> </p>
+              <p>Méret: <span class="inline-size ps-auto"> S (5''x4'')</span></p>
+              <p class="old-price text-center"><s>10000Ft</s></p>
+              <p class="text-center new-price">7500Ft</p>
+              <button class="btn btn-dark d-block mx-auto rounded-pill" onclick="addToCart7500()">Kosárba <i
                   class=" "></i></button>
             </figure>
           </article>
@@ -92,242 +239,53 @@
                   <p>25<i class="lower">%</i> </p>
                 </span> <i class="bi  bi-heart-fill"></i><i class="bi bi-info-circle"></i></div>
               <img src="images/birdfeeder10.webp" alt="">
-              <figcaption class="text-center">Lorem model 2100 SUPER
-
+              <figcaption class="text-center">Lorem model 2000
                 <hr>
               </figcaption>
               <p>Befogadó képesség: <span class="ms-auto inline">3</span> </p>
               <p>Méret: <span class="inline-size ps-auto"> S (5''x4'')</span></p>
               <p class="old-price text-center"><s>10000Ft</s></p>
               <p class="text-center new-price">7500Ft</p>
-              <button class="btn btn-dark d-block mx-auto rounded-pill" onclick="fill()">Kosárba <i
+              <button class="btn btn-dark d-block mx-auto rounded-pill" onclick="addToCart7500()">Kosárba <i
                   class=" "></i></button>
             </figure>
           </article>
           <article class="product">
             <figure>
               <div class="small-icons d-flex flex-column"><span>
-                  <p>30<i class="lower">%</i> </p>
-                </span> <i class="bi  bi-heart-fill"></i><i class="bi bi-info-circle"></i></div>
-              <img src="images/birdfeeder11.webp" alt="">
-              <figcaption class="text-center">Lorem model 2100
-
-                <hr>
-              </figcaption>
-              <p>Befogadó képesség: <span class="ms-auto inline">3</span> </p>
-              <p>Méret: <span class="inline-size ps-auto"> S (5''x4'')</span></p>
-              <p class="old-price text-center"><s>10000Ft</s></p>
-              <p class="text-center new-price">7000Ft</p>
-              <button class="btn btn-dark d-block mx-auto rounded-pill" onclick="fill()">Kosárba <i
-                  class=" "></i></button>
-            </figure>
-          </article>
-          <article class="product">
-            <figure>
-              <div class="small-icons d-flex flex-column"><span>
-                  <p>35<i class="lower">%</i> </p>
-                </span> <i class="bi  bi-heart-fill"></i><i class="bi bi-info-circle"></i></div>
-              <img src="images/birdfeeder12.webp" alt="">
-              <figcaption class="text-center">Ipsum model 2000
-
-                <hr>
-              </figcaption>
-              <p>Befogadó képesség: <span class="ms-auto inline">3</span> </p>
-              <p>Méret: <span class="inline-size ps-auto"> S (5''x4'')</span></p>
-              <p class="old-price text-center"><s>10000Ft</s></p>
-              <p class="text-center new-price">6500Ft</p>
-              <button class="btn btn-dark d-block mx-auto rounded-pill" onclick="fill()">Kosárba <i
-                  class=" "></i></button>
-            </figure>
-          </article>
-          <article class="product">
-            <figure>
-              <div class="small-icons d-flex flex-column"><span>
-                  <p>40<i class="lower">%</i> </p>
-                </span> <i class="bi  bi-heart-fill"></i><i class="bi bi-info-circle"></i></div>
-              <img src="images/birdfeeder13.webp" alt="">
-              <figcaption class="text-center">Ipsum Dolor model 2500
-
-                <hr>
-              </figcaption>
-              <p>Befogadó képesség: <span class="ms-auto inline">3</span> </p>
-              <p>Méret: <span class="inline-size ps-auto"> S (5''x4'')</span></p>
-              <p class="old-price text-center"><s>10000Ft</s></p>
-              <p class="text-center new-price">6000Ft</p>
-              <button class="btn btn-dark d-block mx-auto rounded-pill" onclick="fill()">Kosárba <i
-                  class=" "></i></button>
-            </figure>
-          </article>
-          <article class="product">
-            <figure>
-              <div class="small-icons d-flex flex-column"><span>
-                  <p>15<i class="lower">%</i> </p>
-                </span> <i class="bi  bi-heart-fill"></i><i class="bi bi-info-circle"></i></div>
-              <img src="images/birdfeeder2.webp" alt="">
-              <figcaption class="text-center">Dolor model 2500
-                <hr>
-              </figcaption>
-              <p>Befogadó képesség: <span class="ms-auto inline">3</span> </p>
-              <p>Méret: <span class="inline-size ps-auto"> S (5''x4'')</span></p>
-              <p class="old-price text-center"><s>10000Ft</s></p>
-              <p class="text-center new-price">8500Ft</p>
-              <button class="btn btn-dark d-block mx-auto rounded-pill" onclick="fill()">Kosárba <i
-                  class=" "></i></button>
-            </figure>
-          </article>
-          <article class="product">
-            <figure>
-              <div class="small-icons d-flex flex-column"><span>
-                  <p>63<i class="lower">%</i> </p>
-                </span> <i class="bi  bi-heart-fill"></i><i class="bi bi-info-circle"></i></div>
-              <img src="images/L_madareteto.png" alt="">
-              <figcaption class="text-center">Dolor model 2100
-                <hr>
-              </figcaption>
-              <p>Befogadó képesség: <span class="ms-auto inline">3</span> </p>
-              <p>Méret: <span class="inline-size ps-auto"> S (5''x4'')</span></p>
-              <p class="old-price text-center"><s>10000Ft</s></p>
-              <p class="text-center new-price">3700Ft</p>
-              <button class="btn btn-dark d-block mx-auto rounded-pill" onclick="fill()">Kosárba <i
-                  class=" "></i></button>
-            </figure>
-          </article>
-          <article class="product">
-            <figure>
-              <div class="small-icons d-flex flex-column"><span>
-                  <p>51<i class="lower">%</i> </p>
-                </span> <i class="bi  bi-heart-fill"></i><i class="bi bi-info-circle"></i></div>
-              <img src="images/birdfeeder3.webp" alt="">
-              <figcaption class="text-center">Dolor model 2100 Super
-                <hr>
-              </figcaption>
-              <p>Befogadó képesség: <span class="ms-auto inline">3</span> </p>
-              <p>Méret: <span class="inline-size ps-auto"> S (5''x4'')</span></p>
-              <p class="old-price text-center"><s>10000Ft</s></p>
-              <p class="text-center new-price">4900Ft</p>
-              <button class="btn btn-dark d-block mx-auto rounded-pill" onclick="fill()">Kosárba <i
-                  class=" "></i></button>
-            </figure>
-          </article>
-          <article class="product">
-            <figure>
-              <div class="small-icons d-flex flex-column"><span>
-                  <p>7<i class="lower">%</i> </p>
-                </span> <i class="bi  bi-heart-fill"></i><i class="bi bi-info-circle"></i></div>
-              <img src="images/birdfeeder4.jpg" alt="">
-              <figcaption class="text-center">Dolor model 2400 Super
-                <hr>
-              </figcaption>
-              <p>Befogadó képesség: <span class="ms-auto inline">3</span> </p>
-              <p>Méret: <span class="inline-size ps-auto"> S (5''x4'')</span></p>
-              <p class="old-price text-center"><s>10000Ft</s></p>
-              <p class="text-center new-price">9300Ft</p>
-              <button class="btn btn-dark d-block mx-auto rounded-pill" onclick="fill()">Kosárba <i
-                  class=" "></i></button>
-            </figure>
-          </article>
-          <article class="product">
-            <figure>
-              <div class="small-icons d-flex flex-column"><span>
-                  <p>82<i class="lower">%</i> </p>
-                </span> <i class="bi  bi-heart-fill"></i><i class="bi bi-info-circle"></i></div>
-              <img src="images/birdfeeder5.jpg" alt="">
-              <figcaption class="text-center">Dolor model 2700 Super
-                <hr>
-              </figcaption>
-              <p>Befogadó képesség: <span class="ms-auto inline">3</span> </p>
-              <p>Méret: <span class="inline-size ps-auto"> S (5''x4'')</span></p>
-              <p class="old-price text-center"><s>10000Ft</s></p>
-              <p class="text-center new-price">1800Ft</p>
-              <button class="btn btn-dark d-block mx-auto rounded-pill" onclick="fill()">Kosárba <i
-                  class=" "></i></button>
-            </figure>
-          </article>
-          <article class="product">
-            <figure>
-              <div class="small-icons d-flex flex-column"><span>
-                  <p>36<i class="lower">%</i> </p>
+                  <p>25<i class="lower">%</i> </p>
                 </span> <i class="bi  bi-heart-fill"></i><i class="bi bi-info-circle"></i></div>
               <img src="images/birdfeeder6.jpg" alt="">
-              <figcaption class="text-center">Dolor model 2700 Mega
+              <figcaption class="text-center">Lorem model 2000 SUPER
                 <hr>
               </figcaption>
               <p>Befogadó képesség: <span class="ms-auto inline">3</span> </p>
               <p>Méret: <span class="inline-size ps-auto"> S (5''x4'')</span></p>
               <p class="old-price text-center"><s>10000Ft</s></p>
-              <p class="text-center new-price">6400Ft</p>
-              <button class="btn btn-dark d-block mx-auto rounded-pill" onclick="fill()">Kosárba <i
-                  class=" "></i></button>
-            </figure>
-          </article>
-          <article class="product">
-            <figure>
-              <div class="small-icons d-flex flex-column"><span>
-                  <p>74<i class="lower">%</i> </p>
-                </span> <i class="bi  bi-heart-fill"></i><i class="bi bi-info-circle"></i></div>
-              <img src="images/birdfeeder7.webp" alt="">
-              <figcaption class="text-center">Dolor model 2700 Premium
-                <hr>
-              </figcaption>
-              <p>Befogadó képesség: <span class="ms-auto inline">3</span> </p>
-              <p>Méret: <span class="inline-size ps-auto"> S (5''x4'')</span></p>
-              <p class="old-price text-center"><s>10000Ft</s></p>
-              <p class="text-center new-price">2600Ft</p>
-              <button class="btn btn-dark d-block mx-auto rounded-pill" onclick="fill()">Kosárba <i
-                  class=" "></i></button>
-            </figure>
-          </article>
-          <article class="product">
-            <figure>
-              <div class="small-icons d-flex flex-column"><span>
-                  <p>21<i class="lower">%</i> </p>
-                </span> <i class="bi  bi-heart-fill"></i><i class="bi bi-info-circle"></i></div>
-              <img src="images/birdfeeder8.webp" alt="">
-              <figcaption class="text-center">Dolor model 2200 Extra
-                <hr>
-              </figcaption>
-              <p>Befogadó képesség: <span class="ms-auto inline">3</span> </p>
-              <p>Méret: <span class="inline-size ps-auto"> S (5''x4'')</span></p>
-              <p class="old-price text-center"><s>9600Ft</s></p>
               <p class="text-center new-price">7500Ft</p>
-              <button class="btn btn-dark d-block mx-auto rounded-pill" onclick="fill()">Kosárba <i
+              <button class="btn btn-dark d-block mx-auto rounded-pill" onclick="addToCart7500()">Kosárba <i
                   class=" "></i></button>
             </figure>
           </article>
           <article class="product">
             <figure>
               <div class="small-icons d-flex flex-column"><span>
-                  <p>13<i class="lower">%</i> </p>
+                  <p>25<i class="lower">%</i> </p>
                 </span> <i class="bi  bi-heart-fill"></i><i class="bi bi-info-circle"></i></div>
-              <img src="images/birdfeeder9.webp" alt="">
-              <figcaption class="text-center">Dolor model 2200 Better
+              <img src="images/birdfeeder17.jpg" alt="">
+              <figcaption class="text-center">Lorem model 2200 SUPER
                 <hr>
               </figcaption>
               <p>Befogadó képesség: <span class="ms-auto inline">3</span> </p>
               <p>Méret: <span class="inline-size ps-auto"> S (5''x4'')</span></p>
               <p class="old-price text-center"><s>10000Ft</s></p>
-              <p class="text-center new-price">8700Ft</p>
-              <button class="btn btn-dark d-block mx-auto rounded-pill" onclick="fill()">Kosárba <i
+              <p class="text-center new-price">7500Ft</p>
+              <button class="btn btn-dark d-block mx-auto rounded-pill" onclick="addToCart7500()">Kosárba <i
                   class=" "></i></button>
             </figure>
           </article>
-          <article class="product">
-            <figure>
-              <div class="small-icons d-flex flex-column"><span>
-                  <p>30<i class="lower">%</i> </p>
-                </span> <i class="bi  bi-heart-fill"></i><i class="bi bi-info-circle"></i></div>
-              <img src="images/L_madareteto.png" alt="">
-              <figcaption class="text-center">Dolor model 2100 Better
-                <hr>
-              </figcaption>
-              <p>Befogadó képesség: <span class="ms-auto inline">3</span> </p>
-              <p>Méret: <span class="inline-size ps-auto"> S (5''x4'')</span></p>
-              <p class="old-price text-center"><s>10000Ft</s></p>
-              <p class="text-center new-price">7000Ft</p>
-              <button class="btn btn-dark d-block mx-auto rounded-pill" onclick="fill()">Kosárba <i
-                  class=" "></i></button>
-            </figure>
-          </article>
+
+          
 
         </div>
       </section>
@@ -347,7 +305,7 @@
               <p>Befogadó képesség: <span class="ms-auto inline">5</span> </p>
               <p>Méret: <span class="inline-size ps-auto"> M (10''x4'')</span></p>
               <p class="text-center new-price">10000Ft</p>
-              <button class="btn btn-dark d-block mx-auto rounded-pill" onclick="fill()">Kosárba <i
+              <button class="btn btn-dark d-block mx-auto rounded-pill" onclick="addToCart10000()">Kosárba <i
                   class=" "></i></button>
             </figure>
           </article>
@@ -361,8 +319,8 @@
               </figcaption>
               <p>Befogadó képesség: <span class="ms-auto inline">6</span> </p>
               <p>Méret: <span class="inline-size ps-auto"> L (16''x4'')</span></p>
-              <p class="text-center new-price">15000Ft</p>
-              <button class="btn btn-dark d-block mx-auto rounded-pill" onclick="fill()">Kosárba <i
+              <p class="text-center new-price">10000Ft</p>
+              <button class="btn btn-dark d-block mx-auto rounded-pill" onclick="addToCart10000()">Kosárba <i
                   class=" "></i></button>
             </figure>
           </article>
@@ -378,7 +336,7 @@
               <p>Befogadó képesség: <span class="ms-auto inline">5</span> </p>
               <p>Méret: <span class="inline-size ps-auto"> M (12''x5'')</span></p>
               <p class="text-center new-price">5000Ft</p>
-              <button class="btn btn-dark d-block mx-auto rounded-pill" onclick="fill()">Kosárba <i
+              <button class="btn btn-dark d-block mx-auto rounded-pill" onclick="addToCart5000()">Kosárba <i
                   class=" "></i></button>
             </figure>
           </article>
@@ -392,8 +350,8 @@
               </figcaption>
               <p>Befogadó képesség: <span class="ms-auto inline">8</span> </p>
               <p>Méret: <span class="inline-size ps-auto"> L (20''x8'')</span></p>
-              <p class="text-center new-price">4000Ft</p>
-              <button class="btn btn-dark d-block mx-auto rounded-pill" onclick="fill()">Kosárba <i
+              <p class="text-center new-price">5000Ft</p>
+              <button class="btn btn-dark d-block mx-auto rounded-pill" onclick="addToCart5000()">Kosárba <i
                   class=" "></i></button>
             </figure>
           </article>
@@ -407,8 +365,8 @@
               </figcaption>
               <p>Befogadó képesség: <span class="ms-auto inline">4</span> </p>
               <p>Méret: <span class="inline-size ps-auto"> M (14''x5'')</span></p>
-              <p class="text-center new-price">3200Ft</p>
-              <button class="btn btn-dark d-block mx-auto rounded-pill" onclick="fill()">Kosárba <i
+              <p class="text-center new-price">5000Ft</p>
+              <button class="btn btn-dark d-block mx-auto rounded-pill" onclick="addToCart5000()">Kosárba <i
                   class=" "></i></button>
             </figure>
           </article>
@@ -422,8 +380,8 @@
               </figcaption>
               <p>Befogadó képesség: <span class="ms-auto inline">4</span> </p>
               <p>Méret: <span class="inline-size ps-auto"> M (14''x4'')</span></p>
-              <p class="text-center new-price">1700Ft</p>
-              <button class="btn btn-dark d-block mx-auto rounded-pill" onclick="fill()">Kosárba <i
+              <p class="text-center new-price">2000Ft</p>
+              <button class="btn btn-dark d-block mx-auto rounded-pill" onclick="addToCart2000()">Kosárba <i
                   class=" "></i></button>
             </figure>
           </article>
@@ -437,8 +395,8 @@
               </figcaption>
               <p>Befogadó képesség: <span class="ms-auto inline">5</span> </p>
               <p>Méret: <span class="inline-size ps-auto"> M (14''x4'')</span></p>
-              <p class="text-center new-price">9500Ft</p>
-              <button class="btn btn-dark d-block mx-auto rounded-pill" onclick="fill()">Kosárba <i
+              <p class="text-center new-price">10000Ft</p>
+              <button class="btn btn-dark d-block mx-auto rounded-pill" onclick="addToCart10000()">Kosárba <i
                   class=" "></i></button>
             </figure>
           </article>
@@ -453,7 +411,7 @@
               <p>Befogadó képesség: <span class="ms-auto inline">8</span> </p>
               <p>Méret: <span class="inline-size ps-auto"> L (20''x8'')</span></p>
               <p class="text-center new-price">7500Ft</p>
-              <button class="btn btn-dark d-block mx-auto rounded-pill" onclick="fill()">Kosárba <i
+              <button class="btn btn-dark d-block mx-auto rounded-pill" onclick="addToCart7500()">Kosárba <i
                   class=" "></i></button>
             </figure>
           </article>
@@ -468,7 +426,7 @@
               <p>Befogadó képesség: <span class="ms-auto inline">3</span> </p>
               <p>Méret: <span class="inline-size ps-auto"> S (5''x4'')</span></p>
               <p class="text-center new-price">7500Ft</p>
-              <button class="btn btn-dark d-block mx-auto rounded-pill" onclick="fill()">Kosárba <i
+              <button class="btn btn-dark d-block mx-auto rounded-pill" onclick="addToCart7500()">Kosárba <i
                   class=" "></i></button>
             </figure>
           </article>
@@ -483,7 +441,7 @@
               <p>Befogadó képesség: <span class="ms-auto inline">3</span> </p>
               <p>Méret: <span class="inline-size ps-auto"> S (5''x4'')</span></p>
               <p class="text-center new-price">7500Ft</p>
-              <button class="btn btn-dark d-block mx-auto rounded-pill" onclick="fill()">Kosárba <i
+              <button class="btn btn-dark d-block mx-auto rounded-pill" onclick="addToCart7500()">Kosárba <i
                   class=" "></i></button>
             </figure>
           </article>
@@ -491,14 +449,14 @@
             <figure>
               <div class="small-icons d-flex flex-column"><span>
                 </span> <i class="bi  bi-heart-fill"></i><i class="bi bi-info-circle"></i></div>
-              <img src="images/birdfeeder11.webp" alt="">
+              <img src="images/birdfeeder4.webp" alt="">
               <figcaption class="text-center">Ipsum model 2000 Super
                 <hr>
               </figcaption>
               <p>Befogadó képesség: <span class="ms-auto inline">3</span> </p>
               <p>Méret: <span class="inline-size ps-auto"> S (5''x4'')</span></p>
               <p class="text-center new-price">7500Ft</p>
-              <button class="btn btn-dark d-block mx-auto rounded-pill" onclick="fill()">Kosárba <i
+              <button class="btn btn-dark d-block mx-auto rounded-pill" onclick="addToCart7500()">Kosárba <i
                   class=" "></i></button>
             </figure>
           </article>
@@ -506,14 +464,14 @@
             <figure>
               <div class="small-icons d-flex flex-column"><span>
                 </span> <i class="bi  bi-heart-fill"></i><i class="bi bi-info-circle"></i></div>
-              <img src="images/birdfeeder12.webp" alt="">
+              <img src="images/birdfeeder5.webp" alt="">
               <figcaption class="text-center">Ipsum model 2000 Super Mega Giga
                 <hr>
               </figcaption>
               <p>Befogadó képesség: <span class="ms-auto inline">3</span> </p>
               <p>Méret: <span class="inline-size ps-auto"> S (5''x4'')</span></p>
               <p class="text-center new-price">7500Ft</p>
-              <button class="btn btn-dark d-block mx-auto rounded-pill" onclick="fill()">Kosárba <i
+              <button class="btn btn-dark d-block mx-auto rounded-pill" onclick="addToCart7500()">Kosárba <i
                   class=" "></i></button>
             </figure>
           </article>
@@ -521,14 +479,14 @@
             <figure>
               <div class="small-icons d-flex flex-column"><span>
                 </span> <i class="bi  bi-heart-fill"></i><i class="bi bi-info-circle"></i></div>
-              <img src="images/birdfeeder13.webp" alt="">
+              <img src="images/birdfeeder6.webp" alt="">
               <figcaption class="text-center">Ipsum model 2000 Giga 
                 <hr>
               </figcaption>
               <p>Befogadó képesség: <span class="ms-auto inline">3</span> </p>
               <p>Méret: <span class="inline-size ps-auto"> S (5''x4'')</span></p>
               <p class="text-center new-price">7500Ft</p>
-              <button class="btn btn-dark d-block mx-auto rounded-pill" onclick="fill()">Kosárba <i
+              <button class="btn btn-dark d-block mx-auto rounded-pill" onclick="addToCart7500()">Kosárba <i
                   class=" "></i></button>
             </figure>
           </article>
@@ -542,8 +500,39 @@
               </figcaption>
               <p>Befogadó képesség: <span class="ms-auto inline">9</span> </p>
               <p>Méret: <span class="inline-size ps-auto"> L (20''x8'')</span></p>
-              <p class="text-center new-price">17500Ft</p>
-              <button class="btn btn-dark d-block mx-auto rounded-pill" onclick="fill()">Kosárba <i
+              <p class="text-center new-price">7500Ft</p>
+              <button class="btn btn-dark d-block mx-auto rounded-pill" onclick="addToCart7500()">Kosárba <i
+                  class=" "></i></button>
+            </figure>
+          </article>
+          <article class="product">
+            <figure>
+              <div class="small-icons d-flex flex-column"><span>
+                </span> <i class="bi  bi-heart-fill"></i><i class="bi bi-info-circle"></i></div>
+              <img src="images/birdfeeder3.webp" alt="">
+              <figcaption class="text-center">Dolor model 2300 Waterproof
+                <hr>
+              </figcaption>
+              <p>Befogadó képesség: <span class="ms-auto inline">6</span> </p>
+              <p>Méret: <span class="inline-size ps-auto"> L (16''x4'')</span></p>
+              <p class="text-center new-price">10000Ft</p>
+              <button class="btn btn-dark d-block mx-auto rounded-pill" onclick="addToCart10000()">Kosárba <i
+                  class=" "></i></button>
+            </figure>
+          </article>
+          
+          <article class="product">
+            <figure>
+              <div class="small-icons d-flex flex-column"><span>
+                </span> <i class="bi  bi-heart-fill"></i><i class="bi bi-info-circle"></i></div>
+              <img src="images/birdfeeder16.jpg" alt="">
+              <figcaption class="text-center">Dolor model 2300 Fireproof
+                <hr>
+              </figcaption>
+              <p>Befogadó képesség: <span class="ms-auto inline">5</span> </p>
+              <p>Méret: <span class="inline-size ps-auto"> M (12''x5'')</span></p>
+              <p class="text-center new-price">5000Ft</p>
+              <button class="btn btn-dark d-block mx-auto rounded-pill" onclick="addToCart5000()">Kosárba <i
                   class=" "></i></button>
             </figure>
           </article>
@@ -586,7 +575,7 @@
                 </div>
               </div>
               <p class="text-center new-price">375400Ft</p>
-              <button class="btn btn-dark d-block mx-auto rounded-pill" onclick="fill()">Kosárba <i
+              <button class="btn btn-dark d-block mx-auto rounded-pill" onclick="addToCart375400()">Kosárba <i
                   class=" "></i></button>
             </figcaption>
           </figure>

@@ -35,8 +35,8 @@ header .container-fluid {
     margin-right: 5px;
 }
 
-header .container-fluid a {
-    margin-right: 40px;
+header .container-fluid a, .bi-bag{
+    margin-right: 40px!important;
 }
 
 a {
@@ -297,6 +297,10 @@ form {
     padding-top: 8px !important;
 }
 
+.bi-bag {
+    margin: 0px;
+}
+
 .navbar {
     height: 80px;
     font-size: 30px;
@@ -443,12 +447,6 @@ img {
 }
 
 @media screen and (max-width: 1331px) {
-
-    .nav-link,
-    header form {
-        font-size: 24px !important;
-        padding: 0 !important;
-    }
 
     .navbar-brand {
         margin-right: 10px !important;

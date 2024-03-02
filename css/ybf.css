@@ -5,12 +5,15 @@
     padding: 0;
     margin: 0;
 }
+
 .main-products h1 {
-    margin-bottom: 50px;
+    margin: 20px 20px 10px 20px;
 }
+
 .final-container-mobile {
     display: none;
 }
+
 .logo {
     height: 60px;
     margin-top: 10px;
@@ -20,21 +23,30 @@
 
 .form-select {
     width: 30%;
-    margin-left: 60px!important;    
+    margin-left: 60px !important;
+}
+
+.mobile-cart {
+    display: none;
+    margin-bottom: 10px;
+
 }
 
 .product {
-    margin: 20px;
-    
+    margin: 10px 10px 40px 10px;
 }
-.bi-basket-fill {
-    font-size: 17px!important;
+
+.bi-basket-fill,
+.bi-cart-fill {
+    font-size: 40px !important;
 }
+
 .product p {
     color: #8f8989;
     font-size: 12px;
 }
-.up .bi{
+
+.up .bi {
     font-size: 20px;
 
 }
@@ -43,37 +55,44 @@
     display: inline-block;
     padding-left: 280px;
 }
+
 .small-icons {
     position: absolute;
     top: 60px;
 }
+
 .final-container {
     position: relative;
 }
+
 .inline-size {
     display: inline-block;
     padding-left: 290px;
 }
+
 .bi-bag {
-    margin-right: 0!important;
+    margin-right: 0 !important;
 }
 
-.final,.final2 {
+.final,
+.final2 {
     position: absolute;
     left: 18px;
-    font-size:22px;
+    font-size: 22px;
     top: 15px;
 }
+
 .final2 {
     left: 18px;
     top: 8px;
 }
-.final-container-mobile .bi-bag-fill {
-    font-size: 30px;
-}
+
+
+
 .final-container-mobile p {
     font-size: 18px;
 }
+
 .choose section {
     justify-content: space-evenly;
 }
@@ -84,27 +103,33 @@ header .container-fluid {
     margin-right: 5px;
 }
 
-header .container-fluid a {
-    margin-right: 40px;
+header .container-fluid a,
+header button {
+    margin-right: 40px !important;
 }
+
 .special-offer img {
     width: 600px;
     height: 600px;
 }
+
 article .container {
     width: 40%;
 }
+
 .special-offer p {
-    margin-bottom: 0!important;
+    margin-bottom: 0 !important;
     color: #ccc;
 }
+
 .special-offer .inline {
     padding-right: 20px
 }
+
 .products img {
     height: 400px;
     width: 400px;
-    object-fit:cover;
+    object-fit: cover;
 
 }
 
@@ -120,6 +145,7 @@ article .container {
 .products {
     flex-wrap: wrap;
 }
+
 a {
     text-decoration: none;
     color: #fff;
@@ -135,7 +161,9 @@ footer a {
     transition: color 0.9s ease;
 }
 
-
+.big {
+    font-size: 28px !important;
+}
 
 .fit-img {
     object-position: top;
@@ -145,39 +173,47 @@ footer a {
     width: 100% !important;
     padding: 0 !important;
 }
-.discounts{
-    font-size: 60px!important;
+
+.discounts {
+    font-size: 60px !important;
     font-weight: 700;
     margin-top: 50px;
 }
+
 .minimize {
-    font-size: 14px!important;
+    font-size: 14px !important;
     color: #ccc;
 }
 
 .small-icons p {
-    margin-bottom: 2px!important;
+    margin-bottom: 2px !important;
 }
+
 .small-icons {
-        position: absolute;
-        top: 10px;
-        right: 15px; 
+    position: absolute;
+    top: 10px;
+    right: 15px;
 }
+
 .lower {
     font-size: 16px;
 }
-.small-icons .bi, span {
-    font-size: 18px!important;
+
+.small-icons .bi,
+span {
+    font-size: 18px !important;
 }
+
 .small-icons .bi {
     filter: contrast(200%) brightness(120%);
     color: #bebebecd;
     text-shadow: 1px 1px 1px #000;
 }
+
 .product figure {
     position: relative;
-    margin-bottom: 0!important;
-  }
+    margin-bottom: 0 !important;
+}
 
 .small-icons span p {
     background-color: #fff200e1;
@@ -192,15 +228,17 @@ footer a {
 }
 
 .old-price {
-    font-size: 20px!important;
-    margin-bottom: 0!important;
-    color: #fff000!important;
+    font-size: 20px !important;
+    margin-bottom: 0 !important;
+    color: #fff000 !important;
 }
+
 .new-price {
-    font-size: 28px!important;
-    color: #000!important;
+    font-size: 28px !important;
+    color: #000 !important;
     font-weight: 700;
 }
+
 footer {
     margin: 0 !important;
     border-top: 1px solid #ccc;
@@ -212,6 +250,7 @@ footer p,
 footer article {
     padding-left: 50px;
 }
+
 .bi-heart-fill:hover {
     color: rgb(255, 0, 0);
 }
@@ -219,9 +258,11 @@ footer article {
 .bi-info-circle:hover {
     color: #00ddff;
 }
+
 footer h2 {
     padding-left: 30px;
 }
+
 footer h3 {
     padding-left: 35px;
 }
@@ -235,7 +276,7 @@ footer img {
     font-size: 56px;
     color: #ffffff;
     text-shadow: 2px 2px #060404;
-    
+
     font-weight: 700;
 }
 
@@ -300,12 +341,15 @@ footer img {
 }
 
 .modal-body span,
-.disappear-mobile span, .recommendations span {
+.disappear-mobile span,
+.recommendations span {
     font-weight: 700;
 }
+
 .recommendations .bi {
     font-size: 24px;
 }
+
 .disappear-fullscreen {
     display: none;
 }
@@ -330,10 +374,13 @@ footer img {
     font-size: 22px;
     padding: 5px 20px;
 }
+
 .check {
     justify-content: center;
 }
-figcaption {
+
+figcaption,
+.btn-light {
     margin-top: 10px;
 }
 
@@ -358,7 +405,7 @@ body {
 }
 
 .recommendations {
-    width: 30%;
+    width: 40%;
 }
 
 .btn-primary:first-of-type {
@@ -376,24 +423,29 @@ h2 {
     font-weight: 600;
     margin-bottom: 50px;
 }
+
 .recommendations .bi {
-    margin: 0px 5px 0px 0px!important;
-    
+    margin: 0px 5px 0px 0px !important;
+
 }
+
 .recommendations h2 {
     font-size: 30px;
-    margin: 10px!important;
+    margin: 10px !important;
     color: #0270dd;
     font-weight: 100;
 }
+
 .recommendations p {
     font-weight: 200;
     margin: 10px;
     line-height: 1.5;
 }
-.recommendations article{
+
+.recommendations article {
     padding: 0px 10px;
 }
+
 .bi-facebook:hover,
 .bi-linkedin:hover {
     color: #1877F2;
@@ -420,6 +472,7 @@ nav {
 .feeder_pictures h3 {
     font-size: 34px;
 }
+
 figure img {
     width: 80%;
     height: 100%;
@@ -441,28 +494,49 @@ form {
     height: 80% !important;
     padding-top: 8px !important;
 }
-
+.end-50 {
+    right: 30% !important;
+}
 .navbar {
-    height: 80px;
+    height: 80px!important;
     font-size: 30px;
 }
+
 .form-check .form-check-input {
     margin-left: 1.5em;
 }
+
 img {
     border-radius: 5px;
 }
+
 .bi-search {
     font-size: 26px;
 }
+
 .calculated {
     display: none;
 }
+
 .navbar-toggler {
     font-size: 25px;
     margin-bottom: 10px;
 }
 
+.cart-badge span,
+.badge {
+    font-size: 14px !important;
+    padding: 2px;
+    margin: 4px;
+
+
+}
+
+.bi-cart3 {
+    font-size: 40px !important;
+    height: 0px;
+    color: #fff;
+}
 
 .bi-twitter-x:hover {
     color: rgb(212, 212, 212);
@@ -472,7 +546,8 @@ img {
     color: #E4405F;
 }
 
-footer h2,h3 {
+footer h2,
+h3 {
     margin: 10px 0px !important;
 }
 
@@ -511,12 +586,11 @@ footer h2,h3 {
     .disappear {
         display: none !important;
     }
+    
 }
 
 @media screen and (max-width: 1476px) {
-    .carousel-item h1 {
-        font-size: 36px;
-    }
+
 
     .feeder_pictures img {
         height: 220px;
@@ -531,11 +605,22 @@ footer h2,h3 {
     }
 
 }
+
 @media screen and (max-width:1399px) {
     .special-offer figcaption span {
         padding: 0;
     }
+    .disappear-basket {
+        display: none!important;
+    }
+    .mobile-cart {
+        display: inline!important;
+    }
+    .disappear-logo {
+        display: none!important;
+    }
 }
+
 @media screen and (max-width: 1388px) {
     .help .bi {
         font-size: 36px !important;
@@ -562,6 +647,18 @@ footer h2,h3 {
         margin-right: 10px !important;
     }
 
+    .broken-small-res-display-none {
+        display: none;
+    }
+
+    .container {
+        width: 100%;
+    }
+
+}
+
+@media screen and (max-width: 1270px) {
+
 }
 
 @media screen and (max-width: 1064px) {
@@ -576,12 +673,11 @@ footer h2,h3 {
     .disappear-fullscreen {
         display: inline-block;
     }
-    .container {
-        width: 100%;
-    }
+
     .recommendations section {
         width: 100%;
     }
+
 }
 
 @media screen and (max-width: 991px) {
@@ -610,18 +706,19 @@ footer h2,h3 {
     .offcanvas-header {
         padding-bottom: 0;
     }
+
     .final-container-mobile {
         display: inline-block;
     }
 
 }
 
-@media screen and (max-width: 962px) {}
+@media screen and (max-width: 962px) {
+
+}
 
 @media screen and (max-width: 932px) {
-    .carousel-item h1 {
-        font-size: 36px;
-    }
+
 
     .feeder_pictures img {
         height: 180px;
@@ -651,6 +748,7 @@ footer h2,h3 {
         font-size: 33px !important;
     }
 
+
 }
 
 @media screen and (max-width: 812px) {
@@ -674,19 +772,28 @@ footer h2,h3 {
     .needs-validation h3 {
         font-size: 30px;
     }
+
     .special-offer img {
         width: 100%;
         height: 60%;
     }
+    
 }
+@media screen and (max-width: 635px)  {
 
+}
+@media screen and (max-width: 710px)  {
+   
+}
 @media screen and (max-width: 580px) {
     .carousel-item h1 {
         font-size: 32px;
     }
+
     .discounts {
         font-size: 40px !important;
     }
+
     .feeder_pictures img {
         height: 200px;
         width: 80%;
@@ -720,17 +827,21 @@ footer h2,h3 {
     .help p {
         margin-right: 0px !important;
     }
+
     .products img {
         width: 100%;
         height: 200px;
     }
+
     .inline {
         display: inline-block;
         padding-left: 180px;
     }
+
     .final-container {
         position: relative;
     }
+
     .inline-size {
         display: inline-block;
         padding-left: 200px;
