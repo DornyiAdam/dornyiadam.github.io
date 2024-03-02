@@ -115,8 +115,6 @@ article .container {
     border-radius: 10px;
     margin: 0;
     padding: 15px;
-
-
 }
 
 .products {
@@ -173,7 +171,7 @@ footer a {
 }
 .small-icons .bi {
     filter: contrast(200%) brightness(120%);
-    color: #8f8989;
+    color: #bebebecd;
     text-shadow: 1px 1px 1px #000;
 }
 .product figure {
