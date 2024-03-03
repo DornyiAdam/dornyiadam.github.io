@@ -24,7 +24,7 @@
         event.preventDefault();
         event.stopPropagation();
     } else {
-        alert('Adatait fogadtuk!');
+        console.log('Sikeres generálás!');
     }
 
     form.classList.add('was-validated');

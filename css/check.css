@@ -1,0 +1,21 @@
+img {
+          height: 150px;
+          width: 150px;
+          margin: 10px;
+}
+body li {
+          list-style-type: none;
+}
+button.remove-button {
+          background-color: #4b4b4b09;
+          color: #ffffff; 
+          border: none; 
+          padding: 5px 10px;
+          cursor: pointer; 
+          margin-left: 10px; 
+          border-radius: 5px;
+          color: #000;
+      }
+      button.remove-button:hover {
+          background-color: #909090; 
+      }

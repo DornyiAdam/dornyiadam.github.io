@@ -365,6 +365,47 @@ footer h2 {
 .weight {
     list-style-image: url("../images/weight.png");
 }
+
+.ant {
+    list-style-image: url("../images/ant.png");
+}
+
+
+.aphid {
+    list-style-image: url("../images/aphid.png");
+}
+
+.berries {
+    list-style-image: url("../images/berries.png");
+}
+
+.birds {
+    list-style-image: url("../images/birds.png");
+}
+.bug {
+    list-style-image: url("../images/bug.png");
+}
+.dish {
+    list-style-image: url("../images/dish.png");
+}
+.fly {
+    list-style-image: url("../images/fly.png");
+}
+.grasshopper {
+    list-style-image: url("../images/grasshopper.png");
+}.insect {
+    list-style-image: url("../images/insect.png");
+}
+.rats {
+    list-style-image: url("../images/rats.png");
+}
+.seed {
+    list-style-image: url("../images/seed.png");
+}
+.spider {
+    list-style-image: url("../images/spider.png");
+}
+
 .small-icons {
     position: absolute;
     top: 60px;
