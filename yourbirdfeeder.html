@@ -26,18 +26,20 @@
       </section>
       <nav class="navbar navbar-dark navbar-expand-xxl bg-dark uppercase">
         <div class="container-fluid">
-          <a class="navbar-brand me-auto disappear-logo" href="index.html"><img src="images/logo.png" alt="" class="logo"></a>
+          <a class="navbar-brand me-auto disappear-logo" href="index.html"><img src="images/logo.png" alt=""
+              class="logo"></a>
           <div class="position-relative mobile-cart ms-3">
-            <a href="checkout.html"><i class="bi bi-cart3 end-0"></i></a>            <span class="position-absolute badge rounded-pill bg-danger start-50 cart-badge">
-              <span id="cartItemCount visually-hidden" class="mobile-cart-items" ></span>
+            <a href="checkout.html"><i class="bi bi-cart3 end-0"></i></a> <span
+              class="position-absolute badge rounded-pill bg-danger start-50 cart-badge">
+              <span id="cartItemCount visually-hidden" class="mobile-cart-items"></span>
             </span>
           </div>
           <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="offcanvas"
             data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
-          
-          
+
+
           <div class="offcanvas bg-dark offcanvas-end" tabindex="-1" id="offcanvasNavbar"
             aria-labelledby="offcanvasNavbarLabel">
             <div class="offcanvas-header">
@@ -63,7 +65,7 @@
                   <div class="position-relative">
                     <a href="checkout.html"><i class="bi bi-cart3"></i></a>
                     <span class="position-absolute badge rounded-pill bg-danger end-50 cart-badge">
-                      <span class="cartItemCount" ></span>
+                      <span class="cartItemCount"></span>
                     </span>
                   </div>
                 </li>
@@ -90,13 +92,14 @@
               </figcaption>
               <p>Befogadó képesség: <span class="ms-auto inline">3</span> </p>
               <p>Méret: <span class="inline-size ps-auto"> S (5''x4'')</span></p>
-              <p class="old-price text-center"><s>9600Ft</s></p> 
+              <p class="old-price text-center"><s>9600Ft</s></p>
               <p class="text-center new-price">7500Ft</p>
-              <button class="btn btn-dark d-block mx-auto rounded-pill" onclick="addToCart('Lorem model 2500 S (5″x4″)', '7500', 'images/birdfeeder1.webp')">Kosárba <i
+              <button class="btn btn-dark d-block mx-auto rounded-pill" id="liveToastBtn"
+                onclick="addToCart('Lorem model 2500 S (5″x4″)', '7500', 'images/birdfeeder1.webp')">Kosárba <i
                   class=" "></i></button>
             </figure>
           </article>
-          <article class="product product2">
+          <article class="product">
             <figure>
               <div class="small-icons d-flex flex-column"><span>
                   <p>25<i class="lower">%</i> </p>
@@ -109,7 +112,8 @@
               <p>Méret: <span class="inline-size ps-auto"> S (5''x4'')</span></p>
               <p class="old-price text-center"><s>21875</s></p>
               <p class="text-center new-price">17500Ft</p>
-              <button class="btn btn-dark d-block mx-auto rounded-pill" onclick="addToCart('Lorem model 2800 SUPER S (5″x4″)', '17500', 'images/birdfeeder2.webp')">Kosárba <i
+              <button id="liveToastBtn" class="btn btn-dark d-block mx-auto rounded-pill" id="liveToastBtn"
+                onclick="addToCart('Lorem model 2800 SUPER S (5″x4″)', '17500', 'images/birdfeeder2.webp')">Kosárba <i
                   class=" "></i></button>
             </figure>
           </article>
@@ -126,7 +130,8 @@
               <p>Méret: <span class="inline-size ps-auto"> S (5''x4'')</span></p>
               <p class="old-price text-center"><s>10000Ft</s></p>
               <p class="text-center new-price">7500Ft</p>
-              <button class="btn btn-dark d-block mx-auto rounded-pill" onclick="addToCart('Lorem model 2700 SUPER S (5″x4″)', '7500', 'images/birdfeeder3.webp')">Kosárba <i
+              <button class="btn btn-dark d-block mx-auto rounded-pill" id="liveToastBtn"
+                onclick="addToCart('Lorem model 2700 SUPER S (5″x4″)', '7500', 'images/birdfeeder3.webp')">Kosárba <i
                   class=" "></i></button>
             </figure>
           </article>
@@ -143,7 +148,8 @@
               <p>Méret: <span class="inline-size ps-auto"> S (5''x4'')</span></p>
               <p class="old-price text-center"><s>10000Ft</s></p>
               <p class="text-center new-price">7500Ft</p>
-              <button class="btn btn-dark d-block mx-auto rounded-pill" onclick="addToCart('Lorem model 2700 SUPER S (5″x4″)', '7500', 'images/birdfeeder4.webp')">Kosárba <i
+              <button class="btn btn-dark d-block mx-auto rounded-pill"
+                onclick="addToCart('Lorem model 2700 SUPER S (5″x4″)', '7500', 'images/birdfeeder4.webp')">Kosárba <i
                   class=" "></i></button>
             </figure>
           </article>
@@ -160,7 +166,8 @@
               <p>Méret: <span class="inline-size ps-auto"> S (5''x4'')</span></p>
               <p class="old-price text-center"><s>10000Ft</s></p>
               <p class="text-center new-price">8800</p>
-              <button class="btn btn-dark d-block mx-auto rounded-pill" onclick="addToCart('Lorem model 2500 S (5″x4″)', '8800', 'images/birdfeeder5.webp')">Kosárba <i
+              <button class="btn btn-dark d-block mx-auto rounded-pill"
+                onclick="addToCart('Lorem model 2500 S (5″x4″)', '8800', 'images/birdfeeder5.webp')">Kosárba <i
                   class=" "></i></button>
             </figure>
           </article>
@@ -170,14 +177,15 @@
                   <p>18<i class="lower">%</i> </p>
                 </span> <i class="bi  bi-heart-fill"></i><i class="bi bi-info-circle"></i></div>
               <img src="images/birdfeeder6.webp" alt="">
-              <figcaption class="text-center">Lorem model 2400 
+              <figcaption class="text-center">Lorem model 2400
                 <hr>
               </figcaption>
               <p>Befogadó képesség: <span class="ms-auto inline">3</span> </p>
               <p>Méret: <span class="inline-size ps-auto"> S (5''x4'')</span></p>
               <p class="old-price text-center"><s>12000Ft</s></p>
               <p class="text-center new-price">9840Ft</p>
-              <button class="btn btn-dark d-block mx-auto rounded-pill" onclick="addToCart('Lorem model 2400 S (5″x4″)', '9840', 'images/birdfeeder6.webp')">Kosárba <i
+              <button class="btn btn-dark d-block mx-auto rounded-pill"
+                onclick="addToCart('Lorem model 2400 S (5″x4″)', '9840', 'images/birdfeeder6.webp')">Kosárba <i
                   class=" "></i></button>
             </figure>
           </article>
@@ -194,7 +202,8 @@
               <p>Méret: <span class="inline-size ps-auto"> S (5''x4'')</span></p>
               <p class="old-price text-center"><s>7500Ft</s></p>
               <p class="text-center new-price">5625Ft</p>
-              <button class="btn btn-dark d-block mx-auto rounded-pill" onclick="addToCart('Lorem model 2100 S (5″x4″)', '5625', 'images/birdfeeder7.webp')">Kosárba <i
+              <button class="btn btn-dark d-block mx-auto rounded-pill"
+                onclick="addToCart('Lorem model 2100 S (5″x4″)', '5625', 'images/birdfeeder7.webp')">Kosárba <i
                   class=" "></i></button>
             </figure>
           </article>
@@ -211,7 +220,8 @@
               <p>Méret: <span class="inline-size ps-auto"> S (5''x4'')</span></p>
               <p class="old-price text-center"><s>11000Ft</s></p>
               <p class="text-center new-price">8800Ft</p>
-              <button class="btn btn-dark d-block mx-auto rounded-pill" onclick="addToCart('Lorem model 2400 S SUPER (5″x4″)', '8800', 'images/birdfeeder8.webp')">Kosárba <i
+              <button class="btn btn-dark d-block mx-auto rounded-pill"
+                onclick="addToCart('Lorem model 2400 S SUPER (5″x4″)', '8800', 'images/birdfeeder8.webp')">Kosárba <i
                   class=" "></i></button>
             </figure>
           </article>
@@ -228,7 +238,8 @@
               <p>Méret: <span class="inline-size ps-auto"> S (5''x4'')</span></p>
               <p class="old-price text-center"><s>8900Ft</s></p>
               <p class="text-center new-price">7120Ft</p>
-              <button class="btn btn-dark d-block mx-auto rounded-pill" onclick="addToCart('Lorem model 2300 S SUPER (5″x4″)', '7125', 'images/birdfeeder9.webp')">Kosárba <i
+              <button class="btn btn-dark d-block mx-auto rounded-pill"
+                onclick="addToCart('Lorem model 2300 S SUPER (5″x4″)', '7125', 'images/birdfeeder9.webp')">Kosárba <i
                   class=" "></i></button>
             </figure>
           </article>
@@ -245,7 +256,8 @@
               <p>Méret: <span class="inline-size ps-auto"> S (5''x4'')</span></p>
               <p class="old-price text-center"><s>6000Ft</s></p>
               <p class="text-center new-price">4800Ft</p>
-              <button class="btn btn-dark d-block mx-auto rounded-pill"  onclick="addToCart('Lorem model 2000 S (5″x4″)', '4800', 'images/birdfeeder10.webp')">Kosárba <i
+              <button class="btn btn-dark d-block mx-auto rounded-pill"
+                onclick="addToCart('Lorem model 2000 S (5″x4″)', '4800', 'images/birdfeeder10.webp')">Kosárba <i
                   class=" "></i></button>
             </figure>
           </article>
@@ -262,7 +274,8 @@
               <p>Méret: <span class="inline-size ps-auto"> M (10''x4'')</span></p>
               <p class="old-price text-center"><s>12000Ft</s></p>
               <p class="text-center new-price">9840Ft</p>
-              <button class="btn btn-dark d-block mx-auto rounded-pill"onclick="addToCart('Lorem model 2000  SUPER M (10″x4″)', '9840', 'images/birdfeeder11.webp')">Kosárba <i
+              <button class="btn btn-dark d-block mx-auto rounded-pill"
+                onclick="addToCart('Lorem model 2000  SUPER M (10″x4″)', '9840', 'images/birdfeeder11.webp')">Kosárba <i
                   class=" "></i></button>
             </figure>
           </article>
@@ -279,12 +292,13 @@
               <p>Méret: <span class="inline-size ps-auto"> S (5''x4'')</span></p>
               <p class="old-price text-center"><s>8900Ft</s></p>
               <p class="text-center new-price">7120Ft</p>
-              <button class="btn btn-dark d-block mx-auto rounded-pill" onclick="addToCart('Lorem model 2200 SUPER S (5″x4″)', '7120', 'images/birdfeeder10.webp')">Kosárba <i
+              <button class="btn btn-dark d-block mx-auto rounded-pill"
+                onclick="addToCart('Lorem model 2200 SUPER S (5″x4″)', '7120', 'images/birdfeeder10.webp')">Kosárba <i
                   class=" "></i></button>
             </figure>
           </article>
 
-          
+
 
         </div>
       </section>
@@ -299,12 +313,13 @@
               <img src="images/S_madareteto.png" alt="">
               <figcaption class="text-center">Dolor model 2300 Turbo
                 <hr>
-                
+
               </figcaption>
               <p>Befogadó képesség: <span class="ms-auto inline">5</span> </p>
               <p>Méret: <span class="inline-size ps-auto"> M (10''x4'')</span></p>
               <p class="text-center new-price">5000Ft</p>
-              <button class="btn btn-dark d-block mx-auto rounded-pill"onclick="addToCart('Dolor model 2300 Turbo M (10″x4″)', '5000', 'images/S_madareteto.png')">Kosárba <i
+              <button class="btn btn-dark d-block mx-auto rounded-pill"
+                onclick="addToCart('Dolor model 2300 Turbo M (10″x4″)', '5000', 'images/S_madareteto.png')">Kosárba <i
                   class=" "></i></button>
             </figure>
           </article>
@@ -319,11 +334,12 @@
               <p>Befogadó képesség: <span class="ms-auto inline">6</span> </p>
               <p>Méret: <span class="inline-size ps-auto"> L (16''x4'')</span></p>
               <p class="text-center new-price">28000Ft</p>
-              <button class="btn btn-dark d-block mx-auto rounded-pill" onclick="addToCart('Dolor model 2300 Waterproof SUPER L (16″x4″)', '28000', 'images/birdfeeder14.webp')">Kosárba <i
-                  class=" "></i></button>
+              <button class="btn btn-dark d-block mx-auto rounded-pill"
+                onclick="addToCart('Dolor model 2300 Waterproof SUPER L (16″x4″)', '28000', 'images/birdfeeder14.webp')">Kosárba
+                <i class=" "></i></button>
             </figure>
           </article>
-          
+
           <article class="product">
             <figure>
               <div class="small-icons d-flex flex-column"><span>
@@ -335,7 +351,8 @@
               <p>Befogadó képesség: <span class="ms-auto inline">5</span> </p>
               <p>Méret: <span class="inline-size ps-auto"> M (12''x5'')</span></p>
               <p class="text-center new-price">5000Ft</p>
-              <button class="btn btn-dark d-block mx-auto rounded-pill"  onclick="addToCart('Lorem model 2200 SUPER M (12″x5″)', '5000', 'images/birdfeeder14.webp')">Kosárba <i
+              <button class="btn btn-dark d-block mx-auto rounded-pill"
+                onclick="addToCart('Lorem model 2200 SUPER M (12″x5″)', '5000', 'images/birdfeeder14.webp')">Kosárba <i
                   class=" "></i></button>
             </figure>
           </article>
@@ -350,8 +367,9 @@
               <p>Befogadó képesség: <span class="ms-auto inline">8</span> </p>
               <p>Méret: <span class="inline-size ps-auto"> L (20''x8'')</span></p>
               <p class="text-center new-price">17500Ft</p>
-              <button class="btn btn-dark d-block mx-auto rounded-pill" onclick="addToCart('Dolor model 2300 SUPER Waterproof L (20″x8″)', '17500', 'images/birdfeeder17.webp')">Kosárba <i
-                  class=" "></i></button>
+              <button class="btn btn-dark d-block mx-auto rounded-pill"
+                onclick="addToCart('Dolor model 2300 SUPER Waterproof L (20″x8″)', '17500', 'images/birdfeeder17.webp')">Kosárba
+                <i class=" "></i></button>
             </figure>
           </article>
           <article class="product">
@@ -365,8 +383,9 @@
               <p>Befogadó képesség: <span class="ms-auto inline">4</span> </p>
               <p>Méret: <span class="inline-size ps-auto"> M (14''x5'')</span></p>
               <p class="text-center new-price">8600Ft</p>
-              <button class="btn btn-dark d-block mx-auto rounded-pill" onclick="addToCart('Ipsum model 2100 Turbo M (14″x5″)', '8600Ft', 'images/birdfeeder18.webp')">Kosárba <i
-                  class=" "></i></button>
+              <button class="btn btn-dark d-block mx-auto rounded-pill"
+                onclick="addToCart('Ipsum model 2100 Turbo M (14″x5″)', '8600Ft', 'images/birdfeeder18.webp')">Kosárba
+                <i class=" "></i></button>
             </figure>
           </article>
           <article class="product">
@@ -380,8 +399,9 @@
               <p>Befogadó képesség: <span class="ms-auto inline">4</span> </p>
               <p>Méret: <span class="inline-size ps-auto"> M (14''x4'')</span></p>
               <p class="text-center new-price">6500Ft</p>
-              <button class="btn btn-dark d-block mx-auto rounded-pill" onclick="addToCart('Ipsum model Lorekum 2000 M (14″x4″)', '6500Ft', 'images/birdfeeder19.webp')">Kosárba <i
-                  class=" "></i></button>
+              <button class="btn btn-dark d-block mx-auto rounded-pill"
+                onclick="addToCart('Ipsum model Lorekum 2000 M (14″x4″)', '6500Ft', 'images/birdfeeder19.webp')">Kosárba
+                <i class=" "></i></button>
             </figure>
           </article>
           <article class="product">
@@ -395,8 +415,9 @@
               <p>Befogadó képesség: <span class="ms-auto inline">5</span> </p>
               <p>Méret: <span class="inline-size ps-auto"> M (14''x4'')</span></p>
               <p class="text-center new-price">10000Ft</p>
-              <button class="btn btn-dark d-block mx-auto rounded-pill" onclick="addToCart('Ipsum model 2000 Strength M (14″x4″)', '10000', 'images/birdfeeder20.webp')">Kosárba <i
-                  class=" "></i></button>
+              <button class="btn btn-dark d-block mx-auto rounded-pill"
+                onclick="addToCart('Ipsum model 2000 Strength M (14″x4″)', '10000', 'images/birdfeeder20.webp')">Kosárba
+                <i class=" "></i></button>
             </figure>
           </article>
           <article class="product">
@@ -410,8 +431,9 @@
               <p>Befogadó képesség: <span class="ms-auto inline">8</span> </p>
               <p>Méret: <span class="inline-size ps-auto"> M (14''x4'')</span></p>
               <p class="text-center new-price">13500Ft</p>
-              <button class="btn btn-dark d-block mx-auto rounded-pill" onclick="addToCart('Ipsum model 2000 Strength++ M (14″x4″)', '13500', 'images/birdfeeder20.webp')">Kosárba <i
-                  class=" "></i></button>
+              <button class="btn btn-dark d-block mx-auto rounded-pill"
+                onclick="addToCart('Ipsum model 2000 Strength++ M (14″x4″)', '13500', 'images/birdfeeder20.webp')">Kosárba
+                <i class=" "></i></button>
             </figure>
           </article>
           <article class="product">
@@ -425,7 +447,8 @@
               <p>Befogadó képesség: <span class="ms-auto inline">3</span> </p>
               <p>Méret: <span class="inline-size ps-auto"> S (5''x4'')</span></p>
               <p class="text-center new-price">23500Ft</p>
-              <button class="btn btn-dark d-block mx-auto rounded-pill" onclick="addToCart('Ipsum model 2000 Mega++ S (5″x4″)', '23500', 'images/birdfeeder1.webp')">Kosárba <i
+              <button class="btn btn-dark d-block mx-auto rounded-pill"
+                onclick="addToCart('Ipsum model 2000 Mega++ S (5″x4″)', '23500', 'images/birdfeeder1.webp')">Kosárba <i
                   class=" "></i></button>
             </figure>
           </article>
@@ -440,8 +463,9 @@
               <p>Befogadó képesség: <span class="ms-auto inline">3</span> </p>
               <p>Méret: <span class="inline-size ps-auto"> S (5''x4'')</span></p>
               <p class="text-center new-price">21500Ft</p>
-              <button class="btn btn-dark d-block mx-auto rounded-pill" onclick="addToCart('Ipsum model 2000 Extreme S (5″x4″)', '21500', 'images/birdfeeder10.webp')">Kosárba <i
-                  class=" "></i></button>
+              <button class="btn btn-dark d-block mx-auto rounded-pill"
+                onclick="addToCart('Ipsum model 2000 Extreme S (5″x4″)', '21500', 'images/birdfeeder10.webp')">Kosárba
+                <i class=" "></i></button>
             </figure>
           </article>
           <article class="product">
@@ -455,7 +479,8 @@
               <p>Befogadó képesség: <span class="ms-auto inline">3</span> </p>
               <p>Méret: <span class="inline-size ps-auto"> S (5''x4'')</span></p>
               <p class="text-center new-price">6999Ft</p>
-              <button class="btn btn-dark d-block mx-auto rounded-pill" onclick="addToCart('Ipsum model 2000 Extreme S (5″x4″)', '6999', 'images/birdfeeder4.webp')">Kosárba <i
+              <button class="btn btn-dark d-block mx-auto rounded-pill"
+                onclick="addToCart('Ipsum model 2000 Extreme S (5″x4″)', '6999', 'images/birdfeeder4.webp')">Kosárba <i
                   class=" "></i></button>
             </figure>
           </article>
@@ -470,8 +495,9 @@
               <p>Befogadó képesség: <span class="ms-auto inline">3</span> </p>
               <p>Méret: <span class="inline-size ps-auto"> S (5''x4'')</span></p>
               <p class="text-center new-price">4850Ft</p>
-              <button class="btn btn-dark d-block mx-auto rounded-pill" onclick="addToCart('Ipsum model 2000 Super Mega S (5″x4″)', '4850', 'images/birdfeeder5.webp')">Kosárba <i
-                  class=" "></i></button>
+              <button class="btn btn-dark d-block mx-auto rounded-pill"
+                onclick="addToCart('Ipsum model 2000 Super Mega S (5″x4″)', '4850', 'images/birdfeeder5.webp')">Kosárba
+                <i class=" "></i></button>
             </figure>
           </article>
           <article class="product">
@@ -479,13 +505,14 @@
               <div class="small-icons d-flex flex-column"><span>
                 </span> <i class="bi  bi-heart-fill"></i><i class="bi bi-info-circle"></i></div>
               <img src="images/birdfeeder6.webp" alt="">
-              <figcaption class="text-center">Ipsum model 2000 Giga 
+              <figcaption class="text-center">Ipsum model 2000 Giga
                 <hr>
               </figcaption>
               <p>Befogadó képesség: <span class="ms-auto inline">3</span> </p>
               <p>Méret: <span class="inline-size ps-auto"> S (5''x4'')</span></p>
               <p class="text-center new-price">4380Ft</p>
-              <button class="btn btn-dark d-block mx-auto rounded-pill" onclick="addToCart('Ipsum model 2000 Giga S (5″x4″)', '4380', 'images/birdfeeder6.webp')">Kosárba <i
+              <button class="btn btn-dark d-block mx-auto rounded-pill"
+                onclick="addToCart('Ipsum model 2000 Giga S (5″x4″)', '4380', 'images/birdfeeder6.webp')">Kosárba <i
                   class=" "></i></button>
             </figure>
           </article>
@@ -500,8 +527,9 @@
               <p>Befogadó képesség: <span class="ms-auto inline">9</span> </p>
               <p>Méret: <span class="inline-size ps-auto"> L (20''x8'')</span></p>
               <p class="text-center new-price">18560Ft</p>
-              <button class="btn btn-dark d-block mx-auto rounded-pill" onclick="addToCart('Ipsum model 2000 Giga Chad Turbo L (20″x8″)', '18560', 'images/birdfeeder14.webp')">Kosárba <i
-                  class=" "></i></button>
+              <button class="btn btn-dark d-block mx-auto rounded-pill"
+                onclick="addToCart('Ipsum model 2000 Giga Chad Turbo L (20″x8″)', '18560', 'images/birdfeeder14.webp')">Kosárba
+                <i class=" "></i></button>
             </figure>
           </article>
           <article class="product">
@@ -515,11 +543,12 @@
               <p>Befogadó képesség: <span class="ms-auto inline">6</span> </p>
               <p>Méret: <span class="inline-size ps-auto"> M (8''x4'')</span></p>
               <p class="text-center new-price">12650Ft</p>
-              <button class="btn btn-dark d-block mx-auto rounded-pill" onclick="addToCart('Dolor model 2300 Waterproof M (8″x4″)', '12650', 'images/birdfeeder3.webp')">Kosárba <i
-                  class=" "></i></button>
+              <button class="btn btn-dark d-block mx-auto rounded-pill"
+                onclick="addToCart('Dolor model 2300 Waterproof M (8″x4″)', '12650', 'images/birdfeeder3.webp')">Kosárba
+                <i class=" "></i></button>
             </figure>
           </article>
-          
+
           <article class="product">
             <figure>
               <div class="small-icons d-flex flex-column"><span>
@@ -531,8 +560,9 @@
               <p>Befogadó képesség: <span class="ms-auto inline">5</span> </p>
               <p>Méret: <span class="inline-size ps-auto"> S (5''x4'')</span></p>
               <p class="text-center new-price">35000Ft</p>
-              <button class="btn btn-dark d-block mx-auto rounded-pill" onclick="addToCart('Dolor model 2300 Fireproof S (5″x4″)', '35000', 'images/birdfeeder15.webp')">Kosárba <i
-                  class=" "></i></button>
+              <button class="btn btn-dark d-block mx-auto rounded-pill"
+                onclick="addToCart('Dolor model 2300 Fireproof S (5″x4″)', '35000', 'images/birdfeeder15.webp')">Kosárba
+                <i class=" "></i></button>
             </figure>
           </article>
         </div>
@@ -574,7 +604,8 @@
                 </div>
               </div>
               <p class="text-center new-price">375400Ft</p>
-              <button class="btn btn-dark d-block mx-auto rounded-pill" onclick="addToCart('Ipsum Model 2000 Turbo M (8″x4″)', '375400', 'images/special_offer.jpg')">Kosárba <i
+              <button class="btn btn-dark d-block mx-auto rounded-pill"
+                onclick="addToCart('Ipsum Model 2000 Turbo M (8″x4″)', '375400', 'images/special_offer.jpg')">Kosárba <i
                   class=" "></i></button>
             </figcaption>
           </figure>
@@ -584,13 +615,17 @@
         <section class="ms-auto">
           <article class="mx-2">
             <h2><i class="bi bi-list-check"></i>Gondosan ellenőrzött termékek</h2>
-            <p>Értékesítés előtt minden etető egy <span> alapos átvizsgáláson és <br> tesztelésen esik </span> át közvetlenül szállítás előtt és
-              <span>tökéletesen működik.</span> 
+            <p>Értékesítés előtt minden etető egy <span> alapos átvizsgáláson és <br> tesztelésen esik </span> át
+              közvetlenül szállítás előtt és
+              <span>tökéletesen működik.</span>
             </p>
           </article>
           <article class="mx-2">
             <h2><i class="bi bi-truck"></i>Ingyenes házhozszállítás</h2>
-            <p>A megrendelt termékeket Magyarország területén <span>ingyenesen házhoz szállítjuk.</span> Amennyiben az SMS-ben kapott időpont nem megfelelő, kérjük keresse fel az illetékes futárt, vagy ezt a telefonszámot: <span>+36 1234 5678</span></p>
+            <p>A megrendelt termékeket Magyarország területén <span>ingyenesen házhoz szállítjuk.</span> Amennyiben az
+              SMS-ben kapott időpont nem megfelelő, kérjük keresse fel az illetékes futárt, vagy ezt a telefonszámot:
+              <span>+36 1234 5678</span>
+            </p>
           </article>
         </section>
         <section class="me-auto">
@@ -603,7 +638,7 @@
             <h2><i class="bi bi-shield-check"></i>100%-os garancia </h2>
             <p><span>Szuper egyszerű garanciális ügyintézés:</span> Meghibásodás esetén csak jelzi felénk a garanciális
               igényét, mi a <span>saját költégünkre</span> futárt küldünk az etetőért, majd visszatérítjük a teljes
-                vételárát. </p>
+              vételárát. </p>
           </article>
         </section>
       </section>
@@ -617,6 +652,13 @@
           <button class="btn btn-dark ms-auto border border-success rounded-pill me-2"><i class="bi bi-chevron-up"></i>
           </button></a>
       </section>
+      <div class="toast-container position-fixed bottom-0 end-0 p-3">
+        <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+          <div class="toast-body">
+            Sikeresen hozzáadtad a kosárhoz!
+          </div>
+        </div>
+      </div>
     </main>
 
     <footer class="row contact-info">
@@ -656,6 +698,8 @@
   </div>
   <script src="js/ybf.js"></script>
   <script src="js/bootstrap.min.js"></script>
+  <script src="js/toast.js"></script>
+
 </body>
 
 </html>

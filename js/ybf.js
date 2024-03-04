@@ -1,3 +1,4 @@
+
 var counter = parseInt(localStorage.getItem("cartCounter")) || 0;
 
 function addToCart(nev, price, image) {
@@ -7,7 +8,9 @@ function addToCart(nev, price, image) {
   localStorage.setItem('cart', JSON.stringify(cart));
   counter++;
   updateCounter();
-  checkOut();
+  const toastLiveExample = document.getElementById('liveToast')
+  const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample)
+  toastBootstrap.show()
 }
 
 function load() {
@@ -24,72 +27,13 @@ function updateCounter() {
   console.log('Counter értéke:', counter);
 }
 
-function checkOut() {
-  var cartItemsElement = document.getElementById('cart-items');
-  var cart = JSON.parse(localStorage.getItem('cart')) || [];
-  var net = document.querySelector(".netTotal")
-  var vat = document.querySelector(".vat")
-  var total = document.querySelector(".total")
-  var totalPrice = 0;
 
-  cartItemsElement.innerHTML = '';
-
-  cart.forEach(function (item) {
-    totalPrice += parseInt(item.price);
-    var listItem = document.createElement('li');
-
-    var imgElement = document.createElement('img');
-    imgElement.src = item.image;
-    imgElement.alt = item.nev;
-    listItem.appendChild(imgElement);
-
-    var textContent = document.createElement('span');
-    textContent.textContent = ' ' + item.nev + ': ' + item.price + " Ft";
-    listItem.appendChild(textContent);
-
-    var removeButton = document.createElement('button');
-    removeButton.textContent = 'Eltávolítás';
-    removeButton.addEventListener('click', function () {
-      removeItem(item.id);
-    });
-    listItem.appendChild(removeButton);
-    removeButton.classList.add('remove-button');
-
-    cartItemsElement.appendChild(listItem);
-  });
-  vat.innerHTML = Math.floor(totalPrice * 0.27) + "Ft";
-  net.innerHTML = Math.floor(totalPrice * 0.73) + "Ft";
-  total.innerHTML = totalPrice + " Ft";
-}
-
-function removeItem(itemId) {
-  var cart = JSON.parse(localStorage.getItem('cart')) || [];
-  var updatedCart = cart.filter(function (item) {
-    return item.id !== itemId;
-  });
-  localStorage.setItem('cart', JSON.stringify(updatedCart));
-  counter--;
-  updateCounter();
-  checkOut();
-}
-
-function clearCart() {
-  localStorage.removeItem('cart');
-  counter = 0;
-  updateCounter();
-  checkOut();
-}
 
 console.log("asd");
 
-document.addEventListener('DOMContentLoaded', function () {
-  console.log('Az oldal betöltődött!');
-  checkOut();
-  load();
-  updateCounter();
-});
 
-window.addEventListener('load', function() { 
+
+window.addEventListener('load', function () {
   updateCounter();
 })
 
@@ -107,16 +51,21 @@ function calculatePrice() {
   var size = document.querySelector("#validationFormCheck2:checked") ? 1.5 : (document.querySelector("#validationFormCheck3:checked") ? 2 : (document.querySelector("#validationFormCheck4:checked") ? 3 : 0));
   var price = (Math.floor(choosenwood * size));
   var element = document.querySelector(".calculated");
-  if (size == 0) {
-    alert("Kérlek, válaszd ki a madáretető méretét!");
+  function validateForm(event) {
+    var form = document.querySelector('.needs-validation');
+  
+    if (form.checkValidity() === false) {
+      event.preventDefault();
+      event.stopPropagation();
+    } else {
+      console.log('Sikeres generálás!');
+      element.style.display = "flex";
+  calculated.innerHTML = "Kalkulált összeg: " + price + "Ft"
+    }
+  
+    form.classList.add('was-validated');
   }
-  else if (choosenwood == 0) {
-    alert("Kérlek, válaszd ki a faanyag típusát!");
-  }
-  else {
-    element.style.display = "flex";
-    calculated.innerHTML = "Kalkulált összeg: " + price + "Ft";
-  }
+  
   validateForm(event);
   const myModal = new bootstrap.Modal(document.getElementById('myModal'))
 
@@ -139,3 +88,4 @@ function calculatePrice() {
     }, false)
   })
 })()
+

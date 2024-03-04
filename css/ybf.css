@@ -21,11 +21,10 @@
     object-fit: cover;
 }
 
-.form-select {
-    width: 30%;
-    margin-left: 60px !important;
-}
 
+.check-display {
+    display: none;
+}
 .mobile-cart {
     display: none;
     margin-bottom: 10px;
@@ -503,9 +502,7 @@ form {
     font-size: 30px;
 }
 
-.form-check .form-check-input {
-    margin-left: 1.5em;
-}
+
 
 img {
     border-radius: 5px;
@@ -551,6 +548,7 @@ footer h2,
 h3 {
     margin: 10px 0px !important;
 }
+
 
 
 
@@ -684,6 +682,12 @@ h3 {
 @media screen and (max-width: 991px) {
     .logo {
         margin-top: 0;
+    }
+    .check-display-none {
+        display: none;
+    }
+    .check-display {
+        display: inline;
     }
 
     .disappear {
@@ -864,7 +868,9 @@ h3 {
 
     .check {
         flex-direction: column;
+        margin: 0!important;
     }
+   
 }
 
 

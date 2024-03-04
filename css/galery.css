@@ -9,6 +9,10 @@
     margin: 0;
 }
 
+figure {
+    position: absolute;
+}
+
 .body {
     display: flex;
     align-items: center;
@@ -17,7 +21,7 @@
 }
 
 .small-icons {
-    position: absolute;
+    position: relative;
     top: auto !important;
     right: auto !important;
     font-size: 40px!important;
@@ -26,6 +30,7 @@
 main .bi-star {
     font-size: 40px !important;
     margin: 7px;
+    position: relative !important;
 }
 .choose article{
     width: 200px;
@@ -37,9 +42,6 @@ main .bi-star {
     margin-top: 10px;
     margin-left: 10px;
     object-fit: cover;
-}
-.form-select {
-    width: 30%;
 }
 .choose section {
     justify-content: space-evenly;
@@ -288,6 +290,36 @@ footer img {
     object-fit: cover;
 }
 
+main span{
+    margin-left: 50%;
+    font-size: 30px !important;
+}
+
+.nev {
+    width: 50%;
+}
+
+
+.ertekeles select{
+    margin: 0px !important;
+}
+
+.kuldes {
+    text-align: right;
+}
+
+form {
+    margin: 0 auto;
+    width: 60%;
+}
+
+form .d-flex {
+    width: 100%;
+}
+.ertekeles {
+    width: 50%;
+}
+
 .feeder_pictures img {
     border: 1px solid #ccc;
     padding: 0;
@@ -328,7 +360,7 @@ footer img {
 }
 
 figcaption {
-    margin-top: 10px;
+    margin-top: 0px !important;
 }
 .form-check-label {
     margin-right: 120px!important;
@@ -393,9 +425,17 @@ nav {
     font-size: 34px;
 }
 figure img {
-    height: 200px;
-    width: 200px;
+    height: 400px;
+    width: 600px;
 
+}
+
+main h3 {
+    margin: 0px !important;
+}
+
+figcaption {
+    height: 35px;
 }
 
 .help p {

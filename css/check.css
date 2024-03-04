@@ -1,21 +1,37 @@
 img {
-          height: 150px;
-          width: 150px;
-          margin: 10px;
+    height: 150px;
+    width: 150px;
+    margin: 10px;
 }
+
 body li {
-          list-style-type: none;
+    list-style-type: none;
 }
+
 button.remove-button {
-          background-color: #4b4b4b09;
-          color: #ffffff; 
-          border: none; 
-          padding: 5px 10px;
-          cursor: pointer; 
-          margin-left: 10px; 
-          border-radius: 5px;
-          color: #000;
-      }
-      button.remove-button:hover {
-          background-color: #909090; 
-      }
+    background-color: #0f0f0f09;
+    border: 1px solid #ccc;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-left: 10px;
+    border-radius: 5px;
+    color: #000;
+    margin-left: 220px;
+    margin-top: -60px;
+    
+}
+
+button.remove-button:hover {
+    background-color: #909090;
+}
+
+.modal-lg {
+    width: 700px!important;
+}
+
+.calculator {
+    flex-wrap: wrap;
+}
+.form-check-input[type=radio] {
+    border: 1px solid #ccc!important;
+}
