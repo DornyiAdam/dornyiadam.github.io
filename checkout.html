@@ -31,7 +31,7 @@
               class="logo"></a>
           <div class="position-relative mobile-cart ms-3">
             <a href="checkout.html"><i class="bi bi-cart3 end-0"></i></a> <span
-              class="position-absolute badge rounded-pill bg-danger start-50 cart-badge">
+              class="position-absolute badge rounded-pill bg-danger end-50 cart-badge">
               <span id="cartItemCount visually-hidden" class="mobile-cart-items"></span>
             </span>
           </div>
@@ -94,21 +94,23 @@
           </div>
         </div>
       </div>
-      <section class="d-flex">
+      <section class="d-flex flex-wrap">
         <div>
           <h3>Kosár tartalma</h3>
+          <p class="cart-display">A kosár üres!</p>
           <ul id="cart-items"></ul>
-          <button class="btn btn-info ms-3" onclick="clearCart()">Kosár törlése</button>
+          <button class="remove-button ms-3 clearButton" onclick="clearCart()"><i class="bi bi-trash"></i>
+            Kosár törlése</button>
         </div>
-        <div class="ms-auto">
+        <div class="ms-auto text-center me-auto totalCheckOut">
           <div>
-            <h3>Rendelésed összegzése</h3>
+            <h3>Rendelése összegzése</h3>
             <hr>
             <p>ÁFA: <span class="vat">0 Ft</span></p>
             <p>Nettó összeg: <span class="netTotal">0 Ft</span></p>
             <hr>
             <p>Végösszeg: <span class="total">0 Ft</span></p>
-            <button type="button" onclick="addPrice()" class="btn btn-warning" data-bs-toggle="modal"
+            <button type="button" onclick="addPrice()" class="btn btn-warning payButton" data-bs-toggle="modal"
               data-bs-target="#payModal">
               Tovább a pénztárhoz!
             </button>
@@ -117,80 +119,94 @@
           <div>
             <h3>Szeretnél kupont beváltani?</h3>
             <hr>
-            <p>Kupon beváltásához kérlek lépj be.</p>
+            <p>Kupon beváltásához Kérem lépj be.</p>
           </div>
         </div>
       </section>
       <section class="text-center my-5 choose">
         <h2>Készítsd el a te madáretetőd</h2>
-        <h3 class="text-start ms-5">Kérlek, válaszd ki milyen anyagból, és mekkora madáretetőt szeretnél!</h3>
+        <h3 class="ms-5">Kérem, adja meg az adatait, és válassza ki milyen anyagból, és mekkora madáretetőt szeretne!
+        </h3>
         <section class="container-fluid">
           <section class="d-flex container-fluid calculator">
-            <article>
-              <figure>
-                <img src="images/s1_madareteto.png" class="" alt="">
-                <figcaption>Kis madáretető <br></figcaption>
-                
-              </figure>
-            </article>
-            <article>
-              <figure>
-                <img src="images/M_madareteto.png" class="" alt="">
-                <figcaption>Közepes madáretető </figcaption>
-              </figure>
-            </article>
-            <article>
-              <figure>
-                <img src="images/L2_madareteto.png" class="" alt="">
-                <figcaption>Nagy madáretető</figcaption>
-              </figure>
-            </article>
-          </section>
-          <article class="d-flex container-fluid">
-            <form class="row  needs-validation container-fluid" novalidate>
-              <div class="check row">
-                <div class="form-check col-lg-4 ps-4">
-                  <input type="radio" class="form-check-input mb-1 ms-5 border-dark  border-opacity-20 " id="validationFormCheck2" name="radio-stacked"
-                    required>
-                  <label class="form-check-label" for="validationFormCheck2">S 15x15</label>
 
+          </section>
+          <article class="container-fluid">
+            <form class="row g-3 needs-validation" novalidate>
+              <div class="col-md-4">
+                <label for="validationCustom01" class="form-label">Vezetéknév</label>
+                <input type="text" class="form-control" id="validationCustom01" value="" required>
+                <div class="invalid-feedback">
+                  Helytelen vezetéknév. Helyes: Gipsz (Jakab)     
+              </div>
+              </div>
+              <div class="col-md-4">
+                <label for="validationCustom02" class="form-label">Keresztnév</label>
+                <input type="text" class="form-control" id="validationCustom02" value="" required>
+                <div class="invalid-feedback">
+                  Helytelen keresztnév. Helyes: (Gipsz) Jakab   
                 </div>
-                <div class="form-check col-lg-4 ps-4">
-                  <input type="radio" class="form-check-input mb-1 ms-5 border-dark  border-opacity-20" id="validationFormCheck3" name="radio-stacked"
-                    required>
-                  <label class="form-check-label" for="validationFormCheck3">M 20x20</label>
+              </div>
+              <div class="col-md-4">
+                <label for="validationCustomUsername" class="form-label">E-mail cím</label>
+                <div class="input-group has-validation">
+                  <span class="input-group-text" id="inputGroupPrepend">@</span>
+                  <input type="email" class="form-control" id="validationCustomUsername"
+                    aria-describedby="inputGroupPrepend" required>
                   <div class="invalid-feedback">
-                    <p class="check-display-none"> Kérlek válassz méretet!</p>
-                  </div>
-                </div>
-                <div class="form-check col-lg-4 ps-4">
-                  <input type="radio" class="form-check-input mb-1 ms-5 border-dark  border-opacity-20" id="validationFormCheck4" name="radio-stacked"
-                    required>
-                  <label class="form-check-label" for="validationFormCheck4">L 25x25</label>
-                  <div class="invalid-feedback">
-                    <p class="check-display"> Kérlek válassz anyagot!</p>
+                    Kérem, adjon meg egy helyes e-mail címet.
                   </div>
                 </div>
               </div>
-              <div class="form-check col-lg-12">
-                <select class="form-select my-3" required aria-label="Default select example">
+              <div class="col-md-3">
+                <label for="validtionCustom03" class="form-label">Város</label>
+                <input type="text" class="form-control" id="validationCustom03" required>
+                <div class="invalid-feedback">
+                  Kérem, adjon meg egy létező várost!
+                </div>
+              </div>
+              <div class="col-md-3">
+                <label for="validationCustom03" class="form-label">Méret (CM)</label>
+                <input type="number" min="1" max="15" class="form-control size" id="validationCustom03" required>
+                <div class="invalid-feedback">
+                  Kérem, gépelje be a kívánt méretet! <br> (1-15cm!)
+                </div>
+              </div>
+              <div class="col-md-3">
+                <label for="validationCustom04" class="form-label">Fa típusa</label>
+                <select class="form-select" required aria-label="Default select example">
                   <option value="" selected>Faanyag</option>
                   <option value="1500">Fenyő</option>
                   <option value="2000">Tölgy</option>
                   <option value="3300">Bükk</option>
                 </select>
                 <div class="invalid-feedback">
-                  Kérlek válassz méretet!
+                  Kérem válasszon méretet!
                 </div>
               </div>
-
-
-              <div class="">
+              <div class="col-md-3">
+                <label for="validationCustom05" class="form-label">Irányítószám</label>
+                <input type="number" maxlength="8" max="25000" min="1000"
+                minlength="4" class="form-control" id="validationCustom05" required>
+                <div class="invalid-feedback">
+                  Kérem, adjon meg egy létező irányítószámot!
+                </div>
+              </div>
+              <div class="col-12 text-start">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                  <label class="form-check-label" for="invalidCheck">
+                    Elfogadom a feltételeket.
+                  </label>
+                  <div class="invalid-feedback">
+                    Muszáj elfogadnia a feltételeket a folytatáshoz!                  </div>
+                </div>
+              </div>
+              <div class="col-12">
                 <button class="btn btn-danger" type="button" onclick="calculatePrice(event)">Számolás</button>
               </div>
-
+            </form>
           </article>
-          </form>
         </section>
         <section class="calculated container">
           <article class="pe-5">
@@ -202,7 +218,7 @@
           </article>
           <article class="plans ps-5">
             <img src="images/plans.webp" alt="">
-            <p>* az ilyen típusú etetők nem rendelhetőek, vásárlási szándékával keresse fel ügyfélszolgálatunkat!</p>
+            <p>* az ilyen típusú etetők nem rendelhetőek, adatai rögzítése után felkeressük a részletekkel!</p>
           </article>
         </section>
 

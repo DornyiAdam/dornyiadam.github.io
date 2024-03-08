@@ -62,6 +62,20 @@ main .bi-star {
     grid-template-columns: repeat(10, 1fr);
 }
 
+.comment {
+    border: 2px solid #027c06;
+    padding: 30px;
+    border-radius: 40px;
+    margin: 20px;
+    background-color: #bfffc1;
+}
+
+.comment .d-flex {
+    justify-content: space-between;
+}
+
+.ertekeles
+
 .container {
     max-width: 1600px;
     width: 95%;
@@ -295,30 +309,21 @@ main span{
     font-size: 30px !important;
 }
 
-.nev {
-    width: 50%;
-}
 
 
-.ertekeles select{
-    margin: 0px !important;
-}
 
 .kuldes {
     text-align: right;
 }
 
-form {
-    margin: 0 auto;
-    width: 60%;
+.col-lg-8 {
+    padding: 0!important;
 }
 
 form .d-flex {
     width: 100%;
 }
-.ertekeles {
-    width: 50%;
-}
+
 
 .feeder_pictures img {
     border: 1px solid #ccc;

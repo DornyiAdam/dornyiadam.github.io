@@ -181,6 +181,9 @@ h3 {
     width: 100%;
     object-fit: cover;
 }
+.end-50 {
+    right: 30% !important;
+}
 
 .feeder_pictures img {
     border: 1px solid #ccc;

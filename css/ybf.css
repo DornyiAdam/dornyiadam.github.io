@@ -225,7 +225,9 @@ span {
     text-shadow: 1px 1px #000;
 
 }
-
+.left-40 {
+    left: 40%!important;
+}
 .old-price {
     font-size: 20px !important;
     margin-bottom: 0 !important;

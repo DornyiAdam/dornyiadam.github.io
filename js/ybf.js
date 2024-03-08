@@ -49,23 +49,24 @@ function calculatePrice() {
   var calculated = document.querySelector(".calculated h3");
   var choosenwood = parseFloat(document.querySelector("select").value) || 0;
   var size = document.querySelector("#validationFormCheck2:checked") ? 1.5 : (document.querySelector("#validationFormCheck3:checked") ? 2 : (document.querySelector("#validationFormCheck4:checked") ? 3 : 0));
-  var price = (Math.floor(choosenwood * size));
+  var size2 = parseInt(document.querySelector(".size").value)
+  var price = (Math.floor(choosenwood * size2));
   var element = document.querySelector(".calculated");
   function validateForm(event) {
     var form = document.querySelector('.needs-validation');
-  
+
     if (form.checkValidity() === false) {
       event.preventDefault();
       event.stopPropagation();
     } else {
       console.log('Sikeres generálás!');
       element.style.display = "flex";
-  calculated.innerHTML = "Kalkulált összeg: " + price + "Ft"
+      calculated.innerHTML = "Kalkulált összeg: " + price + "Ft"
     }
-  
+
     form.classList.add('was-validated');
   }
-  
+
   validateForm(event);
   const myModal = new bootstrap.Modal(document.getElementById('myModal'))
 

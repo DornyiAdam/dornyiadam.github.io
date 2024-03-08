@@ -6,7 +6,7 @@ function checkOut() {
     var total = document.querySelector(".total")
     var totalPrice = 0;
     var modal_price = document.querySelector(".pay-ammount")
-    
+
 
 
     cartItemsElement.innerHTML = '';
@@ -21,11 +21,11 @@ function checkOut() {
         listItem.appendChild(imgElement);
 
         var textContent = document.createElement('span');
-        textContent.textContent = ' ' + item.nev + ': ' + Number(item.price).toLocaleString()+ " Ft";
+        textContent.textContent = ' ' + item.nev + ': ' + Number(item.price).toLocaleString() + " Ft";
         listItem.appendChild(textContent);
-
+        
         var removeButton = document.createElement('button');
-        removeButton.textContent = 'Eltávolítás';
+        removeButton.innerHTML = '<span class="red">✕</span> Eltávolítás';
         removeButton.addEventListener('click', function () {
             removeItem(item.id);
         });
@@ -37,10 +37,32 @@ function checkOut() {
     vat.innerHTML = Math.floor(totalPrice * 0.27).toLocaleString() + "Ft";
     net.innerHTML = Math.floor(totalPrice * 0.73).toLocaleString() + "Ft";
     total.innerHTML = totalPrice.toLocaleString() + " Ft";
-    modal_price.innerHTML = "Fizetendő összeg: " + " " +  totalPrice.toLocaleString() + " Ft"    
+    modal_price.innerHTML = "Fizetendő összeg: " + " " + totalPrice.toLocaleString() + " Ft"
+    var storedPrice = localStorage.setItem("storedPrice", totalPrice)
+    payButton();
 }
 
+function payButton() {
+    var storedPrice = localStorage.getItem("storedPrice") || 0;
+    var payButton = document.querySelector(".payButton");
+    var placeholder = document.querySelector(".cart-display");
+    var clearButton = document.querySelector(".clearButton");
+    var totalCheckOut = document.querySelector(".totalCheckOut")
+    if (parseInt(storedPrice) > 0) {
+        payButton.style.display = "inline-block";
+        clearButton.style.display = "inline-block";
+        placeholder.style.display = "none";
+        totalCheckOut.style.dispaly = "block";
+    }
+    else {
+        payButton.style.display = "none";
+        placeholder.style.display = "block";
+        clearButton.style.display = "none";
+        totalCheckOut.style.display = "none";
 
+    }
+
+}
 
 
 function removeItem(itemId) {
@@ -52,6 +74,7 @@ function removeItem(itemId) {
     counter--;
     updateCounter();
     checkOut();
+    payButton();
 }
 
 function clearCart() {
@@ -66,4 +89,5 @@ document.addEventListener('DOMContentLoaded', function () {
     checkOut();
     load();
     updateCounter();
+    payButton();
 });

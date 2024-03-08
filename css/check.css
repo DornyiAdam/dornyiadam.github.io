@@ -9,16 +9,48 @@ body li {
 }
 
 button.remove-button {
-    background-color: #0f0f0f09;
+    background-color: transparent;
     border: 1px solid #ccc;
-    padding: 5px 10px;
+    color: #000000;
+    padding: 7px 10px;
     cursor: pointer;
     margin-left: 10px;
     border-radius: 5px;
-    color: #000;
-    margin-left: 220px;
-    margin-top: -60px;
-    
+    margin-left: 200px;
+    -moz-box-shadow: 0 0 3px #ccc;
+    -webkit-box-shadow: 0 0 3px #ccc;
+    box-shadow: 0 0 3px #ccc;
+    margin-right: auto;
+    padding-bottom: -80px;
+
+}
+.bi-trash{
+    font-size: 16px;
+    margin: 0!important;
+}
+
+li button {
+    text-align: right;
+    height: 40px;
+    display: block;
+
+}
+button.remove-button:hover {
+    -moz-box-shadow: 0 0 8px #000;
+    -webkit-box-shadow: 0 0 8px #000;
+    box-shadow: -8px 1px 5px 9px 8px #ccc;
+    transition: box-shadow 0.3s, transform 0.3s;
+    border: none;
+    color: #fff;
+}
+
+.payButton {
+    display: none;
+}
+
+.red {
+    color: #ff0000;
+    margin-top: 2px;
 }
 
 button.remove-button:hover {
@@ -26,12 +58,17 @@ button.remove-button:hover {
 }
 
 .modal-lg {
-    width: 700px!important;
+    width: 700px !important;
 }
 
 .calculator {
     flex-wrap: wrap;
 }
+
 .form-check-input[type=radio] {
-    border: 1px solid #ccc!important;
+    border: 1px solid #ccc !important;
+}
+
+.form-check-label {
+    margin: 4px 0px 0px 0px !important;
 }
