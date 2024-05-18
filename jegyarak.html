@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jegyárak</title>
+  <link rel="stylesheet" href="cssZoo/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="cssZoo/style.css">
+  <link rel="icon" type="image/x-icon" href="imagesZoo/logo.png">
+  <link rel="stylesheet" href="cssZoo/jegy.css">
+</head>
+
+<body>
+  <div class="container-fluid">
+    <main>
+      <header>
+        <nav class="navbar navbar-dark" id="home">
+          <div class="container-fluid">
+            <a class="navbar-brand me-auto uppercase logo" href="index.html"><img src="imagesZoo/logo.png"
+                alt="Tatabányazoo háttér" title="Tatabányazoo"></a>
+            <a class="navbar-brand uppercase disappear" href="index.html #map" aria-current="page">Nyitvatartás </a>
+            <a class="navbar-brand uppercase disappear" href="index.html">Főoldal</a>
+            <a class="navbar-brand uppercase disappear" href="tamogatas.html">Támogatás</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+              aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+              aria-labelledby="offcanvasNavbarLabel">
+              <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menüpontok</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+              </div>
+              <div class="offcanvas-body">
+                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                  <li class="nav-item">
+                    <a class="nav" aria-current="page" href="index.html">Főoldal</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav" aria-current="page" href="index.html #map">Nyitvatartás</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav" aria-current="page" href="jegyarak.html">Jegyárak</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav" aria-current="page" href="tamogatas.html">Támogatás</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav" href="index.html #map">Az állatkert térképe</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav" href="#kapcsolat" role="button" data-bs-toggle="page" aria-expanded="false">
+                      Kapcsolat
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </header>
+      </section>
+      <section class="row tickets text-center ">
+
+        <article class="col">
+          <div class="table-responsive">
+            <table class="table table-hover">
+              <thead>
+                <tr>
+                  <th>Jegytípusok</th>
+                  <th class="text-left">Részletek</th>
+                  <th class="no-border-right">Árak</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Felnőtt (Adult):</td>
+                  <td></td>
+                  <td class="no-border-right">3000 Ft</td>
+                </tr>
+                <tr>
+                  <td>Diák/nyugdíjas (Student/retired):</td>
+                  <td>Érvényes diák/nyugdíjas igazolvány felmutatásával</td>
+                  <td class="no-border-right">2500 Ft</td>
+                </tr>
+                <tr>
+                  <td>Gyerek (Child): </td>
+                  <td>3-14 éves korig</td>
+                  <td class="no-border-right">1800 Ft</td>
+                </tr>
+                <tr>
+                  <td class="no-border">Kisgyermek:</td>
+                  <td class="no-border">3 éves kor alatt (Más kedvezménnyel össze nem vonható!)</td>
+                  <td class="no-border no-border-right">300 Ft</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </article>
+      </section>
+      <section class="row cards">
+        <article class="col">
+          <p class="line">Bankkártyás fizetés lehetséges (Mastercard, Maestro, Pay Pass, Visa, American Express, OTP).
+            Fizetőeszközként elfogadjuk továbbá a következő kártyákat: <br> OTP SZÉP kártya, MKB SZÉP kártya, K&H SZÉP
+            kártya, MBH SZÉP kártya.
+            Használható Tatabánya kártya (a kedvezmény csak teljes árú jegyekre érvényesíthető). <br>
+
+            <span class="underline">A feltüntetett árak és feltételek kizárólag az állatkerti belépőkre
+              vonatkoznak!</span>
+          </p>
+        </article>
+      </section>
+      <section class="row online text-center">
+        <h2 class="pb-5">Online jegyvásárlás</h2>
+        <article class="col-lg-4">
+          <figure>
+            <img src="imagesZoo/piktogram2.png" alt="Felnőtt jegy">
+            <figcaption>Felnőtt</figcaption>
+          </figure>
+          <p>3500 Ft</p>
+        </article>
+        <article class="col-lg-4">
+          <figure>
+            <img src="imagesZoo/piktogram.png" alt="Gyerek jegy">
+            <figcaption>Gyerek (3-14 év)</figcaption>
+          </figure>
+          <p>2300 Ft</p>
+        </article>
+        <article class="col-lg-4 mb-auto">
+          <figure>
+            <img src="imagesZoo/piktogram.png" alt="Kombinált jegy">
+            <figcaption>Kombinált jegy (2+1)</figcaption>
+          </figure>
+          <p>7400 Ft</p>
+        </article>
+        <a href="jegyOnline.html"> <button type="button" class="btn btn-primary me-auto ms-auto">Tovább<i
+              class="bi bi-arrow-right"></i></button></a>
+      </section>
+
+      <script src="jsZoo/bootstrap.min.js"></script>
+    </main>
+    <footer>
+      <section class="row">
+        <article class="col-lg-6">
+          <h5>Elérhetőségek</h5>
+          <p>Cím: 2800, Tatabánya, Réti utca 1-5.</p>
+          <p>Hungary</p>
+          <p>info@tatabanyazoo.hu</p>
+          <p id="kapcsolat">Telefon: +36 1 234 6789</p>
+        </article>
+        <article class="col-lg-6">
+          <h5>Kövess be minket!</h5>
+          <i class="bi bi-facebook"></i>
+          <i class="bi bi-instagram"></i>
+          <i class="bi bi-tiktok"></i>
+        </article>
+      </section>
+    </footer>
+  </div>
+</body>
+
+</html>
