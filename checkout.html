@@ -27,7 +27,7 @@
       </section>
       <nav class="navbar navbar-dark navbar-expand-xxl bg-dark uppercase">
         <div class="container-fluid">
-          <a class="navbar-brand me-auto disappear-logo" href="madarakmain.html"><img src="images/logo.png" alt=""
+          <a class="navbar-brand me-auto disappear-logo" href="index.html"><img src="images/logo.png" alt=""
               class="logo"></a>
           <div class="position-relative mobile-cart ms-3">
             <a href="checkout.html"><i class="bi bi-cart3 end-0"></i></a> <span
@@ -51,7 +51,7 @@
             <div class="offcanvas-body">
               <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                 <li class="nav-item">
-                  <a class="nav-link" aria-current="page" href="madarakmain.html">Főoldal </a>
+                  <a class="nav-link" aria-current="page" href="index.html">Főoldal </a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" aria-current="page" href="yourbirdfeeder.html">A te madáretetőd</a>
@@ -81,15 +81,61 @@
         <div class="modal-dialog modal-lg">
           <div class="modal-content">
             <div class="modal-header">
-              <h1 class="modal-title fs-5" id="exampleModalLabel">Fizetés</h1>
+              <h1 class="modal-title fs-5" id="exampleModalLabel">Rendszerüzenet</h1>
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
               <p class="pay-ammount">Fizetendő összeg:</p>
+              <form class="row g-3 needs-validation payForm" novalidate>
+                <div class="col-md-8">
+                  <label for="validationCustom01" class="form-label">Kártyaszám</label>
+                  <input type="text" class="form-control" id="validationCustom01" minlength="19" maxlength="24"
+                    required>
+                  <div class="invalid-feedback">
+                    Helytelen formátum. Helyes: 1234 5678 9876 5432
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <label for="validationCustomUsername" class="form-label">CVC kód</label>
+                  <div class="input-group has-validation">
+                    <input type="number" class="form-control" max="999" min="100" id="validationCustomUsername"
+                      aria-describedby="inputGroupPrepend" required>
+                    <div class="invalid-feedback">
+                      Helytelen formátum. Helyes: 987
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-5">
+                  <label for="validationCustom02" class="form-label">Cím</label>
+                  <input type="text" class="form-control" id="validationCustom02" required>
+                  <div class="invalid-feedback">
+                    Kérem, gépeljen be egy létező címet. Pl.: Réti utca 1-5.
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <label for="validationCustom03" class="form-label">Város</label>
+                  <input type="text" class="form-control" id="validationCustom03" required>
+                  <div class="invalid-feedback">
+                    Kérem, gépeljen be egy létező címet. Pl.: Bugyi
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <label for="validationCustom04" class="form-label">Lejárat</label>
+                  <input type="text" class="form-control" pattern="^\d{2}/\d{2}$" id="validationCustom04" required>
+                  <div class="invalid-feedback">
+                    Helytelen formátum. Helyes: 12/34
+                  </div>
+                </div>
+                <div class="col-lg-12 text-end">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Mégse</button>
+                  <button type="button" class="btn btn-success" onclick="showModal(event)">Fizetés</button>
+                </div>
+              </form>
             </div>
+
             <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-primary">Fizetés</button>
+              *Kérjük vegye figyelembe, hogy rendelését legfeljebb 24 órán belül tudjuk megszakítani! Ezután már sajnos
+              semmit se tehetünk. Ügyfélszogálat: + 36 1234 5678
             </div>
           </div>
         </div>
@@ -102,16 +148,15 @@
           <button class="remove-button ms-3 clearButton" onclick="clearCart()"><i class="bi bi-trash"></i>
             Kosár törlése</button>
         </div>
-        <div class="ms-auto text-center me-auto totalCheckOut">
-          <div>
+        <div class="ms-auto text-center totalCheckOut">
+          <div class="">
             <h3>Rendelése összegzése</h3>
             <hr>
             <p>ÁFA: <span class="vat">0 Ft</span></p>
             <p>Nettó összeg: <span class="netTotal">0 Ft</span></p>
             <hr>
             <p>Végösszeg: <span class="total">0 Ft</span></p>
-            <button type="button" onclick="addPrice()" class="btn btn-warning payButton" data-bs-toggle="modal"
-              data-bs-target="#payModal">
+            <button type="button" class="btn btn-warning payButton" data-bs-toggle="modal" data-bs-target="#payModal">
               Tovább a pénztárhoz!
             </button>
           </div>
@@ -125,26 +170,26 @@
       </section>
       <section class="text-center my-5 choose">
         <h2>Készítsd el a te madáretetőd</h2>
-        <h3 class="ms-5">Kérem, adja meg az adatait, és válassza ki milyen anyagból, és mekkora madáretetőt szeretne!
+        <h3>Kérem, adja meg az adatait, és válassza ki milyen anyagból, és mekkora madáretetőt szeretne!
         </h3>
         <section class="container-fluid">
           <section class="d-flex container-fluid calculator">
 
           </section>
           <article class="container-fluid">
-            <form class="row g-3 needs-validation" novalidate>
+            <form class="row g-3 needs-validation paymentForm" novalidate>
               <div class="col-md-4">
-                <label for="validationCustom01" class="form-label">Vezetéknév</label>
-                <input type="text" class="form-control" id="validationCustom01" value="" required>
+                <label for="validationCustom05" class="form-label">Vezetéknév</label>
+                <input type="text" class="form-control" id="validationCustom05" value="" required>
                 <div class="invalid-feedback">
-                  Helytelen vezetéknév. Helyes: Gipsz (Jakab)     
-              </div>
+                  Helytelen vezetéknév. Helyes: Gipsz (Jakab)
+                </div>
               </div>
               <div class="col-md-4">
-                <label for="validationCustom02" class="form-label">Keresztnév</label>
-                <input type="text" class="form-control" id="validationCustom02" value="" required>
+                <label for="validationCustom06" class="form-label">Keresztnév</label>
+                <input type="text" class="form-control" id="validationCustom06" value="" required>
                 <div class="invalid-feedback">
-                  Helytelen keresztnév. Helyes: (Gipsz) Jakab   
+                  Helytelen keresztnév. Helyes: (Gipsz) Jakab
                 </div>
               </div>
               <div class="col-md-4">
@@ -159,22 +204,22 @@
                 </div>
               </div>
               <div class="col-md-3">
-                <label for="validtionCustom03" class="form-label">Város</label>
-                <input type="text" class="form-control" id="validationCustom03" required>
+                <label for="validationCustom07" class="form-label">Város</label>
+                <input type="text" class="form-control" id="validationCustom07" required>
                 <div class="invalid-feedback">
                   Kérem, adjon meg egy létező várost!
                 </div>
               </div>
               <div class="col-md-3">
-                <label for="validationCustom03" class="form-label">Méret (CM)</label>
-                <input type="number" min="1" max="15" class="form-control size" id="validationCustom03" required>
+                <label for="validationCustom08" class="form-label">Méret (CM)</label>
+                <input type="number" min="1" max="15" class="form-control size" id="validationCustom08" required>
                 <div class="invalid-feedback">
                   Kérem, gépelje be a kívánt méretet! <br> (1-15cm!)
                 </div>
               </div>
               <div class="col-md-3">
-                <label for="validationCustom04" class="form-label">Fa típusa</label>
-                <select class="form-select" required aria-label="Default select example">
+                <label for="validationCustom09" class="form-label">Fa típusa</label>
+                <select class="form-select" required aria-label="Default select example" id="validationCustom09">
                   <option value="" selected>Faanyag</option>
                   <option value="1500">Fenyő</option>
                   <option value="2000">Tölgy</option>
@@ -185,9 +230,9 @@
                 </div>
               </div>
               <div class="col-md-3">
-                <label for="validationCustom05" class="form-label">Irányítószám</label>
-                <input type="number" maxlength="8" max="25000" min="1000"
-                minlength="4" class="form-control" id="validationCustom05" required>
+                <label for="validationCustom10" class="form-label">Irányítószám</label>
+                <input type="number" maxlength="8" max="25000" min="1000" minlength="4" class="form-control"
+                  id="validationCustom10" required>
                 <div class="invalid-feedback">
                   Kérem, adjon meg egy létező irányítószámot!
                 </div>
@@ -199,18 +244,35 @@
                     Elfogadom a feltételeket.
                   </label>
                   <div class="invalid-feedback">
-                    Muszáj elfogadnia a feltételeket a folytatáshoz!                  </div>
+                    Muszáj elfogadnia a feltételeket a folytatáshoz! </div>
                 </div>
               </div>
               <div class="col-12">
-                <button class="btn btn-danger" type="button" onclick="calculatePrice(event)">Számolás</button>
+                <button class="btn btn-danger" type="button" onclick="calculatePrice()">Számolás</button>
               </div>
             </form>
           </article>
+          <div class="modal fade" id="systemInfo" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog  modal-md">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="exampleModalLabel">Rendszerüzenet </h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  Sikeres fizetés!
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Bezárás</button>
+
+                </div>
+              </div>
+            </div>
+          </div>
         </section>
         <section class="calculated container">
           <article class="pe-5">
-            <h3>Kalkulált összeg</h3>
+            <h3 class="ar">Kalkulált összeg</h3>
             <h4>Útmutató</h4>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis nobis sed et excepturi sint,
               officiis, maxime velit quibusdam quod ipsam dicta, illo voluptate. Impedit commodi numquam ipsum
@@ -258,11 +320,13 @@
     </footer>
 
   </div>
+
+  <script src="js/bootstrap.min.js"></script>
   <script src="js/custom.js"></script>
   <script src="js/ybf.js"></script>
   <script src="js/toast.js"></script>
   <script src="js/check.js"></script>
-  <script src="js/bootstrap.min.js"></script>
+
 </body>
 
 </html>

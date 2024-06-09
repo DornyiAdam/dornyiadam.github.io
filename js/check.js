@@ -1,3 +1,6 @@
+const payModal = new bootstrap.Modal(document.getElementById('payModal'));
+const otodik = new bootstrap.Modal(document.getElementById('systemInfo'));
+
 function checkOut() {
     var cartItemsElement = document.getElementById('cart-items');
     var cart = JSON.parse(localStorage.getItem('cart')) || [];
@@ -14,16 +17,18 @@ function checkOut() {
     cart.forEach(function (item) {
         totalPrice += parseInt(item.price);
         var listItem = document.createElement('li');
-
+        var textContent = document.createElement('span');
+        textContent.innerHTML = '<br> ' + item.nev + "<br>";
+        textContent.classList.add("title-display")
+        listItem.appendChild(textContent);
         var imgElement = document.createElement('img');
         imgElement.src = item.image;
         imgElement.alt = item.nev;
         listItem.appendChild(imgElement);
-
-        var textContent = document.createElement('span');
-        textContent.textContent = ' ' + item.nev + ': ' + Number(item.price).toLocaleString() + " Ft";
-        listItem.appendChild(textContent);
-        
+        var priceElement = document.createElement('span');
+        priceElement.innerHTML = "<br>" + Number(item.price).toLocaleString() + " Ft" + "<br>"
+        priceElement.classList.add("price-display")
+        listItem.appendChild(priceElement)
         var removeButton = document.createElement('button');
         removeButton.innerHTML = '<span class="red">✕</span> Eltávolítás';
         removeButton.addEventListener('click', function () {
@@ -91,3 +96,74 @@ document.addEventListener('DOMContentLoaded', function () {
     updateCounter();
     payButton();
 });
+
+function calculatePrice(event) {
+    var calculated = document.querySelector(".calculated");
+    var ar = document.querySelector(".ar")
+    var choosenwood = parseFloat(document.querySelector("select").value) || 0;
+    var size2 = parseInt(document.querySelector(".size").value)
+    var price = Math.floor(choosenwood * size2);
+    // Calculate the price before validating
+    validateForm(price)
+    calculated.style.dispaly = "block"
+    ar.innerHTML =  " Kalkulált összeg " +price + "Ft"
+}
+
+function validateForm(price) {
+    var form = document.querySelector('.paymentForm');
+    var calculated = document.querySelector(".calculated");
+    var ar = document.querySelector(".ar");
+
+    if (form.checkValidity() === false) {
+        event.preventDefault();
+        event.stopPropagation();
+    } else {
+        console.log('Sikeres generálás!');
+        ar.innerHTML =  " Kalkulált összeg " +price + "Ft";
+        calculated.style.display = "flex";
+    }
+
+    form.classList.add('was-validated');
+}
+
+
+function showModal(event) {
+
+    var form = document.querySelector('.payForm');
+    var calculated = document.querySelector(".calculated");
+    var ar = document.querySelector(".ar");
+
+    if (form.checkValidity() === false) {
+        event.preventDefault();
+        event.stopPropagation();
+    } else {
+        payModal.hide();
+        console.log("Fasz")
+        otodik.show();
+        document.body.classList.remove('modal-open');
+        clearCart();
+
+        
+    }
+
+    form.classList.add('was-validated');
+}
+// Example starter JavaScript for disabling form submissions if there are invalid fields
+(() => {
+    'use strict'
+  
+    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+    const forms = document.querySelectorAll('.needs-validation')
+  
+    // Loop over them and prevent submission
+    Array.from(forms).forEach(form => {
+      form.addEventListener('submit', event => {
+        if (!form.checkValidity()) {
+          event.preventDefault()
+          event.stopPropagation()
+        }
+  
+        form.classList.add('was-validated')
+      }, false)
+    })
+  })()

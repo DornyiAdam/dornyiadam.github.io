@@ -291,6 +291,18 @@ form {
     color: #E4405F;
 }
 
+.gomb {
+    background-color: #ccc;
+}
+
+.madaraink{
+    display: none;
+}
+
+.show {
+    display: flex !important;
+}
+
 footer h2 {
     margin: 10px 0px!important;
 }
