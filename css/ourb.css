@@ -81,7 +81,10 @@ footer h2 {
 footer img {
     margin-left: 20px;
 }
-
+.ourbirdscenter p {
+    margin: 0 !important;
+    padding: 0 !important;
+}
 .carousel-item h1 {
     z-index: 99;
     font-size: 56px;

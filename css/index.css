@@ -1,4 +1,6 @@
-h1 {
+h1,
+h2,
+.buttondiv {
           text-align: center;
           /* Szöveg középre igazítása */
           margin: 0 auto;
@@ -11,8 +13,117 @@ h1 {
           /* Bal él pozícionálása a középvonal 50%-ára */
           transform: translate(-50%, -50%);
           /* Középre igazítás a tengelyek mentén */
+
+}
+
+.welcome {
+          animation: h1move 5s
+}
+
+.question {
+          animation: h2move 5s;
+          top: 60%;
+          transform: translate(-50%, -50%);
+          width: 250px;
+}
+.animation {
+          animation: wiggle 2s linear infinite ;
+}
+@keyframes wiggle {
+          0%, 7% {
+            transform: rotateZ(0);
+          }
+          15% {
+            transform: rotateZ(-15deg);
+          }
+          20% {
+            transform: rotateZ(10deg);
+          }
+          25% {
+            transform: rotateZ(-10deg);
+          }
+          30% {
+            transform: rotateZ(6deg);
+          }
+          35% {
+            transform: rotateZ(-4deg);
+          }
+          40%, 100% {
+            transform: rotateZ(0);
+          }
+        }
+.buttondiv {
+          top: 70%;
 }
 
 a {
           font-size: 30px !important;
+}
+
+main {
+          padding: 30px;
+}
+
+nav {
+          background-color: #454141;
+}
+.hide {
+          display: none;
+}
+.contact {
+          animation: address 5s
+}
+button {
+          height: 4em;
+          width: 7em;
+          
+          background: #444 !important;
+          background: linear-gradient(top, #555, #333) !important;
+          border: none;
+          border-top: 3px solid orange !important;
+          border-radius: 0 0 0.2em 0.2em;
+          color: #fff;
+          font-family: Helvetica, Arial, Sans-serif;
+          font-size: 1em !important;
+          transform-origin: 50% 5em;
+}
+.email {
+          animation: email 5s;
+          top: 60%
+}
+@keyframes h1move {
+          from {
+                    left: 0px;
+          }
+
+          to {
+                    left: 50%
+          }
+}
+
+@keyframes h2move {
+          from {
+                    left: 100%;
+          }
+
+          to {
+                    right: 50%;
+          }
+}
+
+@keyframes button {
+          0% {
+                    opacity: 0;
+          }
+          100% {
+                    opacity: 1;
+          }
+}
+@keyframes address {
+          from {top: 20%;}
+          to {top: 50%;}
+}
+@keyframes email {
+          from {top: 100%;}
+          to {top: 60%;}
 }
