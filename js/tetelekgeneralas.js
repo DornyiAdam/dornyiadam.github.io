@@ -2,8 +2,8 @@ var rajzok = ["Féregírtó paradoxon", "Hibák felmerülése", "Követelményfe
 
 
 function generalas() {
-          const MIN = 0       
-          const MAX = rajzok.length
+          const MIN = 0
+          const MAX = rajzok.length - 1
           var random = Math.floor(MIN + Math.random() * (MAX - MIN + 1))
           const span = document.querySelector(".outcome")
           if (rajzok.length > 0) {
