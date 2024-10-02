@@ -2,39 +2,56 @@
 <html lang="hu">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tételek</title>
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="css/tetelek.css">
-    
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tételek</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="css/tetelek.css">
+
 </head>
 
 <body>
-    <main>
-        <div class="modal fade dark" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h1 class="modal-title fs-5" id="exampleModalLabel">Feladat generálás</h1>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                  <p>A kiválaszott feladat: <span class="outcome" id="myInput"></span></p>
-                </div>
-              </div>
-            </div>
+  <header></header>
+  <main>
+    <h1 class="text-center">Random feladatok</h1>
+    <div class="modal fade dark" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Feladat generálás</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
-          <button type="button" onclick="generalas()" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">
-            Generálás
-          </button>
+          <div class="modal-body">
+            <p>A kiválaszott feladat: <span class="outcome" id="myInput"></span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <form>
+      <div class="mb-3">
+        <select class="form-select subject" aria-label="Default select example">
+          <option selected>Válassz tantárgyat!</option>
+          <option value="1">Szoftvertesztelés</option>
+          <option value="2">Történelem</option>
+        </select>
+      </div>
+      <div class="mb-3">
+        <button type="button" onclick="generalas()" class="btn btn-success mx-auto d-block disabled"
+          data-bs-toggle="modal" data-bs-target="#exampleModal">
+          Generálás
+        </button>
+      </div>
 
-    </main>
-    <footer></footer>
-    <script src="js/tetelekgeneralas.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+    </form>
+
+
+  </main>
+  <footer></footer>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/tetelekgeneralas.js"></script>
+  <script src="js/bootstrap.min.js"></script>
 
 </body>
 

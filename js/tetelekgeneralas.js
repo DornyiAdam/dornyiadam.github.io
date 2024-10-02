@@ -1,7 +1,7 @@
 var rajzok = ["Féregírtó paradoxon", "Hibák felmerülése", "Követelményfejlesztés folyamata", "Követelmények dokumentumai", "Tesztpiramis", "A tesztelés alapvető folyamata", "Ütemterv", "Szoftverfejlesztési folyamat modellje"]
-
-
-function generalas() {
+var tortenelem = [""]
+var valasztas = 0;
+function rajzGeneralas() {
           const MIN = 0
           const MAX = rajzok.length - 1
           var random = Math.floor(MIN + Math.random() * (MAX - MIN + 1))
@@ -16,3 +16,11 @@ function generalas() {
                     span.innerHTML = "Szép munka!"
           }
 }
+
+$(".subject").change(function() {
+          subject = $(this).val();
+          if(subject == 1) {
+                    rajzGeneralas();
+                    $("button").removeClass("disabled")
+          }
+});
