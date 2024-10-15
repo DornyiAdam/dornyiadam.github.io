@@ -13,7 +13,7 @@ function revealLetter() {
         letter.style.color = 'orange';
         heading.appendChild(letter);
         index++;
-        setTimeout(revealLetter, 200);
+        setTimeout(revealLetter, 100);
     } else {
         content.classList.remove('hidden');
         content.style.display = 'block'; 
@@ -24,4 +24,4 @@ function revealLetter() {
 setTimeout(() => {
     heading.classList.add('reveal'); 
     revealLetter();
-}, 500);
+}, 300);
