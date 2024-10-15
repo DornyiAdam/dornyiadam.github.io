@@ -1,5 +1,5 @@
 //var rajzok = ["Féregírtó paradoxon", "Hibák felmerülése", "Követelményfejlesztés folyamata", "Követelmények dokumentumai", "Tesztpiramis", "A tesztelés alapvető folyamata", "Ütemterv", "Szoftverfejlesztési folyamat modellje"]
-var rajzok = ["Biztonságkritikus V-modell", "Sima V-modell", "Vízesés modell", "Prototípus modell", "Evolúciós fejlesztés", "Inkrementális fejlesztés", "Gyors alkalmazásfejlesztés meghatározás, fejlesztés, rendszerépítés, tesztelés MFRT", "Gyors alkalmazásfejlesztés folyamat"]
+var rajzok = ["Biztonságkritikus V-modell", "Sima V-modell", "Vízesés modell", "Prototípus modell", "Evolúciós fejlesztés", "Inkrementális fejlesztés", "Gyors alkalmazásfejlesztés meghatározás, fejlesztés, rendszerépítés, tesztelés MFRT", "Gyors alkalmazásfejlesztés", "10 agilis alapelv"]
 var tortenelem = [""]
 var valasztas = 0;
 function rajzGeneralas() {
