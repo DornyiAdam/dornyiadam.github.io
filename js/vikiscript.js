@@ -11,14 +11,13 @@ var randomKulcs = kulcsok[Math.floor(Math.random() * kulcsok.length)];
 document.querySelector("img").src = `vikiimages/${kepek[randomKulcs]}`
 
 function next() {
+    
     delete kepek[randomKulcs]
     const remainingKeys = Object.keys(kepek);
     if (remainingKeys.length > 0) {
         randomKulcs = remainingKeys[Math.floor(Math.random() * remainingKeys.length)];
         document.querySelector("img").src = `vikiimages/${kepek[randomKulcs]}`;
         
-    } else {
-        alert("Játék vége!");
     }
 
 }
@@ -48,6 +47,7 @@ function showFeedback(isCorrect) {
 document.querySelector("button").addEventListener("click", () => {
     if (randomKulcs == document.querySelector("input").value) {
         showFeedback(true);  // Helyes válasz
+        document.querySelector("input").value = ""
         next();
     } else {
         showFeedback(false); // Helytelen válasz
