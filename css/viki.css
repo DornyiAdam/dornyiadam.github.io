@@ -1,0 +1,25 @@
+.muveletek {
+    background-color: rgba(95, 96, 99, 0.5);
+    border-radius: 20px;
+    height: 400px;
+    margin: 0px auto;
+    padding: 30px 20px;
+    margin-top: 50px;
+}
+body {
+    color: #E6F4F1;
+    padding: 50px;
+    background-color: #0099E4;
+    width: 400px;
+    margin: 0 auto;
+}
+.picture {
+    height: 50%;
+    width: 80%;
+    margin: 20px auto;
+    background-color: yellow;
+}
+.btn {
+    display:block;
+    margin: 20px auto;
+}
