@@ -8,14 +8,14 @@ const kulcsok = Object.keys(kepek)
 const images = Object.values(kepek)
 
 var randomKulcs = kulcsok[Math.floor(Math.random() * kulcsok.length)];
-document.querySelector("img").src = `../vikiimages/${kepek[randomKulcs]}`
+document.querySelector("img").src = `vikiimages/${kepek[randomKulcs]}`
 
 function next() {
     delete kepek[randomKulcs]
     const remainingKeys = Object.keys(kepek);
     if (remainingKeys.length > 0) {
         randomKulcs = remainingKeys[Math.floor(Math.random() * remainingKeys.length)];
-        document.querySelector("img").src = `../vikiimages/${kepek[randomKulcs]}`;
+        document.querySelector("img").src = `vikiimages/${kepek[randomKulcs]}`;
         
     } else {
         alert("Játék vége!");
