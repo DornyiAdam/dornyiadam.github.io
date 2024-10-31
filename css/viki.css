@@ -8,18 +8,46 @@
 }
 body {
     color: #E6F4F1;
-    padding: 50px;
+    padding: 20px;
     background-color: #0099E4;
     width: 400px;
     margin: 0 auto;
 }
-.picture {
+img {
     height: 50%;
     width: 80%;
     margin: 20px auto;
-    background-color: yellow;
+    background-color: transparent;
+    display: block;
+    object-fit: contain;
+}
+input {
+    margin: 0 auto;
+    width: 80% !important;
 }
 .btn {
     display:block;
     margin: 20px auto;
+}
+.feedback {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    font-size: 2em;
+    padding: 0.5em;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+    opacity: 1;
+    visibility: visible;
+}
+
+.hidden {
+    opacity: 0;
+    visibility: hidden;
 }

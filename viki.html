@@ -7,19 +7,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/viki.css">
 </head>
 
 <body>
     <div class="container-fluid">
         <header>
-            <h1 class="text-center">Gyakorlás</h1>
         </header>
         <main>
+            <div id="feedback" class="feedback hidden">
+                <span id="feedbackIcon">✔️</span>
+            </div>
+            
             <div class="muveletek">
-                <div class="picture"></div>
+                <img src="" alt="">
                 <form>
-                    <input type="number" class="form-control">
+                    <input type="text" pattern="[0-9]+" inputmode="numeric" class="form-control" />
                 </form>
                 <button class="btn btn-warning">Enter</button>
             </div>
@@ -27,7 +30,7 @@
         <footer></footer>
     </div>
     <script src="js/bootstrap.bundle.min.js"></script>
-    <script src="js/script.js"></script>
+    <script src="js/vikiscript.js"></script>
 </body>
 
 </html>

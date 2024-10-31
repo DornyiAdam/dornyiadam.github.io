@@ -47,7 +47,7 @@ nav {
 }
 
 button {
-  height: 4em;
+  height: 3em;
   width: 7em;
   background: #444 !important;
   border-color: transparent !important;
@@ -59,6 +59,10 @@ button {
   font-family: Helvetica, Arial, Sans-serif;
   font-size: 1em !important;
   transform-origin: 50% 5em;
+}
+a {
+  font-size: 1em !important;
+  color: orange;
 }
 body {
   display: flex;
