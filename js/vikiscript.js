@@ -128,7 +128,7 @@ const kulcsok = Object.keys(kepek)
 const images = Object.values(kepek)
 
 var randomKulcs = kulcsok[Math.floor(Math.random() * kulcsok.length)];
-document.querySelector("img").src = `vikiimages/${kepek[randomKulcs]}`
+document.querySelector("img").src = `vikiwebp/${kepek[randomKulcs]}`
 
 function next() {
     
@@ -136,7 +136,7 @@ function next() {
     const remainingKeys = Object.keys(kepek);
     if (remainingKeys.length > 0) {
         randomKulcs = remainingKeys[Math.floor(Math.random() * remainingKeys.length)];
-        document.querySelector("img").src = `vikiimages/${kepek[randomKulcs]}`;
+        document.querySelector("img").src = `vikiwebp/${kepek[randomKulcs]}`;
         
     }
 
