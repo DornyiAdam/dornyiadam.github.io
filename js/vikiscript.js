@@ -207,6 +207,7 @@ function showFeedback(isCorrect) {
     if (isCorrect) {
         pontok++;
         feedbackIcon.textContent = "✅";  // Check mark for correct answer
+        next(); 
     } else {
         feedbackIcon.textContent = "❎";  // X for incorrect answer
         console.log(randomKulcs);
@@ -218,7 +219,6 @@ function showFeedback(isCorrect) {
     // Set timeout for hiding feedback and then move to next question
     setTimeout(() => {
         feedback.classList.add("hidden");
-        next();  // Call next() after feedback is shown
     }, 200);
 }
 
