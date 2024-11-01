@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Unlock&display=swap');
+
 .muveletek {
     background-color: rgba(174, 174, 174, 0.98);
     border-radius: 20px;
@@ -6,6 +8,7 @@
     padding: 30px 20px;
     margin-top: 50px;
 }
+
 body {
     color: #E6F4F1;
     padding: 20px;
@@ -13,32 +16,41 @@ body {
     background-color: #0099E4;
     margin: 0 auto;
     overflow: hidden;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 30px;
 }
+
 .score {
     color: yellow;
 }
+
 img {
     height: 50%;
     width: 80%;
     margin: 20px auto;
     display: block;
     object-fit: contain;
-    mix-blend-mode:multiply;
+    mix-blend-mode: multiply;
 }
+
 input {
     margin: 0 auto;
     width: 80% !important;
 }
+
 .btn {
-    display:block;
+    display: block;
     margin: 20px auto;
 }
+
 .feedback {
     position: fixed;
-    top: 50%;
+    top: 10%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 2em;
+    font-size: 30px;
     padding: 0.5em;
     border-radius: 10px;
     display: flex;
@@ -53,6 +65,7 @@ input {
     opacity: 0;
     visibility: hidden;
 }
+
 .cheat {
     display: none;
 }

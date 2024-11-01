@@ -8,6 +8,7 @@ const kepek = {
     9: "img-9.webp",
     10: "img-10.webp",
     11: "img-11.webp",
+    14: "img-14.webp",   // új elem
     16: "img-16.webp",
     17: "img-17.webp",
     19: "img-19.webp",
@@ -16,6 +17,18 @@ const kepek = {
     27: "img-27.webp",
     31: "img-31.webp",
     42: "img-42.webp",
+    566: "img-566.webp",
+    618: "img-618.webp",
+    621: "img-621.webp",
+    739: "img-739.webp",
+    743: "img-743.webp",
+    101: "img-101.webp", // új elem
+    107: "img-107.webp", // új elem
+    111: "img-111.webp", // új elem
+    112: "img-112.webp", // új elem
+    118: "img-118.webp", // új elem
+    129: "img-129.webp", // új elem
+    134: "img-134.webp", // új elem
     454: "img-454.webp",
     455: "img-455.webp",
     457: "img-457.webp",
@@ -36,10 +49,11 @@ const kepek = {
     426: "img-426.webp",
     432: "img-432.webp",
     433: "img-433.webp",
-    437: "img-437.webp",
+    505: "img-505.webp",
+    506: "img-506.webp",
+    507: "img-507.webp", // új elem
+    537: "img-537.webp",
     539: "img-539.webp",
-    541: "img-541.webp",
-    542: "img-542.webp",
     543: "img-543.webp",
     544: "img-544.webp",
     548: "img-548.webp",
@@ -47,10 +61,12 @@ const kepek = {
     570: "img-570.webp",
     576: "img-576.webp",
     582: "img-582.webp",
+    583: "img-583.webp", // új elem
     588: "img-588.webp",
     589: "img-589.webp",
     605: "img-605.webp",
-    612: "img-612.webp",
+    610: "img-610.webp", // új elem
+    612: "img-612.webp", // új elem
     620: "img-620.webp",
     624: "img-624.webp",
     629: "img-629.webp",
@@ -102,7 +118,7 @@ const kepek = {
     923: "img-923.webp",
     934: "img-934.webp",
     935: "img-935.webp",
-    940: "img-940.webp",
+    940: "img-950.webp",
     945: "img-945.webp",
     952: "img-952.webp",
     957: "img-957.webp",
@@ -121,21 +137,45 @@ const kepek = {
     987: "img-987.webp",
     988: "img-988.webp",
     998: "img-998.webp",
+    517: "img-517.webp", // új elem
+    612: "img-612.webp", // új elem
+    201: "img-201.webp", // új elem
+    205: "img-205.webp", // új elem
+    206: "img-206.webp", // új elem
+    213: "img-213.webp", // új elem
+    224: "img-224.webp", // új elem
+    238: "img-238.webp", // új elem
+    304: "img-304.webp", // új elem
+    309: "img-309.webp", // új elem
+    312: "img-312.webp", // új elem
+    368: "img-368.webp", // új elem
+    373: "img-373.webp", // új elem
+    396: "img-396.webp", // új elem
+    402: "img-402.webp", // új elem
+    405: "img-405.webp", // új elem
+    407: "img-407.webp", // új elem
 };
+
 
 // ====== Játék változók inicializálása ======
 var jatek = false;
 const kulcsok = Object.keys(kepek);
 const images = Object.values(kepek);
 var pontok = 0;
+var found = [ ]
+var wrong = [ ]
 var randomKulcs = kulcsok[Math.floor(Math.random() * kulcsok.length)];
 
 // ====== Első kép beállítása ======
 document.querySelector("img").src = `vikiwebp/${kepek[randomKulcs]}`;
-document.querySelector("img").addEventListener("error", next);
-
+document.querySelector("img").addEventListener("error", findWrong);
+function findWrong() {
+    wrong.push(randomKulcs)
+    next()
+}
 // ====== Kép hiba esetén következő kép betöltése ======
 function next() {
+    found.push(randomKulcs)
     delete kepek[randomKulcs];
     const remainingKeys = Object.keys(kepek);
     if (remainingKeys.length > 0) {
@@ -146,12 +186,13 @@ function next() {
         }
     } else {
         console.log("Nincs több kép.");
+        console.log(wrong)
     }
 }
 
 // ====== Fejlesztői mód ellenőrzése ======
 //var dev = confirm("Szeretnéd látni a megoldásokat?");
-var dev = true;
+var dev = confirm("Szeretnéd látni a megoldásokat egyből?");
 if (dev) {
     document.querySelector(".cheat").style.display = "block";
     document.querySelector(".cheat").innerHTML = randomKulcs
@@ -160,7 +201,7 @@ if (dev) {
 // ====== Pontszám kijelző frissítése ======
 setInterval(() => {
     document.querySelector(".score").innerHTML = pontok;
-}, 500);
+}, 100);
 
 // ====== Visszajelzés megjelenítése helyes és helytelen válaszra ======
 function showFeedback(isCorrect) {
