@@ -148,11 +148,9 @@ function showFeedback(isCorrect) {
     const feedbackIcon = document.getElementById("feedbackIcon");
 
     if (isCorrect) {
-        feedbackIcon.textContent = "✔️";  // Pipa jel helyes válasz esetén
-        feedback.style.backgroundColor = "green";
+        feedbackIcon.textContent = "✅";  // Pipa jel helyes válasz esetén
     } else {
-        feedbackIcon.textContent = "❌";  // X jel helytelen válasz esetén
-        feedback.style.backgroundColor = "red";
+        feedbackIcon.textContent = "❎";  // X jel helytelen válasz esetén
         console.log(randomKulcs)
     }
 

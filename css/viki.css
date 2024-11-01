@@ -1,5 +1,5 @@
 .muveletek {
-    background-color: rgba(95, 96, 99, 0.5);
+    background-color: rgba(174, 174, 174, 0.98);
     border-radius: 20px;
     height: 400px;
     margin: 0px auto;
@@ -17,9 +17,9 @@ img {
     height: 50%;
     width: 80%;
     margin: 20px auto;
-    background-color: transparent;
     display: block;
     object-fit: contain;
+    mix-blend-mode:multiply;
 }
 input {
     margin: 0 auto;
@@ -34,8 +34,6 @@ input {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: rgba(0, 0, 0, 0.8);
-    color: white;
     font-size: 2em;
     padding: 0.5em;
     border-radius: 10px;
