@@ -1,4 +1,4 @@
-
+// ====== Képek adatainak beállítása ======
 const kepek = {
     1: "img-1.webp",
     3: "img-3.webp",
@@ -123,35 +123,56 @@ const kepek = {
     998: "img-998.webp",
 };
 
-var jatek = false
-const kulcsok = Object.keys(kepek)
-const images = Object.values(kepek)
-
+// ====== Játék változók inicializálása ======
+var jatek = false;
+const kulcsok = Object.keys(kepek);
+const images = Object.values(kepek);
+var pontok = 0;
 var randomKulcs = kulcsok[Math.floor(Math.random() * kulcsok.length)];
-document.querySelector("img").src = `vikiwebp/${kepek[randomKulcs]}`
-document.querySelector("img").addEventListener("error", next)
+
+// ====== Első kép beállítása ======
+document.querySelector("img").src = `vikiwebp/${kepek[randomKulcs]}`;
+document.querySelector("img").addEventListener("error", next);
+
+// ====== Kép hiba esetén következő kép betöltése ======
 function next() {
-    delete kepek[randomKulcs]
+    delete kepek[randomKulcs];
     const remainingKeys = Object.keys(kepek);
     if (remainingKeys.length > 0) {
         randomKulcs = remainingKeys[Math.floor(Math.random() * remainingKeys.length)];
         document.querySelector("img").src = `vikiwebp/${kepek[randomKulcs]}`;
+        if (dev) {
+            document.querySelector(".cheat").innerHTML = randomKulcs
+        }
+    } else {
+        console.log("Nincs több kép.");
     }
-    else {
-        console.log("Nincsenek több képek.");
-    }
-
 }
 
+// ====== Fejlesztői mód ellenőrzése ======
+//var dev = confirm("Szeretnéd látni a megoldásokat?");
+var dev = true;
+if (dev) {
+    document.querySelector(".cheat").style.display = "block";
+    document.querySelector(".cheat").innerHTML = randomKulcs
+}
+
+// ====== Pontszám kijelző frissítése ======
+setInterval(() => {
+    document.querySelector(".score").innerHTML = pontok;
+}, 500);
+
+// ====== Visszajelzés megjelenítése helyes és helytelen válaszra ======
 function showFeedback(isCorrect) {
     const feedback = document.getElementById("feedback");
     const feedbackIcon = document.getElementById("feedbackIcon");
 
     if (isCorrect) {
+        pontok++;
         feedbackIcon.textContent = "✅";  // Pipa jel helyes válasz esetén
     } else {
         feedbackIcon.textContent = "❎";  // X jel helytelen válasz esetén
-        console.log(randomKulcs)
+        console.log(randomKulcs);
     }
 
     // Felugró ablak megjelenítése
@@ -163,11 +184,11 @@ function showFeedback(isCorrect) {
     }, 1500);
 }
 
-// Hívás példa
+// ====== Gombkattintás eseménykezelő ======
 document.querySelector("button").addEventListener("click", () => {
     if (randomKulcs == document.querySelector("input").value) {
         showFeedback(true);  // Helyes válasz
-        document.querySelector("input").value = ""
+        document.querySelector("input").value = "";
         next();
     } else {
         showFeedback(false); // Helytelen válasz

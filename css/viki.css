@@ -9,9 +9,13 @@
 body {
     color: #E6F4F1;
     padding: 20px;
+    width: 350px;
     background-color: #0099E4;
-    width: 400px;
     margin: 0 auto;
+    overflow: hidden;
+}
+.score {
+    color: yellow;
 }
 img {
     height: 50%;
@@ -48,4 +52,7 @@ input {
 .hidden {
     opacity: 0;
     visibility: hidden;
+}
+.cheat {
+    display: none;
 }
