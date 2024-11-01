@@ -1,14 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Unlock&display=swap');
 
-.muveletek {
-    background-color: rgba(174, 174, 174, 0.98);
-    border-radius: 20px;
-    height: 400px;
-    margin: 0px auto;
-    padding: 30px 20px;
-    margin-top: 50px;
-}
-
 body {
     color: #E6F4F1;
     padding: 20px;
@@ -22,27 +13,65 @@ body {
     font-size: 30px;
 }
 
+.muveletek {
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 25px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    margin: 0px auto;
+    padding: 30px 20px;
+    margin-top: 50px;
+    height: 550px;
+    color: #333;
+}
+
 .score {
-    color: yellow;
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-size: 25px;
+    text-align: center;
+    width: 40%;
+    margin: 20px auto;
 }
 
 img {
-    height: 50%;
+    height: 200px;
     width: 80%;
     margin: 20px auto;
     display: block;
-    object-fit: contain;
-    mix-blend-mode: multiply;
+    object-fit: cover;
+    border-radius: 15px;
+    border: 2px solid #ccc; /* Light gray border */
+    background-color: #f3f3f3; /* Light gray background */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
+
 
 input {
     margin: 0 auto;
     width: 80% !important;
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 24px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 .btn {
     display: block;
     margin: 20px auto;
+    background-color: #ffcc00;
+    color: #333;
+    padding: 10px 20px;
+    font-size: 24px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #ffdd33;
 }
 
 .feedback {
@@ -50,22 +79,39 @@ input {
     top: 10%;
     left: 50%;
     transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.75);
+    color: #fff;
+    padding: 15px 25px;
     font-size: 30px;
-    padding: 0.5em;
-    border-radius: 10px;
+    border-radius: 15px;
     display: flex;
     align-items: center;
     justify-content: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    visibility: hidden;
     transition: opacity 0.5s ease, visibility 0.5s ease;
-    opacity: 1;
-    visibility: visible;
+    font-family: "Unlock", cursive;
 }
 
-.hidden {
+.feedback.hidden {
     opacity: 0;
     visibility: hidden;
 }
 
+.feedback:not(.hidden) {
+    opacity: 1;
+    visibility: visible;
+}
+
 .cheat {
     display: none;
+    background-color: #f44336;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    width: 40%;
+    text-align: center;
+    font-size: 20px;
+    margin: 20px auto;
 }
