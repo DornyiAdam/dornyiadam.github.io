@@ -162,8 +162,8 @@ var jatek = false;
 const kulcsok = Object.keys(kepek);
 const images = Object.values(kepek);
 var pontok = 0;
-var found = [ ]
-var wrong = [ ]
+var found = []
+var wrong = []
 var randomKulcs = kulcsok[Math.floor(Math.random() * kulcsok.length)];
 
 // ====== Első kép beállítása ======
@@ -175,15 +175,14 @@ function findWrong() {
 }
 // ====== Kép hiba esetén következő kép betöltése ======
 function next() {
+    document.querySelector(".cheat").style.display = "none";
     found.push(randomKulcs)
     delete kepek[randomKulcs];
     const remainingKeys = Object.keys(kepek);
     if (remainingKeys.length > 0) {
         randomKulcs = remainingKeys[Math.floor(Math.random() * remainingKeys.length)];
         document.querySelector("img").src = `vikiwebp/${kepek[randomKulcs]}`;
-        if (dev) {
-            document.querySelector(".cheat").innerHTML = randomKulcs
-        }
+        helpuser()
     } else {
         console.log("Nincs több kép.");
         console.log(wrong)
@@ -193,10 +192,7 @@ function next() {
 // ====== Fejlesztői mód ellenőrzése ======
 //var dev = confirm("Szeretnéd látni a megoldásokat?");
 var dev = confirm("Szeretnéd látni a megoldásokat egyből?");
-if (dev) {
-    document.querySelector(".cheat").style.display = "block";
-    document.querySelector(".cheat").innerHTML = randomKulcs
-}
+
 
 // ====== Pontszám kijelző frissítése ======
 setInterval(() => {
@@ -210,28 +206,49 @@ function showFeedback(isCorrect) {
 
     if (isCorrect) {
         pontok++;
-        feedbackIcon.textContent = "✅";  // Pipa jel helyes válasz esetén
+        feedbackIcon.textContent = "✅";  // Check mark for correct answer
     } else {
-        feedbackIcon.textContent = "❎";  // X jel helytelen válasz esetén
+        feedbackIcon.textContent = "❎";  // X for incorrect answer
         console.log(randomKulcs);
     }
 
-    // Felugró ablak megjelenítése
+    // Show feedback
     feedback.classList.remove("hidden");
 
-    // Eltűnés beállítása 1,5 másodperc múlva
+    // Set timeout for hiding feedback and then move to next question
     setTimeout(() => {
         feedback.classList.add("hidden");
-    }, 1500);
+        next();  // Call next() after feedback is shown
+    }, 200);
 }
 
-// ====== Gombkattintás eseménykezelő ======
-document.querySelector("button").addEventListener("click", () => {
-    if (randomKulcs == document.querySelector("input").value) {
-        showFeedback(true);  // Helyes válasz
-        document.querySelector("input").value = "";
-        next();
+// ====== Gombkattintás eseménykezelő ====
+function handlestuff() {
+    const inputValue = document.querySelector("input").value;
+    if (randomKulcs == inputValue) {
+        showFeedback(true);  // Correct answer
+        document.querySelector("input").value = ""; // Clear input after feedback is shown
     } else {
-        showFeedback(false); // Helytelen válasz
+        showFeedback(false); // Incorrect answer
     }
+}
+
+document.querySelector("button").addEventListener("click", handlestuff);
+document.querySelector("input").addEventListener("keypress", function(event) {
+    if (event.key === "Enter") {
+        event.preventDefault(); // Prevent form submission
+        handlestuff();
+    }   
 });
+
+helpuser()
+// HELP
+function helpuser() {
+    if (dev) {
+        setTimeout(() => {
+            document.querySelector(".cheat").style.display = "block";
+            document.querySelector(".cheat").innerHTML = randomKulcs
+        }, 15000);
+
+    }
+}
