@@ -15,3 +15,6 @@ body {
     width: 60px;
     z-index: 10; /* Biztosítja, hogy a gomb a többi elem felett jelenjen meg */
 }
+textarea {
+    height: 500px;
+}
