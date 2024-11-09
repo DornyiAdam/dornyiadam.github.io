@@ -1,0 +1,64 @@
+header, footer{
+    background-color: #d6322F;
+    padding: 15px 0px;
+    border-bottom: 5px solid #fff;
+    text-align: center;
+}
+header, footer, aside{
+    color: #fff;
+    text-align: center;
+}
+header, footer, .pont{
+    background-color: #d6322F;
+}
+footer{
+    border-bottom: none;
+    border-top: 5px solid #fff;
+    position: fixed;
+    width: 100%;
+    left: 0;
+    right: 0;
+}
+body{
+    background-image: url(../img/bg.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+section{
+    margin: 30px auto;
+    width: 400px;
+    height: 500px;
+    border: 2px solid #d6322F;
+    background-color: #add8e6;
+    overflow: hidden;
+    position: relative;
+}
+main{
+    width: 70%;
+    height: 90vh;
+    margin: 0px auto;
+}
+aside{
+    width: 30%;
+    padding: 30px;
+    background-color: rgba(0,0,0,0.5);
+}
+.pont{
+    padding: 10px;
+    display: inline-block;
+    font-weight: 700;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+.apple, .banana{
+    width: 50px;
+    height: 50px;
+    background-image: url(../img/apple.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+}
+.banana{
+    background-image: url(../img/banana.png);
+}
