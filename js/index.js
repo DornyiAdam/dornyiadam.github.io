@@ -24,4 +24,4 @@ function revealLetter() {
 setTimeout(() => {
     heading.classList.add('reveal'); 
     revealLetter();
-}, 300);
+}, 100);
