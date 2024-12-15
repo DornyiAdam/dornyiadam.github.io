@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Madáretető projekt</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/ybf.css">
+  <link rel="stylesheet" href="css/check.css">
+  <link rel="icon" type="image/x-icon" href="images/favicon.png">
+</head>
+
+<body>
+  <div class="container-fluid" id="top">
+    <header class="sticky-top">
+      <section class="d-flex help">
+        <p class="text-center ms-5 me-5 bi">Tegyünk <span class="broken-small-res-display-none big">együtt</span> a
+          természetért! <i class="bi  bi-heart-fill broken-small-res-display-none"></i> </p>
+
+        <a href="" class="text-dark">
+          <i class="bi">Elakadtál? Segítünk! </i>
+          <i class="bi">titkarsag@bankitatabanya.hu</i>
+          <i class="bi bi-envelope broken-small-res-display-none"></i>
+        </a>
+      </section>
+      <nav class="navbar navbar-dark navbar-expand-xxl bg-dark uppercase">
+        <div class="container-fluid">
+          <a class="navbar-brand me-auto disappear-logo" href="index.html"><img src="images/logo.png" alt=""
+              class="logo"></a>
+          <div class="position-relative mobile-cart ms-3">
+            <a href="checkout.html"><i class="bi bi-cart3 end-0"></i></a> <span
+              class="position-absolute badge rounded-pill bg-danger end-50 cart-badge">
+              <span id="cartItemCount visually-hidden" class="mobile-cart-items"></span>
+            </span>
+          </div>
+          <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+
+          <div class="offcanvas bg-dark offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+            aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header">
+              <h4 class="offcanvas-title text-white" id="offcanvasDarkNavbarLabel">Menü</h4>
+              <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                <li class="nav-item">
+                  <a class="nav-link" aria-current="page" href="index.html">Főoldal </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" aria-current="page" href="yourbirdfeeder.html">A te madáretetőd</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link  " aria-current="page" href="ourbirds.html">Madaraink</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link " aria-current="page" href="galery.html">Galéria </a>
+                </li>
+                <li class="nav-item disappear-basket">
+                  <div class="position-relative">
+                    <a href="checkout.html"><i class="bi bi-cart3"></i></a>
+                    <span class="position-absolute badge rounded-pill bg-danger end-50 cart-badge">
+                      <span class="cartItemCount"></span>
+                    </span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main class="container">
+      <div class="modal fade" id="payModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">Rendszerüzenet</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <p class="pay-ammount">Fizetendő összeg:</p>
+              <form class="row g-3 needs-validation payForm" novalidate>
+                <div class="col-md-8">
+                  <label for="validationCustom01" class="form-label">Kártyaszám</label>
+                  <input type="text" class="form-control" id="validationCustom01" minlength="19" maxlength="24"
+                    required>
+                  <div class="invalid-feedback">
+                    Helytelen formátum. Helyes: 1234 5678 9876 5432
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <label for="validationCustomUsername" class="form-label">CVC kód</label>
+                  <div class="input-group has-validation">
+                    <input type="number" class="form-control" max="999" min="100" id="validationCustomUsername"
+                      aria-describedby="inputGroupPrepend" required>
+                    <div class="invalid-feedback">
+                      Helytelen formátum. Helyes: 987
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-5">
+                  <label for="validationCustom02" class="form-label">Cím</label>
+                  <input type="text" class="form-control" id="validationCustom02" required>
+                  <div class="invalid-feedback">
+                    Kérem, gépeljen be egy létező címet. Pl.: Réti utca 1-5.
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <label for="validationCustom03" class="form-label">Város</label>
+                  <input type="text" class="form-control" id="validationCustom03" required>
+                  <div class="invalid-feedback">
+                    Kérem, gépeljen be egy létező címet. Pl.: Bugyi
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <label for="validationCustom04" class="form-label">Lejárat</label>
+                  <input type="text" class="form-control" pattern="^\d{2}/\d{2}$" id="validationCustom04" required>
+                  <div class="invalid-feedback">
+                    Helytelen formátum. Helyes: 12/34
+                  </div>
+                </div>
+                <div class="col-lg-12 text-end">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Mégse</button>
+                  <button type="button" class="btn btn-success" onclick="showModal(event)">Fizetés</button>
+                </div>
+              </form>
+            </div>
+
+            <div class="modal-footer">
+              *Kérjük vegye figyelembe, hogy rendelését legfeljebb 24 órán belül tudjuk megszakítani! Ezután már sajnos
+              semmit se tehetünk. Ügyfélszogálat: + 36 1234 5678
+            </div>
+          </div>
+        </div>
+      </div>
+      <section class="d-flex flex-wrap">
+        <div>
+          <h3>Kosár tartalma</h3>
+          <p class="cart-display">A kosár üres!</p>
+          <ul id="cart-items"></ul>
+          <button class="remove-button ms-3 clearButton" onclick="clearCart()"><i class="bi bi-trash"></i>
+            Kosár törlése</button>
+        </div>
+        <div class="ms-auto text-center totalCheckOut">
+          <div class="">
+            <h3>Rendelése összegzése</h3>
+            <hr>
+            <p>ÁFA: <span class="vat">0 Ft</span></p>
+            <p>Nettó összeg: <span class="netTotal">0 Ft</span></p>
+            <hr>
+            <p>Végösszeg: <span class="total">0 Ft</span></p>
+            <button type="button" class="btn btn-warning payButton" data-bs-toggle="modal" data-bs-target="#payModal">
+              Tovább a pénztárhoz!
+            </button>
+          </div>
+
+          <div>
+            <h3>Szeretnél kupont beváltani?</h3>
+            <hr>
+            <p>Kupon beváltásához Kérem lépj be.</p>
+          </div>
+        </div>
+      </section>
+      <section class="text-center my-5 choose">
+        <h2>Készítsd el a te madáretetőd</h2>
+        <h3>Kérem, adja meg az adatait, és válassza ki milyen anyagból, és mekkora madáretetőt szeretne!
+        </h3>
+        <section class="container-fluid">
+          <section class="d-flex container-fluid calculator">
+
+          </section>
+          <article class="container-fluid">
+            <form class="row g-3 needs-validation paymentForm" novalidate>
+              <div class="col-md-4">
+                <label for="validationCustom05" class="form-label">Vezetéknév</label>
+                <input type="text" class="form-control" id="validationCustom05" value="" required>
+                <div class="invalid-feedback">
+                  Helytelen vezetéknév. Helyes: Gipsz (Jakab)
+                </div>
+              </div>
+              <div class="col-md-4">
+                <label for="validationCustom06" class="form-label">Keresztnév</label>
+                <input type="text" class="form-control" id="validationCustom06" value="" required>
+                <div class="invalid-feedback">
+                  Helytelen keresztnév. Helyes: (Gipsz) Jakab
+                </div>
+              </div>
+              <div class="col-md-4">
+                <label for="validationCustomUsername" class="form-label">E-mail cím</label>
+                <div class="input-group has-validation">
+                  <span class="input-group-text" id="inputGroupPrepend">@</span>
+                  <input type="email" class="form-control" id="validationCustomUsername"
+                    aria-describedby="inputGroupPrepend" required>
+                  <div class="invalid-feedback">
+                    Kérem, adjon meg egy helyes e-mail címet.
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <label for="validationCustom07" class="form-label">Város</label>
+                <input type="text" class="form-control" id="validationCustom07" required>
+                <div class="invalid-feedback">
+                  Kérem, adjon meg egy létező várost!
+                </div>
+              </div>
+              <div class="col-md-3">
+                <label for="validationCustom08" class="form-label">Méret (CM)</label>
+                <input type="number" min="1" max="15" class="form-control size" id="validationCustom08" required>
+                <div class="invalid-feedback">
+                  Kérem, gépelje be a kívánt méretet! <br> (1-15cm!)
+                </div>
+              </div>
+              <div class="col-md-3">
+                <label for="validationCustom09" class="form-label">Fa típusa</label>
+                <select class="form-select" required aria-label="Default select example" id="validationCustom09">
+                  <option value="" selected>Faanyag</option>
+                  <option value="1500">Fenyő</option>
+                  <option value="2000">Tölgy</option>
+                  <option value="3300">Bükk</option>
+                </select>
+                <div class="invalid-feedback">
+                  Kérem válasszon méretet!
+                </div>
+              </div>
+              <div class="col-md-3">
+                <label for="validationCustom10" class="form-label">Irányítószám</label>
+                <input type="number" maxlength="8" max="25000" min="1000" minlength="4" class="form-control"
+                  id="validationCustom10" required>
+                <div class="invalid-feedback">
+                  Kérem, adjon meg egy létező irányítószámot!
+                </div>
+              </div>
+              <div class="col-12 text-start">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                  <label class="form-check-label" for="invalidCheck">
+                    Elfogadom a feltételeket.
+                  </label>
+                  <div class="invalid-feedback">
+                    Muszáj elfogadnia a feltételeket a folytatáshoz! </div>
+                </div>
+              </div>
+              <div class="col-12">
+                <button class="btn btn-danger" type="button" onclick="calculatePrice()">Számolás</button>
+              </div>
+            </form>
+          </article>
+          <div class="modal fade" id="systemInfo" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog  modal-md">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="exampleModalLabel">Rendszerüzenet </h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  Sikeres fizetés!
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Bezárás</button>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="calculated container">
+          <article class="pe-5">
+            <h3 class="ar">Kalkulált összeg</h3>
+            <h4>Útmutató</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis nobis sed et excepturi sint,
+              officiis, maxime velit quibusdam quod ipsam dicta, illo voluptate. Impedit commodi numquam ipsum
+              omnis similique exercitationem.</p>
+          </article>
+          <article class="plans ps-5">
+            <img src="images/plans.webp" alt="">
+            <p>* az ilyen típusú etetők nem rendelhetőek, adatai rögzítése után felkeressük a részletekkel!</p>
+          </article>
+        </section>
+
+    </main>
+    <footer class="row contact-info">
+      <section class="col-lg-4">
+        <h2>Információk</h2>
+        <p><i class="bi bi-house"></i>Tatabánya, Réti utca 1-5.</i></p>
+        <p><i class="bi bi-globe"></i>Magyarország</p>
+        <p><i class="bi bi-telephone"></i>+36 1234 5678</p>
+        <p><i class="bi bi-mailbox"></i>titkarsag.bankitatabanya.hu</p>
+        <article class="d-flex">
+          <a href=""><i class="bi bi-facebook"></i></a>
+          <a href=""><i class="bi bi-instagram"></i></a>
+          <a href=""><i class="bi bi-linkedin"></i></a>
+          <a href=""><i class="bi bi-twitter-x"></i></a>
+        </article>
+      </section>
+      <section class="col-lg-4">
+        <h2>Vásárlói fiók</h2>
+        <p><i class="bi bi-person-up"></i>Belépés</p>
+        <p><i class="bi bi-person-down"></i>Regisztráció </p>
+        <p><i class="bi bi-person"></i>Profilom </p>
+        <p><i class="bi bi-bag-check"></i>Kosár</p>
+        <p><i class="bi bi-star"></i>Kedvenceim</p>
+      </section>
+      <section class="col-lg-4">
+        <h2>Szállítás</h2>
+        <p><i class="bi bi-truck"></i> Visszaküldési szabályzat</p>
+        <p><i class="bi bi-box"></i> Elállás</p>
+        <p><i class="bi bi-box-seam"></i>Csomagbiztosítás</p>
+        <p><i class="bi bi-wallet2"></i>Fizetés</p>
+        <p><i class="bi bi-calendar"></i>Időzített átvétel</p>
+
+
+      </section>
+    </footer>
+
+  </div>
+
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/custom.js"></script>
+  <script src="js/ybf.js"></script>
+  <script src="js/toast.js"></script>
+  <script src="js/check.js"></script>
+
+</body>
+
+</html>

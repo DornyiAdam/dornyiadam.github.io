@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Madáretető projekt</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/ybf.css">
+    <link rel="icon" type="image/x-icon" href="images/favicon.png">
+</head>
+
+<body>
+    <div class="container-fluid" id="top">
+        <header>
+            <section class="d-flex help">
+                <p class="text-center ms-5 me-5 bi">Tegyünk <span class="broken-small-res-display-none">együtt</span> a
+                    természetért! <i class="bi bi-heart-fill broken-small-res-display-none"></i> </p>
+
+                <a href="" class="text-dark">
+                    <i class="bi">Elakadtál? Segítünk! </i>
+                    <i class="bi">titkarsag@bankitatabanya.hu</i>
+                    <i class="bi bi-envelope broken-small-res-display-none"></i>
+                </a>
+            </section>
+            <nav class="navbar navbar-dark navbar-expand-lg bg-dark uppercase">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="madarakmain.html"><img src="images/logo.png" alt="" class="logo"></a>
+                    <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="offcanvas"
+                        data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="offcanvas bg-dark offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+                        aria-labelledby="offcanvasNavbarLabel">
+                        <div class="offcanvas-header">
+                            <h4 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Menü</h4>
+                            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                                aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body">
+                            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                                <li class="nav-item">
+                                    <a class="nav-link disappear" aria-current="page" href="madarakmain.html">Főoldal </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link active" aria-current="page" href="yourbirdfeeder.html">A te
+                                        madáretetőd</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link " aria-current="page" href="ourbirds.html">Madaraink</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link " aria-current="page" href="galery.html">Galéria </a>
+                                </li>
+                            </ul>
+                            <form class="d-flex" role="search">
+                                <i class="bi bi-search text-white"></i>
+                                <input class="form-control me-2" type="search" placeholder="Ide írj"
+                                    aria-label="Search">
+                                <button class="btn btn-outline-success" type="submit">Keresés</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <main>
+            <section class="text-center my-5 choose">
+                <h1>Készítsd el a te madáretetőd</h1>
+                <h3 class="text-start ms-5">Kérlek, válaszd ki milyen anyagból, és mekkora madáretetőt szeretnél!</h3>
+                <section class="container-fluid">
+                    <section class="d-flex container-fluid">
+                        <article>
+                            <figure>
+                                <img src="images/s1_madareteto.png" class="" alt="">
+                                <figcaption>Kis madáretető</figcaption>
+                            </figure>
+                        </article>
+                        <article>
+                            <figure>
+                                <img src="images/M_madareteto.png" class="" alt="">
+                                <figcaption>Közepes madáretető </figcaption>
+                            </figure>
+                        </article>
+                        <article>
+                            <figure>
+                                <img src="images/L2_madareteto.png" class="" alt="">
+                                <figcaption>Nagy madáretető</figcaption>
+                            </figure>
+                        </article>
+                    </section>
+                    <article class="d-flex container-fluid">
+                        <form class="row  needs-validation container-fluid" novalidate>
+                            <div class="check row">
+                                <div class="form-check col-lg-4 ps-5">
+                                    <input type="radio" class="form-check-input my-0 " id="validationFormCheck2"
+                                        name="radio-stacked" required>
+                                    <label class="form-check-label" for="validationFormCheck2">S 15x15</label>
+                                </div>
+                                <div class="form-check col-lg-4 ps-5">
+                                    <input type="radio" class="form-check-input my-0" id="validationFormCheck3"
+                                        name="radio-stacked" required>
+                                    <label class="form-check-label" for="validationFormCheck3">M 20x20</label>
+                                </div>
+                                <div class="form-check col-lg-4 ps-5">
+                                    <input type="radio" class="form-check-input my-0 ms-2" id="validationFormCheck4"
+                                        name="radio-stacked" required>
+                                    <label class="form-check-label" for="validationFormCheck4">L 25x25</label>
+                                </div>
+                            </div>
+                            <select class="form-select ms-5" required aria-label="Default select example">
+                                <option value="" selected>Faanyag</option>
+                                <option value="1500">Fenyő</option>
+                                <option value="2000">Tölgy</option>
+                                <option value="3300">Bükk</option>
+                            </select>
+                            <div class="">
+                                <button class="btn btn-danger" type="button" onclick="calculatePrice(event)">Számolás</button>
+                            </div>
+                            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                
+                              </div>
+                    </article>
+                    </form>
+                </section>
+            </section>
+            <section class="calculated container">
+                <article class="pe-5">
+                    <h3>Kalkulált összeg</h3>
+                    <h4>Útmutató</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis nobis sed et excepturi sint,
+                        officiis, maxime velit quibusdam quod ipsam dicta, illo voluptate. Impedit commodi numquam ipsum
+                        omnis similique exercitationem.</p>
+                </article>
+                <article class="plans ps-5">
+                    <div class="imageplace"></div>
+                    <img src="" alt="">
+                </article>
+            </section>
+
+            <a href="#top" class="ms-3 mb-5"><button
+                    class="btn btn-dark sticky-bottom ps-5 my-5 pe-5 fs-4 border border-warning rounded-pill">Fel!</button></a>
+        </main>
+        <footer class="row">
+            <section class="col-lg-6 contact-info">
+                <h2>Elérhetőségek</h2>
+                <p><i class="bi bi-house-fill"></i>Tatabánya, Réti utca 1-5.</i></p>
+                <p><i class="bi bi-globe"></i>Magyarország</p>
+                <p><i class="bi bi-telephone-fill"></i>+36 1234 5678</p>
+                <p><i class="bi bi-mailbox2"></i>titkarsag.bankitatabanya.hu</p>
+            </section>
+            <section class="col-lg-6">
+                <h2>Kövess minket itt is!</h2>
+                <article class="d-flex">
+                    <a href=""><i class="bi bi-facebook"></i></a>
+                    <a href=""><i class="bi bi-instagram"></i></a>
+                    <a href=""><i class="bi bi-linkedin"></i></a>
+                    <a href=""><i class="bi bi-twitter-x"></i></a>
+                </article>
+            </section>
+        </footer>
+
+    </div>
+    <script src="js/ybf.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+
+</html>

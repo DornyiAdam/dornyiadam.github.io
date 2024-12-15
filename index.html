@@ -1,409 +1,63 @@
 <!DOCTYPE html>
-<html lang="hu">
+<html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ToDo App</title>
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kezdőoldal</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/index.css">
 </head>
 
 <body>
-    <div class="container-fluid">
-        <header>
-            <div class="logo d-flex justify-content-between">
-                <img src="img/logo.png" alt>
-                <button>Buy now</button>
-            </div>
-            <div class="infonav">
-                <div class="info">
-                    <p class="phone">
-                        <i class="bi bi-telephone-fill"></i> +00-122-123-0099
-                    </p>
-                    <p class="mail">
-                        <i class="bi bi-envelope-fill"></i> contact@yogi.com
-                    </p>
-                </div>
+  <h1 id="heading">Üdvözöllek a weboldalamon!</h1>
+  <div class="container-fluid hidden" id="content">
 
-            </div>
-        </header>
-        <main>
-            <section class="navbarandslideshow">
-                <div id="carouselExampleIndicators" class="carousel slide">
-                    <div class="carousel-indicators">
-                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                    </div>
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <img src="img/yoga1.jpg" class="d-block w-100 cimg" alt="...">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="img/yoga2.jpg" class="d-block w-100 cimg" alt="...">
-                        </div>
-                    </div>
-                </div>
-                <nav class="navbar navbar-expand-lg">
-                    <div class="container-fluid navwrapper">
-                        <a class="navbar-brand" href="#"><img src="img/yogi3.png" class="yogi" alt srcset></a>
-                        <div class="d-flex appearLaters">
-                            <a class="nav-link" href="#"><img src="img/user.png" alt srcset class="appearLater"></a>
-                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <header>
+      <nav class="navbar navbar-expand-xxl bg-dark" data-bs-theme="dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">🤪</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="madarakmain.html">Madár webshop 🦅</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="zooIndex.html">Tatabánya legnagyobb állatkertje 🦁</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="jquery.html">Ádám és a jquery 🤧</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="tetelek.html">Tétel húzás 🔥</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="kepkereso.html">Képkereső improved ⚡</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="felolvasas/felolvasas.html">(Edge kell hozzá) 🔊🔊🔊🔊</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
 
-                                                                                          <span class="navbar-toggler-2">
-                                                                                                    <svg width="30"
-                                                                                                              height="30"
-                                                                                                              viewBox="0 0 30 30"
-                                                                                                              xmlns="http://www.w3.org/2000/svg">
-                                                                                                              <rect width="25"
-                                                                                                                        height="5"
-                                                                                                                        rx="2"
-                                                                                                                        fill="white">
-                                                                                                              </rect>
-                                                                                                              <rect y="10"
-                                                                                                                        width="25"
-                                                                                                                        height="5"
-                                                                                                                        rx="2"
-                                                                                                                        fill="white">
-                                                                                                              </rect>
-                                                                                                              <rect y="20"
-                                                                                                                        width="25"
-                                                                                                                        height="5"
-                                                                                                                        rx="2"
-                                                                                                                        fill="white">
-                                                                                                              </rect>
-                                                                                                    </svg>
-                                                                                          </span>
-                                                                                </button>
-                        </div>
-                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                                <li class="nav-item">
-                                    <a class="nav-link borderbottom active" aria-current="page" href="#">Home</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">Classes</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">Trainers</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">Events</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">Pages</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">Blog</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">Shop</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#"><img src="img/user.png" alt srcset></a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#"><img src="img/shopping-bag.png" alt srcset></a>
-                                </li>
-
-                            </ul>
-                        </div>
-                    </div>
-                </nav>
-            </section>
-            <section class="row welcome">
-                <div class="content justify-content-center col-8">
-                    <img src="img/icon-title.png">
-                    <h2>Welcome to
-                        <span>Yogi</span>
-                    </h2>
-                    <div class="redline"></div>
-                    <p>Yogi is founded with our passion for yoga and we would love to spread that love to more and more people.
-                    </p>
-                    <p>
-                        At Yogi, we do not only teach yoga, we seek to create a yoga community where we can share daily matters, stress at work or problems in life. Yoga is the great recipe to communicate and balance your mind and body.
-                    </p>
-                    <div class="icons d-flex justify-content-evenly">
-                        <div class="icondiv d-flex justify-content-center align-items-center">
-                            <div class="icon">
-                                <i class="bi bi-bell-fill"></i>
-                            </div>
-                            <h4>Balance <br> body and mind
-                            </h4>
-                        </div>
-                        <div class="slash"></div>
-                        <div class="icondiv d-flex justify-content-center align-items-center">
-                            <div class="icon">
-                                <i class="bi bi-suitcase-lg-fill"></i>
-                            </div>
-                            <h4>Healthy <br> daily life
-                            </h4>
-                        </div>
-                        <div class="slash"></div>
-                        <div class="icondiv d-flex justify-content-center align-items-center">
-                            <div class="icon">
-                                <i class="bi bi-trophy-fill"></i>
-                            </div>
-                            <h4>Yoga <br> month challange
-                            </h4>
-                        </div>
-                    </div>
-                </div>
-                <div class="imghold col-3">
-                    <img src="img/girl1.png" alt>
-                </div>
-            </section>
-            <section class="to-do">
-                <img src="img/icon-title.png" class="space-logo">
-                <h2>To <span>do</span></h2>
-                <div class="redline"></div>
-                <form id="eventForm" class="row mx-auto ">
-                    <div class="form-group col-6">
-                        <label for="eventName">Megnevezés</label>
-                        <input type="text" id="eventName" class="form-control" maxlength="20" required>
-                    </div>
-                    <div class="form-group col-6">
-                        <label for="eventLocation">Helyszín</label>
-                        <input type="text" id="eventLocation" class="form-control" maxlength="15" required>
-                    </div>
-                    <div class="form-group col-12">
-                        <textarea id="eventDescription" required class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 150px" maxlength="50"></textarea>
-                    </div>
-                    <div class="form-group col-lg-12">
-                        <button type="button" class="btn btn-dark mx-auto d-block addtask">Hozzáadás</button>
-                    </div>
-                </form>
-                <hr>
-                <section>
-                    <h2>Tevékenységek:</h2>
-                    <div class="row tasks gx-3 gy-3">
-
-                    </div>
-                </section>
-                <hr>
-                <section>
-                    <h2>Összegzés:</h2>
-                    <div class="daily-summary"></div>
-                    <hr>
-                </section>
-            </section>
-            <section class="video-topics d-flex">
-                <section class="left-side">
-                    <img src="img/icon-title.png" class="space-logo">
-                    <h2>New video <span>topics</span></h2>
-                    <div class="redline"></div>
-                    <div class="d-flex film-name">
-                        <div class="film-container">
-                            <i class="bi bi-film text-light"></i>
-                        </div>
-                        <div class="film-text">
-                            <p class="tred">Become an Yoga trainer at Yogi center</p>
-                            <p>Yoga is physical, mental, and spiritual practice...</p>
-                        </div>
-                    </div>
-                    <div class="d-flex film-name">
-                        <div class="film-container">
-                            <i class="bi bi-film text-light"></i>
-                        </div>
-                        <div class="film-text">
-                            <p class="tred">Become an Yoga trainer at Yogi center</p>
-                            <p>Yoga is physical, mental, and spiritual practice...</p>
-                        </div>
-                    </div>
-                    <div class="d-flex film-name">
-                        <div class="film-container">
-                            <i class="bi bi-film text-light"></i>
-                        </div>
-                        <div class="film-text">
-                            <p class="tred">Become an Yoga trainer at Yogi center</p>
-                            <p>Yoga is physical, mental, and spiritual practice...</p>
-                        </div>
-                    </div>
-                </section>
-                <section>
-                    <figure>
-                        <img src="img/no.jpg" alt="" srcset="">
-                        <figcaption class="d-flex">
-                            <div class="film-container">
-                                <i class="bi bi-play-fill text-light"></i>
-                            </div>
-                            <div class="film-text">
-                                <p class="bigger">Become an Yoga trainer at Yogi center</p>
-                                <p>Yoga is physical, mental, and spiritual practice...</p>
-                            </div>
-                        </figcaption>
-                    </figure>
-                </section>
-            </section>
-            <section class="w-100 feher">
-                <section class="trainer text-center">
-                    <img src="img/icon-title.png" class="space-logo">
-                    <h2>Best <span>trainer</span></h2>
-                    <div class="redline"></div>
-                    <div class="people d-flex justify-content-around">
-                        <div class="d-flex">
-                            <div class="person">
-                                <p class="trainername">Daisy Lou</p>
-                                <p class="small">Yoga Dance</p>
-                                <div class="redline"></div>
-                                <img src="img/no2.jpg" alt="">
-                            </div>
-                        </div>
-                        <div class="d-flex">
-                            <div class="person">
-                                <p class="trainername">Daisy Lou</p>
-                                <p class="small">Yoga Dance</p>
-                                <div class="redline"></div>
-                                <img src="img/no2.jpg" alt="">
-                            </div>
-                        </div>
-                        <div class="d-flex">
-                            <div class="person">
-                                <p class="trainername">Daisy Lou</p>
-                                <p class="small">Yoga Dance</p>
-                                <div class="redline"></div>
-                                <img src="img/no2.jpg" alt="">
-                            </div>
-                        </div>
-                        <div class="d-flex">
-                            <div class="person">
-                                <p class="trainername">Daisy Lou</p>
-                                <p class="small">Yoga Dance</p>
-                                <div class="redline"></div>
-                                <img src="img/no2.jpg" alt="">
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-            </section>
-            <section class="d-flex quote row">
-                <div class="col-6 womanpicture">
-                    <img src="img/no3.png" alt="">
-                </div>
-                <div class="col-6 texthere">
-                    <p>Yogi is my second family where I’ve learned and then worked for a long time. Becoming a yoga trainer here is the second best decision I have made, the first one is to marry John, my beloved husband. At Yogi, I find my self and the
-                        way to be close friend with her.</p>
-                    <span class="textred">Rose Anderson </span>
-                </div>
-            </section>
-            <section class="w-100 feher blog">
-                <section class="trainer text-center">
-                    <img src="img/icon-title.png" class="space-logo">
-                    <h2>Our <span>Blog</span></h2>
-                    <div class="redline"></div>
-                    <div class="people d-flex justify-content-center row">
-                        <div class="d-flex col-lg-3 me-5">
-                            <div class="person">
-                                <div class="imageimage">
-                                    <img src="img/no5.jpg" alt="">
-                                    <div class="iconinimage">
-                                        <i class="bi bi-file-earmark-image"></i>
-                                    </div>
-                                </div>
-                                <p class="titleof text-start ms-2">Not everyone who practices yoga is happy</p>
-                                <p class="small gray text-start ms-3">October 30, 2019
-                                </p>
-                                <p class=" ms-3 text-start">How to Start Doing Yoga Every Day? The key to successful yoga practice is discipline. Short yoga breaks every day can be more beneficial than a vigorous...</p>
-                                <p class="ms-3 text-start"> <i class="bi bi-arrow-right-circle-fill"></i> Read more</p>
-                            </div>
-                        </div>
-                        <div class="d-flex col-lg-3 mx-5">
-                            <div class="person">
-                                <div class="imageimage">
-                                    <img src="img/no5.jpg" alt="">
-                                    <div class="iconinimage">
-                                        <i class="bi bi-file-earmark-image"></i>
-                                    </div>
-                                </div>
-                                <p class="titleof text-start ms-2">Not everyone who practices yoga is happy</p>
-                                <p class="small gray text-start ms-3">October 30, 2019
-                                </p>
-                                <p class=" ms-3 text-start">How to Start Doing Yoga Every Day? The key to successful yoga practice is discipline. Short yoga breaks every day can be more beneficial than a vigorous...</p>
-                                <p class="ms-3 text-start"> <i class="bi bi-arrow-right-circle-fill"></i> Read more</p>
-                            </div>
-                        </div>
-                        <div class="d-flex col-lg-3 ms-5">
-                            <div class="person">
-                                <div class="imageimage">
-                                    <img src="img/no5.jpg" alt="">
-                                    <div class="iconinimage">
-                                        <i class="bi bi-file-earmark-image"></i>
-                                    </div>
-                                </div>
-                                <p class="titleof text-start ms-2">Not everyone who practices yoga is happy</p>
-                                <p class="small gray text-start ms-3">October 30, 2019
-                                </p>
-                                <p class=" ms-3 text-start">How to Start Doing Yoga Every Day? The key to successful yoga practice is discipline. Short yoga breaks every day can be more beneficial than a vigorous...</p>
-                                <p class="ms-3 text-start"> <i class="bi bi-arrow-right-circle-fill"></i> Read more</p>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-            </section>
-            <section class="red d-flex">
-                <p>Join our Monthly Membership</p>
-                <h2>Take any class at your free time flexibly for a whole month</h2>
-                <button type="button">Sign up now</button>
-            </section>
-
-
-        </main>
-        <footer>
-            <div class="footer-container">
-                <div class="footer-column">
-                    <h3>Address</h3>
-                    <div class="grayline"></div>
-
-                    <p><i class="bi bi-geo-alt-fill"></i> 1900 Pico Blvd Santa Monica<br>CA 90405 United States</p>
-                    <p><i class="bi bi-telephone-fill"></i>+48 123 456 789<br><i class="bi bi-envelope-fill"></i> info@test.com</p>
-                    <p><i class="bi bi-skype"></i> your.company</p>
-                    <div class="social-icons">
-                        <a href="#"><i class="bi bi-facebook"></i></a>
-                        <a href="#"><i class="bi bi-twitter"></i></a>
-                        <a href="#"><i class="bi bi-google"></i></a>
-                        <a href="#"><i class="bi bi-pinterest"></i></a>
-                    </div>
-                </div>
-                <div class="footer-column">
-                    <h3>Recent Tweets</h3>
-                    <div class="grayline"></div>
-                    <p>Could not authenticate you.</p>
-                </div>
-                <div class="footer-column">
-                    <h3>Quicklink</h3>
-                    <div class="grayline"></div>
-
-                    <ul>
-                        <li> <a href="#">My Account</a></li>
-                        <li><a href="#">View Order</a></li>
-                        <li><a href="#">Privacy and Security</a></li>
-                        <li><a href="#">Promotions</a></li>
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="#">Contact Us</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column contact-form">
-                    <h3>Contact Form</h3>
-                    <div class="grayline"></div>
-
-                    <form>
-                        <input type="text" placeholder="Name" required>
-                        <input type="email" placeholder="Email" required>
-                        <textarea placeholder="Message" rows="4" required></textarea>
-                        <button type="submit">Send</button>
-                    </form>
-                </div>
-            </div>
-            <div class="copyright d-flex">
-                <p> &copy; 2016 - 2019 Yogi All rights reserved</p>
-
-            </div>
-            <script src="js/bootstrap.bundle.min.js"></script>
-            <script src="js/script.js"></script>
-        </footer>
-    </div>
+      <div class="buttondiv">
+        <a href="viki.html"><button type="button" class="btn btn-success gomb animation">Katt!</button></a>
+        
+      </div>
+    </main>
+  </div>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/index.js"></script>
 </body>
 
 </html>

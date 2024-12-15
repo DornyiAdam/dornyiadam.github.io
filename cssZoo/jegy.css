@@ -1,0 +1,143 @@
+.tickets .btn {
+    border: none;
+    width: 100px;
+}
+.tickets .btn:hover, .tickets button .active-bg, .btn-active-bg, hr {
+    opacity: 0.8;
+}
+.table{
+    --bs-table-bg: none;
+    border-radius: 15px;
+}
+.online button {
+    width: 10%;
+    margin-bottom: 20px;
+    border: none;
+    --bs-btn-active-bg: #01530087;
+}
+.online button:hover {
+    background-color: #015300c4;
+}
+.online button {
+    background-color: #025300;
+}
+
+table {
+    background-image: url("../imagesZoo/background7.png");
+    background-position:center;
+    background-repeat: no-repeat;
+}
+
+.thead tr th, tbody tr td, th {
+    text-shadow: none;
+    color: #fff!important;
+    }
+col line p  {
+    color: #000000!important;
+    text-shadow: none;
+}
+
+td {
+    font-size: 25px;
+}
+hr {
+    border: 3px solid rgb(255, 255, 0);
+    border-radius: 5px;
+}
+
+.cards {
+    font-size: 22px;
+    text-align: center;
+    line-height: 2.5rem;
+    
+    
+}
+.cards p {
+    color: #ff8c00;
+    text-shadow: none;
+    background-image: url(../imagesZoo/background7.png);border-radius: 15px;
+}
+
+thead tr th, td {
+    border-bottom:1px solid black!important;
+    border-right: 1px solid black!important;
+}
+.no-border {
+    border-bottom: 0!important;
+}
+.no-border-right {
+    border-right: 0!important;
+}
+.doboz {
+    height: 200px;
+    width: 200px;
+    background-color: #000;
+    border-radius: 20%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.online {
+    padding-top: 50px;
+}
+.tickets h2 {
+    font-size: 40px;
+}
+
+.online img {
+    width: 150px;
+}
+.online button a {
+    text-decoration: none;
+    color: #fff;
+}
+@media screen and (max-width: 1576px) {
+    .no-border-right {
+        white-space: nowrap;
+    }
+    .table-responsive {
+        overflow-x: auto;
+    }
+}
+@media screen and (max-width: 708px) {
+    .container-fluid {
+        text-align: center;
+        margin: 0 auto
+    }
+    h2 {
+        font-size: 30px!important;
+    }
+    .table th {
+        font-size: 25px!important;
+    }
+    .table-responsive-sm .table th {
+        font-size: 25px !important;
+    }
+    .online button {
+        width: 40%;
+    }
+    figcaption {
+        font-size: 22px;
+    }
+    .online p {
+        font-size: 20px;
+    }
+    thead tr th, td {
+        border-bottom:3px solid black!important;
+    }
+    thead tr th, tbody tr td {
+        border-right: none;
+    }
+    .table-responsive tbody td, .table-responsive thead th {
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+        margin-bottom: 4px;
+        padding: 4px;
+    }
+    table tr td:nth-of-type(2),table tr td:first-of-type {
+        border: none!important;
+    }
+    thead {
+        display: none;
+    }
+}

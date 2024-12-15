@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Madáretető projekt</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/ybf.css">
+    <link rel="stylesheet" href="css/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="css/ourb.css">
+    <link rel="icon" type="image/x-icon" href="images/favicon.png">
+</head>
+
+<body>
+    <div class="container-fluid" id="top">
+        <header class="sticky-top">
+            <section class="d-flex help">
+              <p class="text-center ms-5 me-5 bi">Tegyünk <span class="broken-small-res-display-none big">együtt</span> a
+                természetért! <i class="bi  bi-heart-fill broken-small-res-display-none"></i> </p>
+      
+              <a href="" class="text-dark">
+                <i class="bi">Elakadtál? Segítünk! </i>
+                <i class="bi">titkarsag@bankitatabanya.hu</i>
+                <i class="bi bi-envelope broken-small-res-display-none"></i>
+              </a>
+            </section>
+            <nav class="navbar navbar-dark navbar-expand-xxl bg-dark uppercase">
+              <div class="container-fluid">
+                <a class="navbar-brand me-auto disappear-logo" href="madarakmain.html"><img src="images/logo.png" alt="" class="logo"></a>
+                <div class="position-relative mobile-cart ms-3">
+                  <a href="checkout.html"><i class="bi bi-cart3 end-0"></i></a>                  <span class="position-absolute badge rounded-pill bg-danger end-50 cart-badge">
+                    <span id="cartItemCount visually-hidden" class="mobile-cart-items" ></span>
+                  </span>
+                </div>
+                <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="offcanvas"
+                  data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                
+                <div class="offcanvas bg-dark offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+                  aria-labelledby="offcanvasNavbarLabel">
+                  <div class="offcanvas-header">
+                    <h4 class="offcanvas-title text-white" id="offcanvasDarkNavbarLabel">Menü</h4>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                      aria-label="Close"></button>
+                  </div>
+                  <div class="offcanvas-body">
+                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                      <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="madarakmain.html">Főoldal </a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link " aria-current="page" href="yourbirdfeeder.html">A te madáretetőd</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link active " aria-current="page" href="ourbirds.html">Madaraink</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link " aria-current="page" href="galery.html">Galéria </a>
+                      </li>
+                      <li class="nav-item disappear-basket">
+                        <div class="position-relative">
+                          <a href="checkout.html"><i class="bi bi-cart3"></i></a>
+                          <span class="position-absolute badge rounded-pill bg-danger end-50 cart-badge">
+                            <span class="cartItemCount" ></span>
+                          </span>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </nav>
+          </header>
+        <main>
+            <section>
+              <section class="container-fluid mb-5 h1-center">
+                <h1 class="text-center mt-5">Madaraink</h1>
+                <button class="btn btn-warning ms-3" onclick="vedett('all')"><img src="images/all.png" alt=""></button>
+                <button class="btn btn-danger" onclick="vedett('vedett')"><img src="images/danger.png" alt=""></button>
+                <button class="btn btn-success" onclick="vedett('nem')"><img src="images/no-waiting.png" alt=""></button>
+              </section>
+                <div class="madaraink vedett row">
+                    <div class="col-lg-6 madar_kep">
+                        <img src="images/szencinege.jpg" alt="Széncinege" title="Széncinege madár">
+                    </div>
+                    <div class="col-lg-6 madar_info">
+                        <h2>Széncinege</h2>
+                        <ul>
+                            <li class="width">Testhossza: 12,5-14 cm</li>
+                            <li class="weight">Testömege: 14-22 g</li>
+                            <li class="feather">Szárnyfesztávolsága: 22 cm</li>
+                            <li class="dish">Táplálkozása: 
+                                <ul>
+                                    <li class="fly">rovarok</li>
+                                    <li class="spider">pókok</li>
+                                    <li class="grasshopper">szöcskék</li>
+                                    <li class="bug">poloskák</li>
+                                    <li class="insect">hernyók</li>
+                                </ul>
+                            </li>
+                            <li class="egg">Tojásai kikelési ideje: 12-15 nap</li>
+                            <li class="danger">Védettsége: védett</li>
+                        </ul>
+
+                    </div>
+                </div>
+                <div class="madaraink vedett row">
+                    <div class="col-lg-6 order-1 madar_kep">
+                        <img src="images/fakopancs.jpg" alt="Fehérhátú fakopáncs" title="fakopáncs">
+                    </div>
+                    <div class="col-lg-6 order-0 madar_info">
+                        <h2>Fehérhátú fakopáncs</h2>
+                        <ul>
+                            <li class="width">Testhossza: 24–26</li>
+                            <li class="weight">Testömege: 100–112 g</li>
+                            <li class="feather">Szárnyfesztávolsága: 38–40</li>
+                            <li class="dish">Táplálkozása: 
+                                <ul>
+                                    <li class="fly">rovarok</li>
+                                    <li class="insect">hernyók</li>
+                                    <li class="ant">hangyák</li>
+                                    <li class="seed">magvak</li>
+                                </ul>
+                            </li>
+                            <li class="egg">Tojásai kikelési ideje: 14-16 nap</li>
+                            <li class="danger">Védettsége: védett (FOKOZOTTAN)</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="madaraink vedett row">
+                    <div class="col-lg-6 madar_kep">
+                        <img src="images/fustifecke.jpg" alt="Füsti fecske" title="fecske">
+                    </div>
+                    <div class="col-lg-6 madar_info">
+                        <h2>Füsti fecske</h2>
+                            <ul>
+                                <li class="width">Testhossza: 17-19 cm</li>
+                                <li class="weight">Testömege: 16-22 g</li>
+                                <li class="feather">Szárnyfesztávolsága: 32-34,5 cm</li>
+                                <li class="dish">Táplálkozása: 
+                                    <ul>
+                                        <li class="fly">repűlő rovarok</li>
+                                        <li class="aphid">levéltetvek</li>
+                                        <li class="spider">pókok</li>
+                                        <li class="insect">hernyók</li>
+                                    </ul>
+                                </li>
+                                <li class="egg">Tojásai kikelési ideje: </li>
+                                <li class="danger">Védettsége: védett</li>
+                            </ul>
+                    </div>
+
+                </div>
+                <div class="madaraink nem row">
+                    <div class="col-lg-6 order-1 madar_kep">
+                        <img src="images/galamb.jpg" alt="Galamb" title="Parlagi galamb">
+                    </div>
+                    <div class="col-lg-6 order-0 madar_info">
+                        <h2>Parlagi galamb</h2>
+                        <ul>
+                            <li class="width">Testhossza: 31–34 cm</li>
+                            <li class="weight">Testömege: 230–370 g</li>
+                            <li class="feather">Szárnyfesztávolsága: 63–76 cm</li>
+                            <li class="dish">Táplálkozása: 
+                                <ul>
+                                    <li class="seed">gyommagvak</li>
+                                    <li class="seed">haszonmagvak</li>
+                                </ul>
+                            </li>
+                            <li class="egg">Tojásai kikelési ideje: 17 nap</li>
+                            <li class="danger">Védettsége: nem védett</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="madaraink nem row">
+                  <div class="col-lg-6 madar_kep">
+                      <img src="images/varju.jpg" alt="Dolmányos varjú" title="Varjú">
+                  </div>
+                  <div class="col-lg-6 madar_info">
+                      <h2>Dolmányos varjú</h2>
+                      <ul>
+                          <li class="width">Testhossza: 44–52 cm</li>
+                          <li class="weight">Testömege: 540–600 g</li>
+                          <li class="feather">Szárnyfesztávolsága: 84–100 cm</li>
+                          <li class="dish">Táplálkozása: 
+                              <ul>
+                                  <li class="fly">rovarok</li>
+                                  <li class="rats">kisebb emlősök</li>
+                                  <li class="birds">kisebb madarak</li>
+                                  <li class="aphid">dögök</li>
+                                  <li class="berries">növények</li>
+                              </ul>
+                          </li>
+                          <li class="egg">Tojásai kikelési ideje: 17-20 nap</li>
+                          <li class="danger">Védettsége: nem védett</li>
+                      </ul>
+                  </div>
+                </div>
+                <div class="madaraink vedett row">
+                    <div class="col-lg-6 order-1 madar_kep">
+                        <img src="images/furj.jpg" alt="Fürj" title="Fürj">
+                    </div>
+                    <div class="col-lg-6 order-0 madar_info">
+                        <h2>Fürj</h2>
+                        <ul>
+                            <li class="width">Testhossza: 16–18 cm</li>
+                            <li class="weight">Testömege: 75–135 g</li>
+                            <li class="feather">Szárnyfesztávolsága: 32–35 cm</li>
+                            <li class="dish">Táplálkozása: 
+                                <ul>
+                                    <li class="fly">rovarok</li>
+                                    <li class="seed">magvak</li>
+                                    <li class="berries">bogyók</li>
+                                </ul>
+                            </li>
+                            <li class="egg">Tojásai kikelési ideje: 16-17 nap</li>
+                            <li class="danger">Védettsége: védett</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="madaraink vedett row">
+                  <div class="col-lg-6 madar_kep">
+                      <img src="images/rigo.jpg" alt="Fekete rigó" title="Rigó">
+                  </div>
+                  <div class="col-lg-6 madar_info">
+                      <h2>Fekete rigó</h2>
+                      <ul>
+                          <li class="width">Testhossza: 23,5–29 cm</li>
+                          <li class="weight">Testömege: 80–125 g</li>
+                          <li class="feather">Szárnyfesztávolsága: 34–38 cm</li>
+                          <li class="dish">Táplálkozása: 
+                              <ul>
+                                  <li class="bug">bogarak</li>
+                                  <li class="insect">lárvák</li>
+                                  <li class="worm">giliszták</li>
+                                  <li class="berries">gyümölcsök</li>
+                              </ul>
+                          </li>
+                          <li class="egg">Tojásai kikelési ideje: 14 nap</li>
+                          <li class="danger">Védettsége: védett</li>
+                      </ul>
+                  </div>
+              </div>
+              </div>
+            </section>
+            <section class="container-fluid sticky-bottom text-end up mb-3">
+                <a href="#top">
+                  <button class="btn btn-dark ms-auto border border-success rounded-pill me-2"><i class="bi bi-chevron-up"></i>
+                  </button></a>
+              </section>
+        </main>
+        <footer class="row contact-info">
+            <section class="col-lg-4 ourbirdsleft">
+              <h2>Információk</h2>
+              <p><i class="bi bi-house"></i>Tatabánya, Réti utca 1-5.</i></p>
+              <p><i class="bi bi-globe"></i>Magyarország</p>
+              <p><i class="bi bi-telephone"></i>+36 1234 5678</p>
+              <p><i class="bi bi-mailbox"></i>titkarsag.bankitatabanya.hu</p>
+              <article class="d-flex">
+                <a href=""><i class="bi bi-facebook"></i></a>
+                <a href=""><i class="bi bi-instagram"></i></a>
+                <a href=""><i class="bi bi-linkedin"></i></a>
+                <a href=""><i class="bi bi-twitter-x"></i></a>
+              </article>
+            </section>
+            <section class="col-lg-4 ourbirdscenter">
+              <h2>Vásárlói fiók</h2>
+              <p><i class="bi bi-person-up"></i>Belépés</p>
+              <p><i class="bi bi-person-down"></i>Regisztráció </p>
+              <p><i class="bi bi-person"></i>Profilom </p>
+              <p><i class="bi bi-bag-check"></i>Kosár</p>
+              <p><i class="bi bi-star"></i>Kedvenceim</p>
+            </section>
+            <section class="col-lg-4">
+              <h2>Szállítás</h2>
+              <p><i class="bi bi-truck"></i> Visszaküldési szabályzat</p>
+              <p><i class="bi bi-box"></i> Elállás</p>
+              <p><i class="bi bi-box-seam"></i>Csomagbiztosítás</p>
+              <p><i class="bi bi-wallet2"></i>Fizetés</p>
+              <p><i class="bi bi-calendar"></i>Időzített átvétel</p>
+      
+      
+            </section>
+          </footer>
+
+    </div>
+    <script src="js/ourb.js"></script>
+    <script src="js/custom.js"></script>
+    <script src="js/ybf.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+
+</html>

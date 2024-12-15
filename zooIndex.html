@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tatabányazoo</title>
+  <link rel="stylesheet" href="cssZoo/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  <link rel="icon" type="image/x-icon" href="imagesZoo/logo.png">
+  <link rel="stylesheet" href="cssZoo/style.css">
+</head>
+
+<body id="overflow">
+  <div class="container-fluid">
+    <header>
+      <nav class="navbar navbar-dark" id="home">
+        <div class="container-fluid">
+          <a class="navbar-brand me-auto uppercase logo" href="zooIndex.html"><img src="imagesZoo/logo.png"
+              alt="Tatabányazoo háttér" title="Tatabányazoo"></a>
+          <a class="navbar-brand uppercase disappear" href="#map">Nyitvatartás </a>
+          <a class="navbar-brand uppercase disappear" href="jegyarak.html">Jegyárak</a>
+          <a class="navbar-brand uppercase disappear" href="tamogatas.html">Támogatás</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+            aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+            aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menüpontok</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                <li class="nav-item">
+                  <a class="nav" aria-current="page" href="zooIndex.html">Főoldal</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav" href="#map">Nyitvatartás</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav" aria-current="page" href="jegyarak.html">Jegyárak</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav" aria-current="page" href="tamogatas.html">Támogatás</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav" href="#map">Az állatkert térképe</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav" href="#kapcsolat" role="button" data-bs-toggle="page" aria-expanded="false">
+                    Kapcsolat
+                  </a>
+
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <div class="container-fluid slider">
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+              aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+              aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+              aria-label="Slide 3"></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <h4 class="welcome">Üdvözöljük <br> állatkertünkben!</h4>
+              <img src="imagesZoo/majmok.png" class="d-block w-100" alt="Tatabánya majmok" title="Tatabánya majmok">
+            </div>
+            <div class="carousel-item">
+              <h4 class="welcome">Üdvözöljük <br> állatkertünkben!</h4>
+              <img src="imagesZoo/zsirafok.png" class="d-block w-100 giraffeTop" alt="Tatabánya zsiráfok"
+                title="Komárom-Esztergom megye zsiráfok">
+            </div>
+            <div class="carousel-item">
+              <h4 class="welcome">Üdvözöljük <br> állatkertünkben!</h4>
+              <img src="imagesZoo/orrszarvu.png" class="d-block w-100" alt="Komárom-esztergom megye orrszarvúak"
+                title="Tatabánya orrszarvúak">
+            </div>
+          </div>
+        </div>
+      </div>
+      <section class="row">
+        <div class="col-lg-12 text-center plan">
+          <h3 class>Tervezze meg látogatását!</h3>
+          <p>Állatkertünk csodálatos környezetben várja látogatóit az év minden napján, így hétvégéken és ünnepnapokon
+            is. Az egész napos programot nyújtó állatkerti séta bármely korosztály részére kellemes kikapcsolódást
+            jelent, ahol felfedezhetik az állatok csodálatos világát és találkozhatnak legújabb kedvenceinkkel.</p>
+        </div>
+      </section>
+      <section class="row" id="map">
+        <article class="col-lg-4 text-center py-5">
+          <h4>Téli <br> nyitvatartás</h4>
+          <p>Hétköznap <br>
+            9:00 - 15:00 <br>Hétvége <br> 10:00 - 15:00 <br>
+          </p>
+          <button type="button" class="btn btn-primary uppercase" onclick="stayOverflow()" data-bs-toggle="modal"
+            data-bs-target="#exampleModal">Részletek</button>
+          <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title" id="exampleModalLabel">Téli nyitvatartás</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  A téli időszakban csak a benti részt lehet látogatni.
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Bezárás</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article class="col-lg-4 text-center py-5">
+          <h4>Térkép</h4>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2691.417654834041!2d18.385487576658246!3d47.5791178898745!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x476a40c530f93685%3A0x7ccc44f96f526432!2sTSZC%20B%C3%A1nki%20Don%C3%A1t%20-%20P%C3%A9ch%20Antal%20Technikum!5e0!3m2!1shu!2shu!4v1705319182457!5m2!1shu!2shu"
+            width="320" height="250" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </article>
+        <article class="col-lg-4 text-center py-5">
+          <h4>Megközelítési <br> lehetőségek</h4>
+          <p>
+            Tömegközlekedés <br> 9-es helyijárat <br> 8-as helyijárat <br> 5-ös helyijárat
+          </p>
+          <button type="button" class="btn btn-primary uppercase" onclick="stayOverflow()" data-bs-toggle="modal"
+            data-bs-target="#transport">Részletek</button>
+          <div class="modal fade" id="transport" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title" id="exampleModalLabel">Megközelítés</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  Az állatkert területén parkoló található, de <span class="underline">fizetős</span>!
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Bezárás</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+      </section>
+      <section class="row">
+        <h4 class="text-center uppercase pets">Lakóink</h4>
+        <article class="col-lg-3 text-center">
+          <figure>
+            <img src="imagesZoo/rovar.png" alt="Tatabánya rovarok" title="Tb rovarok" class="allatok">
+            <figcaption><span>Rovarok</span></figcaption>
+          </figure>
+        </article>
+        <article class="col-lg-3 text-center">
+          <figure>
+            <img src="imagesZoo/keteltu.jpg" alt="Tatabánya kétéltűek" title="Komárom-Esztergom megye kétéltűek"
+              class="allatok">
+            <figcaption><span>Kétéltűek</span></figcaption>
+          </figure>
+        </article>
+        <article class="col-lg-3 text-center">
+          <figure>
+            <img src="imagesZoo/madar.png" alt="Tatabánya madarak" title="Tatabánya madarak" class="allatok">
+            <figcaption><span>Madarak</span></figcaption>
+          </figure>
+        </article>
+        <article class="col-lg-3 text-center">
+          <figure>
+            <img src="imagesZoo/emlos.png" alt="Tatabánya emlősök" title="Tb emlősök" class="allatok">
+            <figcaption><span>Emlősök</span></figcaption>
+          </figure>
+        </article>
+      </section>
+      <section class="row news">
+        <article class="col-lg-4 text-center">
+          <img src="imagesZoo/hir4.jpg" alt="Tatabányazoo 2023 szezon" title="Tatabánya állatkert 2023" class="mb-4">
+          <h5>2023 <br> évértékelő</h5>
+          <p class="fs-5">2023-12-31</p>
+          <p class="fs-3">Ebben az évben is <br> mozgalmas szezont zártunk!</p>
+          <a href="hirek.html"><button type="button" class="btn btn-primary uppercase round">Elolvasom <i
+                class="bi bi-arrow-right"></i></button></a>
+        </article>
+        <article class="col-lg-4 text-center">
+          <img src="imagesZoo/hir3.jpg" alt="Tatabánya év állat" title="Tatabányazoo év állata" class="mb-4">
+          <h5>Látogatóink <br> kiválasztották Az Év Állatát!</h5>
+          <p class="fs-5">2023-12-30</p>
+          <p class="fs-3">Íme a megtisztelő cím nyertese, sokkoló eredmény!</p>
+          <a href="hirek2.html"><button type="button" class="btn btn-primary uppercase round">Elolvasom <i
+                class="bi bi-arrow-right"></i></button></a>
+        </article>
+        <article class="col-lg-4 text-center">
+          <img src="imagesZoo/hir1.jpg" alt="Állatok születtek" title="Tatabányai kipusztoló állatok" class="mb-4">
+          <h5>Kipusztulás szélén álló <br> állatok születtek</h5>
+          <p class="fs-5">2024-01-12</p>
+          <p class="fs-3">A 6 hetes kölyköket már a látogatók is megtekinthetik.</p>
+          <a href="hirek3.html"><button type="button" class="btn btn-primary uppercase round">Elolvasom <i
+                class="bi bi-arrow-right"></i></button></a>
+        </article>
+      </section>
+      <section>
+        <a href="#home"><button class="btn btn-success backToTop fixed-bottom" type="button">Fel <i
+              class="bi bi-arrow-bar-up"></i></button></a>
+      </section>
+      <script src="jsZoo/bootstrap.min.js"></script>
+      <script src="jsZoo/custom.js"></script>
+    </main>
+    <footer>
+      <div class="row">
+        <div class="col-lg-6">
+          <h5>Elérhetőségek</h5>
+          <p>Cím: 2800, Tatabánya, Réti utca 1-5.</p>
+          <p>Hungary</p>
+          <p>info@tatabanyazoo.hu</p>
+          <p id="kapcsolat">Telefon: +36 1 234 6789</p>
+
+
+        </div>
+        <div class="col-lg-6">
+          <h5>Kövess be minket!</h5>
+          <i class="bi bi-facebook"></i>
+          <i class="bi bi-instagram"></i>
+          <i class="bi bi-tiktok"></i>
+        </div>
+      </div>
+    </footer>
+  </div>
+</body>
+
+</html>
